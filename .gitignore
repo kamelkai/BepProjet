@@ -4,7 +4,6 @@
 /var/
 /vendor/
 ###< symfony/framework-bundle ###
-/nbproject/
 ###> symfony/web-server-bundle ###
 .web-server-pid
 ###< symfony/web-server-bundle ###
