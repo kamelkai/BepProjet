@@ -80,13 +80,13 @@ class Product
     
     
     /**
-     * @ORM\ManyToMany(targetEntity="Cart", inversedBy="products")
+     * @ORM\ManyToMany(targetEntity="Cart", mappedBy="products")
      * @var Collection
      */
     private $carts;
     
      /**
-     * @ORM\ManyToMany(targetEntity="Tags", mappedBy="products")
+     * @ORM\ManyToMany(targetEntity="Tag", mappedBy="products")
      * @var Collection
      */
     private $tags;

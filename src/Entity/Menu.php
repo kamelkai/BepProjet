@@ -56,7 +56,7 @@ class Menu
     
     
     /**
-     * @ORM\ManyToMany(targetEntity="Tags", mappedBy="menus")
+     * @ORM\ManyToMany(targetEntity="Tag", mappedBy="menus")
      * @var Collection
      */
     private $tags;
