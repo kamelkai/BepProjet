@@ -6,9 +6,14 @@ use App\Repository\MemberRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
+use Doctrine\ORM\Mapping\Index;
+use Doctrine\ORM\Mapping\Table;
+use Symfony\Component\Validator\Constraints as Assert;
+
 
 /**
  * @ORM\Entity(repositoryClass="MemberRepository")
+ * @Table(indexes={@Index(name="status_index", columns={"status"})})
  */
 class Member
 {
@@ -44,6 +49,13 @@ class Member
     */
     private $mdp;
     
+     /**
+     * @ORM\Column(type="string", length=25)
+     * @Assert\Choice({"member", "admin"})
+     * @var string
+     */
+    private $status;  
+    
     /**
     * @ORM\OneToMany(targetEntity="Cart", mappedBy="member")
     * @var Collection
@@ -51,6 +63,11 @@ class Member
     private $carts;
     
     
+
+
+
+
+
     // ACTIONS
     public function __construct() {
        $this->carts = new ArrayCollection();
