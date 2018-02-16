@@ -101,7 +101,7 @@
             "repo": "github.com/symfony/recipes",
             "branch": "master",
             "version": "3.3",
-            "ref": "c646e4b71af082e94b5014daca36ef6812bad076"
+            "ref": "9f94d3ea453cd8a3b95db7f82592d7344fe3a76a"
         }
     },
     "symfony/debug": {
@@ -208,6 +208,9 @@
             "version": "3.3",
             "ref": "f75ac166398e107796ca94cc57fa1edaa06ec47f"
         }
+    },
+    "symfony/validator": {
+        "version": "v4.0.4"
     },
     "symfony/var-dumper": {
         "version": "v4.0.4"
