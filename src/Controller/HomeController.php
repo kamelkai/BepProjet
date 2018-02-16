@@ -26,5 +26,25 @@ class HomeController extends Controller
         // replace this line with your own code!
         return $this->render('menu.html.twig');
     } 
+    /**
+     * 
+     * @Route("/contact", name="contact")
+     */
+   public function contact()
+    {
+        // replace this line with your own code!
+        return $this->render('contact.html.twig');
+    } 
+   
+     /**
+     * 
+     * @Route("/about", name="about")
+     */
+   public function about()
+    {
+        // replace this line with your own code!
+        return $this->render('about.html.twig');
+    } 
+ 
     
-}
+ }
