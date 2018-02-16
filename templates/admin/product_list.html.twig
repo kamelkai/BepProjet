@@ -1,0 +1,111 @@
+{# empty Twig template #}
+{% extends "admin/templateAdmin.html.twig" %}
+                {% block title %}Liste des produits{% endblock %}
+
+{% block body %}
+
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="card">
+                                <div class="card-header" data-background-color="green">
+                                    <h4 class="">Plats</h4>
+                                </div>
+                                <div class="card-content table-responsive">
+                                    <table class="table">
+                                        <thead class="text-primary">
+                                            <th>id</th>
+                                          
+                                        </thead>
+                                        <tbody> 
+                                            {% for dish in dishes %}
+                                            <tr>
+                                               
+                                                <td>{{ dish.id }}</td>
+                                                <td>{{ dish.name }}</td>
+                                                <td>{{ dish.type }}</td>
+                                                <td>{{ dish.garnish }}</td>
+                                                <td>{{ dish.image }}</td>
+                                                <td>{{ dish.description }}</td>
+                                                <td>{{ dish.price }}</td>
+                                                <td>{{ dish.status }}</td>
+                                            </tr>  
+                                            {% endfor %}
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="card">
+                                <div class="card-header" data-background-color="green">
+                                    <h4 class="">Desserts</h4>
+                                </div>
+                                <div class="card-content table-responsive">
+                                    <table class="table">
+                                        <thead class="text-primary">
+                                            <th>id</th>
+                                            
+                                        </thead>
+                                      <tbody> 
+                                            {% for dessert in desserts %}
+                                            <tr>
+                                               
+                                                <td>{{ dessert.id }}</td>
+                                                <td>{{ dessert.name }}</td>
+                                                <td>{{ dessert.type }}</td>
+                                                <td>{{ dessert.garnish }}</td>
+                                                <td>{{ dessert.image }}</td>
+                                                <td>{{ dessert.description }}</td>
+                                                <td>{{ dessert.price }}</td>
+                                                <td>{{ dessert.status }}</td>
+                                            </tr>  
+                                            {% endfor %}
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="card">
+                                <div class="card-header" data-background-color="green">
+                                    <h4 class="">Boissons</h4>
+                                </div>
+                                <div class="card-content table-responsive">
+                                    <table class="table">
+                                        <thead class="text-primary">
+                                            <th>id</th>
+                                          
+                                        </thead>
+                                        <tbody> 
+                                            {% for drink in drinks %}
+                                            <tr>
+                                                <td>{{ drink.id }}</td>
+                                                <td>{{ drink.name }}</td>
+                                                <td>{{ drink.type }}</td>
+                                                <td>{{ drink.garnish }}</td>
+                                                <td>{{ drink.image }}</td>
+                                                <td>{{ drink.description }}</td>
+                                                <td>{{ drink.price }}</td>
+                                                <td>{{ drink.status }}</td>
+                                            </tr>  
+                                            {% endfor %}
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>    
+{% endblock %}
+
+
+
