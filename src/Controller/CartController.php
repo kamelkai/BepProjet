@@ -9,7 +9,7 @@ use Symfony\Component\HttpFoundation\Response;
 class CartController extends Controller
 {
     /**
-     * @Route("/cart", name="cart")
+     * @Route("/cart", name="cart_list")
      */
     public function index()
     {
