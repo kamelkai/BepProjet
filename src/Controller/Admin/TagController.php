@@ -2,18 +2,23 @@
 
 namespace App\Controller\Admin;
 
+use App\Repository\TagRepository;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-use Symfony\Component\HttpFoundation\Response;
 
 class TagController extends Controller
 {
     /**
-     * @Route("admin/tag", name="tag")
+     * @Route("admin/tag", name="tag_list")
      */
-    public function index()
+    public function getList(TagRepository $tagRepo)
     {
       
-        return $this->render('admin/tag_list.html.twig');
+           $tags = $tagRepo->findAll();
+        
+        return $this->render('admin/tag_list.html.twig', [
+            'tags' => $tags
+        ]);
+       
     }
 }

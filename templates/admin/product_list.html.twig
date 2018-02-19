@@ -105,6 +105,39 @@
                         </div>
                     </div>
                 </div>    
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="card">
+                                <div class="card-header" data-background-color="green">
+                                    <h4 class="">Toppings</h4>
+                                </div>
+                                <div class="card-content table-responsive">
+                                    <table class="table">
+                                        <thead class="text-primary">
+                                            <th>id</th>
+                                          
+                                        </thead>
+                                        <tbody> 
+                                            {% for topping in toppings %}
+                                            <tr>
+                                                <td>{{ topping.id }}</td>
+                                                <td>{{ topping.name }}</td>
+                                                <td>{{ topping.type }}</td>
+                                                <td>{{ topping.garnish }}</td>
+                                                <td>{{ topping.image }}</td>
+                                                <td>{{ topping.description }}</td>
+                                                <td>{{ topping.price }}</td>
+                                                <td>{{ topping.status }}</td>
+                                            </tr>  
+                                            {% endfor %}
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>    
 {% endblock %}
 
 

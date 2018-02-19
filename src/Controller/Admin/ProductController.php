@@ -22,11 +22,15 @@ class ProductController extends Controller
                 $drinks = $productRepo->findBy([
                     'type' => 'drink'
                 ]);
+                $toppings = $productRepo->findBy([
+                    'type' => 'topping'
+                ]);
         
         return $this->render('admin/product_list.html.twig', [
             'dishes' => $dishes,
             'desserts' => $desserts,
-            'drinks' => $drinks
+            'drinks' => $drinks,
+            'toppings' => $toppings
         ]);
 
     }
