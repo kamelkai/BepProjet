@@ -2,12 +2,11 @@
 
 namespace App\Entity;
 
-use App\Repository\EventRepository;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
 
 /**
- * @ORM\Entity(repositoryClass="EventRepository")
+ * @ORM\Entity(repositoryClass="App\Repository\EventRepository")
  */
 class Event
 {

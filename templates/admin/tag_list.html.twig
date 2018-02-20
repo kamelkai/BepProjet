@@ -1,38 +1,55 @@
-{# tags list #}
-{# empty Twig template #}
+{# Liste des ingrédients #}
+
 {% extends "admin/templateAdmin.html.twig" %}
-               {% block title %}Liste des Ingrédients{% endblock %}
+{% block title %}Liste des Ingrédients{% endblock %}
 
 {% block body %}
-
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="card">
-                                <div class="card-header" data-background-color="green">
-                                    <h4 class="">Ingrédients</h4>
-                                </div>
-                                <div class="card-content table-responsive">
-                                    <table class="table">
-                                        <thead class="text-primary">
-                                            <th>id</th>
-                                          
-                                        </thead>
-                                        <tbody> 
-                                            {% for tag in tags %}
-                                            <tr>
-                                               
-                                                <td>{{ tag.id }}</td>
-                                                <td>{{ tag.name }}</td>
-                                            </tr>  
-                                            {% endfor %}
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+{# Tableau d'affichage des ingrédients #}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header" data-background-color="green">
+                    <h4 class="">Ingrédients</h4>
                 </div>
+                <div class="card-content table-responsive">
+                    <table class="table">
+                        <thead class="text-primary">
+                            <th>Id</th>
+                            <th>Nom</th>
+                            <th colspan='2'>Action</th>
+                        </thead>
+                        <tbody> 
+                            {% for tag in tags %}
+                            <tr>
+                                <td>{{ tag.id }}</td>
+                                <td>{{ tag.name }}</td>
+                                <td><a href='{{ path('tag_edit',  {id : tag.id }) }}'><i class="material-icons">create</i></a></td>
+                                <td><a href='{{ path('tag_delete',  {id : tag.id }) }}'><i class="material-icons">delete</i></a></td>
+                            </tr>  
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
              
-    
+{# Formulaire de gestion des ingrédients #}
+    <div class="row">
+        <div class="col-md-offset-2 col-md-8">
+            <div class="card">
+                <div class="card-header" data-background-color="green">
+                    <h4 class="title">gestion des ingrédients</h4>
+                </div>
+                <div class="card-content">
+
+                    {{ form(form) }} {# formulaire #}
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+                    
 {% endblock %}

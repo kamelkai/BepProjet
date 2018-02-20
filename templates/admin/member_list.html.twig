@@ -4,73 +4,62 @@
 {% block title %}Liste des membres{% endblock %}
 
 {% block body %}
+{# Tableau d'affichage des membres #}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header" data-background-color="green">
+                    <h4 class="">Membres</h4>
+                </div>
+                <div class="card-content table-responsive">
+                    <table class="table">
+                        <thead class="text-primary">
+                            <th>Id</th>
+                            <th>Prénom</th>
+                            <th>Nom</th>
+                            <th>Email</th>
+                            <th>Mot de passe</th>
+                            <th>Statut</th>
+                            <th colspan='2'>Action</th>
+                        </thead>
+                        <tbody> 
+                            {% for membre in membres %}
+                            <tr>
+                                <td>{{ membre.id }}</td>
+                                <td>{{ membre.firstname }}</td>
+                                <td>{{ membre.lastname }}</td>
+                                <td>{{ membre.email }}</td>
+                                <td>{{ membre.mdp }}</td>
+                                <td>{{ membre.status }}</td>
+                                <td><a href='{{ path('member_edit',  {id : membre.id }) }}'><i class="material-icons">create</i></a></td>
+                                <td><a href='{{ path('member_delete',  {id : membre.id }) }}'><i class="material-icons">delete</i></a></td>
+                            </tr>  
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+                        
+    {# Formulaire de gestion des membres #}
+    <div class="row">
+        <div class="col-md-offset-2 col-md-8">
+            <div class="card">
+                <div class="card-header" data-background-color="green">
+                    <h4 class="title">gestion des membres</h4>
+                </div>
+                <div class="card-content">
 
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="card">
-                                <div class="card-header" data-background-color="green">
-                                    <h4 class="">Administrateur</h4>
-                                </div>
-                                <div class="card-content table-responsive">
-                                    <table class="table">
-                                        <thead class="text-primary">
-                                            <th>id</th>
-                                          
-                                        </thead>
-                                        <tbody> 
-                                            {% for admin in admins %}
-                                            <tr>
-                                               
-                                                <td>{{ admin.id }}</td>
-                                                <td>{{ admin.firstname }}</td>
-                                                <td>{{ admin.lastname }}</td>
-                                                <td>{{ admin.email }}</td>
-                                                <td>{{ admin.mdp }}</td>
-                                                <td>{{ admin.status }}</td>
-                                            </tr>  
-                                            {% endfor %}
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    {{ form(form) }} {# formulaire #}
+
                 </div>
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="card">
-                                <div class="card-header" data-background-color="green">
-                                    <h4 class="">Membres</h4>
-                                </div>
-                                <div class="card-content table-responsive">
-                                    <table class="table">
-                                        <thead class="text-primary">
-                                            <th>id</th>
-                                            
-                                        </thead>
-                                        <tbody> 
-                                            {% for membre in membres %}
-                                            <tr>
-                                               
-                                                <td>{{ membre.id }}</td>
-                                                <td>{{ membre.firstname }}</td>
-                                                <td>{{ membre.lastname }}</td>
-                                                <td>{{ membre.email }}</td>
-                                                <td>{{ membre.mdp }}</td>
-                                                <td>{{ membre.status }}</td>
-                                             
-                                            </tr>  
-                                            {% endfor %}
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-    
+            </div>
+        </div>
+    </div>
+</div>
+
 {% endblock %}
 
 

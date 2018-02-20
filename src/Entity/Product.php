@@ -2,7 +2,6 @@
 
 namespace App\Entity;
 
-use App\Repository\ProductRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 use Doctrine\ORM\Mapping\Table;
@@ -11,7 +10,7 @@ use Symfony\Component\Validator\Constraints\Collection;
 use Doctrine\ORM\Mapping\Index;
 
 /**
- * @ORM\Entity(repositoryClass="ProductRepository")
+ * @ORM\Entity(repositoryClass="App\Repository\ProductRepository")
  * @Table(indexes={
  *      @Index(name="type_index", columns={"type"}),
  *      @Index(name="garnish_index", columns={"garnish"}),
@@ -43,7 +42,7 @@ class Product
     
      /**
      * @ORM\Column(type="string", nullable=true)
-     * @Assert\Choice({"beef", "chicken", "tofu", "mortadella"})
+     * @Assert\Choice({null,"beef", "chicken", "chicken and shrimp", "tofu", "mortadella"})
      * @var string
      */
     private $garnish;
@@ -56,7 +55,7 @@ class Product
     
      /**
      * @ORM\Column(type="text")
-     * @Assert\Length(min=20, max=2500)
+     * @Assert\Length(min=10, max=2500)
      */
     private $description;
     

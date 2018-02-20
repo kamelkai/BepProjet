@@ -2,20 +2,20 @@
 
 namespace App\Entity;
 
-use App\Repository\MenuRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints\Collection;
 use Symfony\Component\Validator\Constraints as Assert;
-use Doctrine\ORM\Mapping\Table;
-use Doctrine\ORM\Mapping\Index;
+
 
 
 /**
- * @ORM\Entity(repositoryClass="MenuRepository")
+ * @ORM\Entity(repositoryClass="App\Repository\MenuRepository")
  */
 class Menu
 {
+    // CHAMPS
+    
     /**
      * @ORM\Id
      * @ORM\GeneratedValue
@@ -36,8 +36,7 @@ class Menu
      */
     private $products;
     
-    
-     /**
+    /**
      * @ORM\Column(type="text")
      * @Assert\Length(min=20, max=2500)
      */
@@ -54,7 +53,6 @@ class Menu
      */
     private $carts;
     
-    
     /**
      * @ORM\ManyToMany(targetEntity="Tag", mappedBy="menus")
      * @var Collection
@@ -62,26 +60,17 @@ class Menu
     private $tags;
 
 
+    // ACTIONS
     public function __construct() {
         $this->products= new ArrayCollection();
         $this->tags= new ArrayCollection();
         $this->carts= new ArrayCollection();
     }
     
-    public function getTags(): Collection {
-        return $this->tags;
-    }
-
-    public function setTags(Collection $tags) {
-        $this->tags = $tags;
-        return $this;
-    }
-
     
 
-    public function getCarts(): Collection {
-        return $this->carts;
-    }
+    
+    // GETTERS
     public function getId() {
         return $this->id;
     }
@@ -101,10 +90,18 @@ class Menu
     public function getPrice() {
         return $this->price;
     }
-    public function setCarts(Collection $carts) {
-        $this->carts = $carts;
-        return $this;
+    
+    public function getTags(): Collection {
+        return $this->tags;
     }
+    
+    public function getCarts(): Collection {
+        return $this->carts;
+    }
+    
+    
+    
+    // SETTERS
     public function setId($id) {
         $this->id = $id;
         return $this;
@@ -129,6 +126,15 @@ class Menu
         $this->price = $price;
         return $this;
     }
+    
+     public function setTags(Collection $tags) {
+        $this->tags = $tags;
+        return $this;
+    }
 
+     public function setCarts(Collection $carts) {
+        $this->carts = $carts;
+        return $this;
+    }
 
 }

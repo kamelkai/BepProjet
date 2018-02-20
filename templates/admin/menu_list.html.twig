@@ -1,39 +1,60 @@
-{# empty Twig template #}
+{# Liste des menus #}
+
 {% extends "admin/templateAdmin.html.twig" %}
 {% block title %}Liste des Menus{% endblock %}
 
 {% block body %}
-
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="card">
-                                <div class="card-header" data-background-color="green">
-                                    <h4 class="">Menus</h4>
-                                </div>
-                                <div class="card-content table-responsive">
-                                    <table class="table">
-                                        <thead class="text-primary">
-                                            <th>id</th>
-                                          
-                                        </thead>
-                                        <tbody> 
-                                            {% for menu in menus %}
-                                            <tr>
-                                               
-                                                <td>{{ menu.id }}</td>
-                                                <td>{{ menu.name }}</td>
-                                                <td>{{ menu.description }}</td>
-                                                <td>{{ menu.price }}</td>
-                                            </tr>  
-                                            {% endfor %}
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+{# Tableau d'affichage des menus #}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header" data-background-color="green">
+                    <h4 class="">Menus</h4>
                 </div>
+                <div class="card-content table-responsive">
+                    <table class="table">
+                        <thead class="text-primary">
+                            <th>Id</th>
+                            <th>Nom</th>
+                            <th>Description</th>
+                            <th>Prix</th>
+                            <th colspan='2'>Action</th>
+                        </thead>
+                        <tbody> 
+                            {% for menu in menus %}
+                            <tr>
+                                <td>{{ menu.id }}</td>
+                                <td>{{ menu.name }}</td>
+                                <td>{{ menu.description }}</td>
+                                <td>{{ menu.price }}</td>
+                                <td><a href='{{ path('menu_edit',  {id : menu.id }) }}'><i class="material-icons">create</i></a></td>
+                                <td><a href='{{ path('menu_delete',  {id : menu.id }) }}'><i class="material-icons">delete</i></a></td>
+                            </tr>  
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+                                 
+    {# Formulaire de gestion des menus #}
+    <div class="row">
+        <div class="col-md-offset-2 col-md-8">
+            <div class="card">
+                <div class="card-header" data-background-color="green">
+                    <h4 class="title">gestion des menus</h4>
+                </div>
+                <div class="card-content">
+
+                    {{ form(form) }} {# formulaire #}
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
              
     
 {% endblock %}
