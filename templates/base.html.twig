@@ -7,7 +7,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
         <!-- Title -->
-        <title>Soup - Restaurant with Online Ordering System Template</title>
+        <title>Bêp - Vietnamese Street Food</title>
 
         <!-- Favicons -->
         <link rel="shortcut icon" href="{{ asset('assets/img/favicon.png') }}">
@@ -28,11 +28,112 @@
 
         <!-- CSS Theme -->
         <link id="theme" rel="stylesheet" href="{{ asset('assets/css/themes/theme-beige.min.css') }}" />
-        <link href="{{ asset('css/demo.css') }}" rel="stylesheet" />
+        <link href="{{ asset('css/override.css') }}" rel="stylesheet" />
+        
+        
 
     </head>
 
     <body>
+        <!-- Modal INSCRIPTION -->
+		<div class="modal fade" id="myModalinscription" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		  <div class="modal-dialog" role="document">
+		  	<form method="post" action="">
+			    <div class="modal-content">
+			      <div class="modal-header">
+			        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                <h2 class="modal-title" id="myModalLabel"><b style="color: #42A232;">Inscription</b></h2>
+			      </div>
+			      <div class="modal-body">
+
+			        <!-- FORMULAIRE INSCRIPTION A METTRE CI-DESSOUS -->
+
+			        <?= $msg ?>
+
+					<!-- infos à rentrer:
+					- pseudo (varchar 20)
+					- mdp (varchar 60)
+					- nom (varchar 20)
+					- prenom (varchar 20)
+					- email (varchar 50)
+					- civilite (enum : m,f)
+					- statut (int 1)
+					- date_enregistrement (datetime)  -->
+
+					
+					  <div class="form-group">
+					    <label for="nom">Nom</label>
+					    <input type="text" class="form-control" id="lastname" name="lastname" placeholder="Votre nom">
+					  </div>
+					  <div class="form-group">
+					    <label for="prenom">Prénom</label>
+					    <input type="text" class="form-control" id="firstname" name="firstname" placeholder="Votre prénom">
+					  </div>
+					  <div class="form-group">
+					    <label for="email">Email</label>
+					    <input type="email" class="form-control" id="email" name="email" placeholder="Votre e-mail">
+					  </div>
+                                        
+                                          <div class="form-group">
+					    <label for="mdp">Mot de passe</label>
+					    <input type="password" class="form-control" id="mdp" name="mdp" placeholder="Votre mot de passe">
+					  </div>
+  
+			        <!-- fin FORMULAIRE INSCRIPTION -->
+
+			     	</div>
+			     	<div class="modal-footer">
+			        	<button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
+			        	<button type="submit" class="btn btn-primary">Envoyer</button>
+			     	</div>
+			      	<div class="propalConnexionInscription" style="padding: 10px;">
+			      		Vous avez déjà un compte ? <a href="" data-toggle="modal" data-target="#myModalconnexion"> <b style="color: #42A232;">Connectez-vous</b></a> !
+			      	</div>
+			    </div>
+		    </form>
+		  </div>
+		</div>
+		<!-- fin Modal INSCRIPTION -->
+
+		<!-- Modal CONNEXION -->
+		<div class="modal fade" id="myModalconnexion" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		  <div class="modal-dialog" role="document">
+		  	<form method="post" action="">
+			    <div class="modal-content">
+			      <div class="modal-header">
+			        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                <h2 class="modal-title" id="myModalLabel"><b style="color: #42A232;">Connexion</b></h2>
+			      </div>
+			      <div class="modal-body">
+			        <!-- FORMULAIRE CONNEXION A METTRE CI-DESSOUS -->
+
+			        <?= $msg ?>
+
+                                        <div class="form-group">
+					    <label for="emailconnexion">Email</label>
+					    <input type="text" class="form-control" id="emailconnexion" name="emailconnexion" placeholder="Votre e-mail">
+					</div>
+					<div class="form-group">
+					    <label for="mdpconnexion">Mot de passe</label>
+					    <input type="password" class="form-control" id="mdpconnexion" name="mdpconnexion" placeholder="Votre mot de passe">
+					</div>
+
+			        <!-- fin CONNEXION INSCRIPTION -->
+			     	</div>
+			      	<div class="modal-footer">
+			        	<button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
+			        	<button type="submit" class="btn btn-primary">Se connecter</button>
+			      	</div>
+			      		<div class="propalConnexionInscription" style="padding: 10px;">
+			      		Vous n'avez pas de compte ? <a href="" data-toggle="modal" data-target="#myModalinscription"><b style="color: #42A232;">Inscrivez-vous</b></a> en quelques clics !
+			      	</div>
+			    </div>
+			</form>
+		  </div>
+		</div>
+		<!-- fin Modal CONNEXION -->
+
+		<!-- fin BOITE MODAL -->
 
         <!-- Body Wrapper -->
         <div id="body-wrapper" class="animsition">
@@ -46,29 +147,46 @@
                             <!-- Logo -->
                             <div class="module module-logo">
                                 <a href="index.html">
-                                    <img src="{{ asset('assets/img/photobep/Design/beplogo.png') }}" alt="" width="88" style="margin-top: -88px;
-    margin-left: 140px;">
+                                    <img src="{{ asset('assets/img/photobep/Design/beplogo.png') }}" alt="" width="" style="border-radius: 50%;background: white">
                                 </a>
                             </div>
                         </div>
-                        <div class="col-md-7">
+                        <div class="col-md-7" style="font-size: 1.5em">
                             <!-- Navigation -->
                             <nav class="module module-navigation left mr-4">
                                 <ul id="nav-main" class="nav nav-main">
-                                    <li class="has-dropdown">
-                                        <a href="#">Home</a>
+                                    <li>
+                                        <a href="#">Accueil</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">A propos</a>
+                                    </li>
+                                    <li>
+                                        <a href="page-contact.html">Contact</a>
                                     </li>
                                     <li class="has-dropdown">
-                                        <a href="#">About</a>
+                                        <a href="#">Connexion</a>
+                                        <div class="dropdown-container">
+                                            <ul>
+                                                <li>                                              
+                                                    
+                                                    <a href="#" data-toggle="modal" data-target="#myModalinscription">Inscription</a>
+
+
+                                                </li>
+                                                <li>
+                                                   
+                                                    <a href="#" data-toggle="modal" data-target="#myModalconnexion">Connexion</a>
+                                               
+                                                </li>
+                                            </ul>
+                                </div>
                                     </li>
-                                    <li class="has-dropdown">
-                                        <a href="#">Menu</a>
-                                    </li>
-                                    <li><a href="page-contact.html">Contact</a></li>
-                                </ul>
+
+                                </ul> 
                             </nav>
                             <div class="module left">
-                                <a href="menu-list-navigation.html" class="btn btn-outline-secondary"><span>Order</span></a>
+                                <a href="menu-list-navigation.html" class="btn btn-outline-secondary"><span>Commander !</span></a>
                             </div>
                         </div>
                         <div class="col-md-2">
@@ -77,7 +195,7 @@
                                     <i class="ti ti-shopping-cart"></i>
                                     <span class="notification">2</span>
                                 </span>
-                                <span class="cart-value">$32.98</span>
+                                <span class="cart-value">9.50 €</span>
                             </a>
                         </div>
                     </div>
@@ -95,7 +213,7 @@
 
                 <div class="module module-logo">
                     <a href="index.html">
-                        <img src="{{ asset('assets/img/logo-horizontal-dark.svg') }}" alt="">
+                        <img src="{{ asset('assets/img/photobep/Design/beplogocarre.png') }}" alt="">
                     </a>
                 </div>
 
@@ -113,59 +231,21 @@
             {% block body %}{% endblock %}
 
             <!-- Footer -->
-            <footer id="footer" class="bg-dark dark">
+            <footer id="footer" class="bg-dark dark text-center">
 
                 <div class="container">
-                    <!-- Footer 1st Row -->
-                    <div class="footer-first-row row">
-                        <div class="col-lg-3 text-center">
-                            <a href="index.html"><img src="{{ asset('assets/img/photobep/Design/beplogo.png') }}" alt="" width="200" class="mt-5 mb-5"></a>
-                        </div>
-                        <div class="col-lg-4 col-md-6">
-                            <h5 class="text-muted">Latest news</h5>
-                            <ul class="list-posts">
-                                <li>
-                                    <a href="blog-post.html" class="title">How to create effective webdeisign?</a>
-                                    <span class="date">February 14, 2015</span>
-                                </li>
-                                <li>
-                                    <a href="blog-post.html" class="title">Awesome weekend in Polish mountains!</a>
-                                    <span class="date">February 14, 2015</span>
-                                </li>
-                                <li>
-                                    <a href="blog-post.html" class="title">How to create effective webdeisign?</a>
-                                    <span class="date">February 14, 2015</span>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="col-lg-5 col-md-6">
-                            <h5 class="text-muted">Subscribe Us!</h5>
-                            <!-- MailChimp Form -->
-                            <form action="//suelo.us12.list-manage.com/subscribe/post-json?u=ed47dbfe167d906f2bc46a01b&amp;id=24ac8a22ad" id="sign-up-form" class="sign-up-form validate-form mb-3" method="POST">
-                                <div class="input-group">
-                                    <input name="EMAIL" id="mce-EMAIL" type="email" class="form-control" placeholder="Tap your e-mail..." required>
-                                    <span class="input-group-btn">
-                                        <button class="btn btn-primary btn-submit" type="submit">
-                                            <span class="description">Subscribe</span>
-                                            <span class="success">
-                                                <svg x="0px" y="0px" viewBox="0 0 32 32"><path stroke-dasharray="19.79 19.79" stroke-dashoffset="19.79" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" d="M9,17l3.9,3.9c0.1,0.1,0.2,0.1,0.3,0L23,11"/></svg>
-                                            </span>
-                                            <span class="error">Try again...</span>
-                                        </button>
-                                    </span>
-                                </div>
-                            </form>
-                            <h5 class="text-muted mb-3">Social Media</h5>
-                            <a href="#" class="icon icon-social icon-circle icon-sm icon-facebook"><i class="fa fa-facebook"></i></a>
-                            <a href="#" class="icon icon-social icon-circle icon-sm icon-google"><i class="fa fa-google"></i></a>
-                            <a href="#" class="icon icon-social icon-circle icon-sm icon-twitter"><i class="fa fa-twitter"></i></a>
-                            <a href="#" class="icon icon-social icon-circle icon-sm icon-youtube"><i class="fa fa-youtube"></i></a>
-                            <a href="#" class="icon icon-social icon-circle icon-sm icon-instagram"><i class="fa fa-instagram"></i></a>
-                        </div>
-                    </div>
+                   
                     <!-- Footer 2nd Row -->
                     <div class="footer-second-row">
-                        <span class="text-muted">Copyright Soup 2017©. Made with love by Suelo.</span>
+                       
+                         <h3 class="text-muted mb-3">Suivez-nous !</h3>
+               <a href="https://www.facebook.com/bepstreetfood/" class="icon icon-social icon-circle icon-facebook"><i class="fa fa-facebook fa-2x"></i></a>
+              <a href="https://pro.iconosquare.com/igfeed/home/1855623217997824/3105274801" class="icon icon-social icon-circle icon-instagram"><i class="fa fa-instagram  fa-2x"></i></a>
+              <br>
+              <br>
+                
+              <span class="text-muted">Copyright 2018©. Bêp Vietnamese Street Food,102 Rue La Fayette 75010 PARIS - Métro Poissonnière, 09 81 33 34 49,contact@bepstreetfood.com </span>
+                        
                     </div>
                 </div>
 
@@ -178,89 +258,89 @@
 
         <!-- Panel Cart -->
         <div id="panel-cart">
+            
             <div class="panel-cart-container">
                 <div class="panel-cart-title">
-                    <h5 class="title">Your Cart</h5>
+                    <h5 class="title"><b>Plage horaire</b></h5>
+                    
                     <button class="close" data-toggle="panel-cart"><i class="ti ti-close"></i></button>
+                </div>
+                <div class="panel-cart-title">
+                <p>Heure à laquelle je viendrais retirer ma commande</p>
+                </div>
+                <div class="form-group">
+                    <select class="form-control text-center">
+                        <option>12h00</option>
+                        <option>12h15</option>
+                        <option>12h30</option>
+                        <option>12h45</option>
+                        <option>13h00</option>
+                        <option>13h15</option>
+                        <option>13h30</option>
+                    </select>
+                </div>
+
+                <div class="panel-cart-title">
+                    <h5 class="title"><b>Votre panier</b></h5>
+                    <button class="close" data-toggle="panel-cart"><i class="ti ti-close"></i></button>
+                </div>
+                <div class="panel-cart-title">
+                <p>Récapitulatif de ma commande</p>
                 </div>
                 <div class="panel-cart-content">
                     <table class="table-cart">
+                        {# vignette commande#}
                         <tr>
                             <td class="title">
-                                <span class="name"><a href="#productModal" data-toggle="modal">Pizza Chicked BBQ</a></span>
-                                <span class="caption text-muted">26”, deep-pan, thin-crust</span>
+                                <span class="name"><a href="#productModal" data-toggle="modal">Bahn Mi</a></span>
+                                <span class="caption text-muted">Garniture + récap ingrédients</span>
                             </td>
-                            <td class="price">$9.82</td>
+                            <td class="price">9.50 €</td>
                             <td class="actions">
                                 <a href="#productModal" data-toggle="modal" class="action-icon"><i class="ti ti-pencil"></i></a>
                                 <a href="#" class="action-icon"><i class="ti ti-close"></i></a>
                             </td>
                         </tr>
-                        <tr>
-                            <td class="title">
-                                <span class="name"><a href="#productModal" data-toggle="modal">Beef Burger</a></span>
-                                <span class="caption text-muted">Large (500g)</span>
-                            </td>
-                            <td class="price">$9.82</td>
-                            <td class="actions">
-                                <a href="#productModal" data-toggle="modal" class="action-icon"><i class="ti ti-pencil"></i></a>
-                                <a href="#" class="action-icon"><i class="ti ti-close"></i></a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="title">
-                                <span class="name"><a href="#productModal" data-toggle="modal">Extra Burger</a></span>
-                                <span class="caption text-muted">Small (200g)</span>
-                            </td>
-                            <td class="price text-success">$0.00</td>
-                            <td class="actions">
-                                <a href="#productModal" data-toggle="modal" class="action-icon"><i class="ti ti-pencil"></i></a>
-                                <a href="#" class="action-icon"><i class="ti ti-close"></i></a>
-                            </td>
-                        </tr>
-                        <tr>
+                        {# fin vignette commande#}
+                        
+                        {# vignette promotion#}
+                            {# <tr>
                             <td class="title">
                                 <span class="name">Weekend 20% OFF</span>
                             </td>
                             <td class="price text-success">-$8.22</td>
                             <td class="actions"></td>
-                        </tr>
+                        </tr>#}
+                        {# fin vignette promotion#}
                     </table>
                     <div class="cart-summary">
-                        <div class="row">
-                            <div class="col-7 text-right text-muted">Order total:</div>
-                            <div class="col-5"><strong>$21.02</strong></div>
-                        </div>
-                        <div class="row">
-                            <div class="col-7 text-right text-muted">Devliery:</div>
-                            <div class="col-5"><strong>$3.99</strong></div>
-                        </div>
-                        <hr class="hr-sm">
+                        {# <div class="row">
+                            <div class="col-7 text-right text-muted">Total:</div>
+                            <div class="col-5"><strong>9.50 €</strong></div>
+                        </div>#}
+                        {#<hr class="hr-sm">#}
                         <div class="row text-lg">
                             <div class="col-7 text-right text-muted">Total:</div>
-                            <div class="col-5"><strong>$24.21</strong></div>
+                            <div class="col-5"><strong>24.21 €</strong></div>
                         </div>
                     </div>
                 </div>
             </div>
-            <a href="checkout.html" class="panel-cart-action btn btn-secondary btn-block btn-lg"><span>Go to checkout</span></a>
+            <a href="#" class="panel-cart-action btn btn-secondary btn-block btn-lg"><span>Valider ma commande</span></a>
         </div>
 
         <!-- Panel Mobile -->
         <nav id="panel-mobile">
             <div class="module module-logo bg-dark dark">
                 <a href="#">
-                    <img src="{{ asset('assets/img/logo-light.svg') }}" alt="" width="88">
+                    <img src="{{ asset('assets/img/photobep/Design/beplogocarre.png') }}" alt="" width="88">
                 </a>
                 <button class="close" data-toggle="panel-mobile"><i class="ti ti-close"></i></button>
             </div>
             <nav class="module module-navigation"></nav>
             <div class="module module-social">
-                <h6 class="text-sm mb-3">Follow Us!</h6>
+                <h6 class="text-sm mb-3">Suivez nous!</h6>
                 <a href="#" class="icon icon-social icon-circle icon-sm icon-facebook"><i class="fa fa-facebook"></i></a>
-                <a href="#" class="icon icon-social icon-circle icon-sm icon-google"><i class="fa fa-google"></i></a>
-                <a href="#" class="icon icon-social icon-circle icon-sm icon-twitter"><i class="fa fa-twitter"></i></a>
-                <a href="#" class="icon icon-social icon-circle icon-sm icon-youtube"><i class="fa fa-youtube"></i></a>
                 <a href="#" class="icon icon-social icon-circle icon-sm icon-instagram"><i class="fa fa-instagram"></i></a>
             </div>
         </nav>
@@ -275,55 +355,21 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header modal-header-lg dark bg-dark">
-                    <div class="bg-image"><img src="{{ asset('assets/img/photos/modal-add.jpg') }}" alt=""></div>
-                    <h4 class="modal-title">Specify your dish</h4>
+                    <div class="bg-image"><img src="{{ asset('assets/img/photobep/Design/beplogocarre.png') }}" alt="" width="100px"></div>
+                    <h4 class="modal-title">Modifier mon plat</h4>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><i class="ti-close"></i></button>
                 </div>
                 <div class="modal-product-details">
                     <div class="row align-items-center">
                         <div class="col-9">
-                            <h6 class="mb-0">Boscaiola Pasta</h6>
-                            <span class="text-muted">Pasta, Cheese, Tomatoes, Olives</span>
+                            <h6 class="mb-0">Banh Mi</h6>
+                            <span class="text-muted">Boeuf citronelle, sirasha</span>
                         </div>
                         <div class="col-3 text-lg text-right">$9.00</div>
                     </div>
                 </div>
                 <div class="modal-body panel-details-container">
-                    <!-- Panel Details / Size -->
-                    <div class="panel-details">
-                        <h5 class="panel-details-title">
-                            <label class="custom-control custom-radio">
-                                <input name="radio_title_size" type="radio" class="custom-control-input">
-                                <span class="custom-control-indicator"></span>
-                            </label>
-                            <a href="#panelDetailsSize" data-toggle="collapse">Size</a>
-                        </h5>
-                        <div id="panelDetailsSize" class="collapse show">
-                            <div class="panel-details-content">
-                                <div class="form-group">
-                                    <label class="custom-control custom-radio">
-                                        <input name="radio_size" type="radio" class="custom-control-input" checked>
-                                        <span class="custom-control-indicator"></span>
-                                        <span class="custom-control-description">Small - 100g ($9.99)</span>
-                                    </label>
-                                </div>
-                                <div class="form-group">
-                                    <label class="custom-control custom-radio">
-                                        <input name="radio_size" type="radio" class="custom-control-input">
-                                        <span class="custom-control-indicator"></span>
-                                        <span class="custom-control-description">Medium - 200g ($14.99)</span>
-                                    </label>
-                                </div>
-                                <div class="form-group">
-                                    <label class="custom-control custom-radio">
-                                        <input name="radio_size" type="radio" class="custom-control-input">
-                                        <span class="custom-control-indicator"></span>
-                                        <span class="custom-control-description">Large - 350g ($21.99)</span>
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                   
                     <!-- Panel Details / Additions -->
                     <div class="panel-details">
                         <h5 class="panel-details-title">
@@ -331,7 +377,7 @@
                                 <input name="radio_title_additions" type="radio" class="custom-control-input">
                                 <span class="custom-control-indicator"></span>
                             </label>
-                            <a href="#panelDetailsAdditions" data-toggle="collapse">Additions</a>
+                            <a href="#panelDetailsAdditions" data-toggle="collapse">Ajouter un ingrédient</a>
                         </h5>
                         <div id="panelDetailsAdditions" class="collapse">
                             <div class="panel-details-content">
@@ -341,21 +387,21 @@
                                             <label class="custom-control custom-checkbox">
                                                 <input type="checkbox" class="custom-control-input">
                                                 <span class="custom-control-indicator"></span>
-                                                <span class="custom-control-description">Tomato ($1.29)</span>
+                                                <span class="custom-control-description">Carotte (1 €)</span>
                                             </label>
                                         </div>
                                         <div class="form-group">
                                             <label class="custom-control custom-checkbox">
                                                 <input type="checkbox" class="custom-control-input">
                                                 <span class="custom-control-indicator"></span>
-                                                <span class="custom-control-description">Ham ($1.29)</span>
+                                                <span class="custom-control-description">Concombre (1 €)</span>
                                             </label>
                                         </div>
                                         <div class="form-group">
                                             <label class="custom-control custom-checkbox">
                                                 <input type="checkbox" class="custom-control-input">
                                                 <span class="custom-control-indicator"></span>
-                                                <span class="custom-control-description">Chicken ($1.29)</span>
+                                                <span class="custom-control-description">Nem (2 €)</span>
                                             </label>
                                         </div>
                                     </div>
@@ -364,14 +410,14 @@
                                             <label class="custom-control custom-checkbox">
                                                 <input type="checkbox" class="custom-control-input">
                                                 <span class="custom-control-indicator"></span>
-                                                <span class="custom-control-description">Cheese($1.29)</span>
+                                                <span class="custom-control-description">Viande(2 €)</span>
                                             </label>
                                         </div>
                                         <div class="form-group">
                                             <label class="custom-control custom-checkbox">
                                                 <input type="checkbox" class="custom-control-input">
                                                 <span class="custom-control-indicator"></span>
-                                                <span class="custom-control-description">Bacon ($1.29)</span>
+                                                <span class="custom-control-description">Nouille (1.50 €)</span>
                                             </label>
                                         </div>
                                     </div>
@@ -379,21 +425,8 @@
                             </div>
                         </div>
                     </div>
-                    <!-- Panel Details / Other -->
-                    <div class="panel-details">
-                        <h5 class="panel-details-title">
-                            <label class="custom-control custom-radio">
-                                <input name="radio_title_other" type="radio" class="custom-control-input">
-                                <span class="custom-control-indicator"></span>
-                            </label>
-                            <a href="#panelDetailsOther" data-toggle="collapse">Other</a>
-                        </h5>
-                        <div id="panelDetailsOther" class="collapse">
-                            <textarea cols="30" rows="4" class="form-control" placeholder="Put this any other informations..."></textarea>
-                        </div>
-                    </div>
                 </div>
-                <button type="button" class="modal-btn btn btn-secondary btn-block btn-lg" data-dismiss="modal"><span>Add to Cart</span></button>
+                <button type="button" class="modal-btn btn btn-secondary btn-block btn-lg" data-dismiss="modal"><span>Ajouter au panier</span></button>
             </div>
         </div>
     </div>

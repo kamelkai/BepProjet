@@ -5,97 +5,37 @@
     <div class="page-content">
             <div class="container">
                 <div class="row no-gutters">
-                    <div class="col-md-3">
+                    <div class="col-md-3" id="menuSidebar">
                         <!-- Menu Navigation -->
                         <nav id="menu-navigation" class="stick-to-content" data-local-scroll>
                             <ul class="nav nav-menu bg-dark dark">
-                                <li><a href="#Burgers">Burgers</a></li>
-                                <li><a href="#Pasta">Pasta</a></li>
-                                <li><a href="#Pizza">Pizza</a></li>
-                                <li><a href="#Sushi">Sushi</a></li>
-                                <li><a href="#Desserts">Desserts</a></li>
-                                <li><a href="#Drinks">Drinks</a></li>
+                                <li><a href="#Bepbox">Bêp Box</a></li>
+                                <li><a href="#Plat">Plat</a></li>
+                                <li><a href="#Dessert">Dessert</a></li>
+                                <li><a href="#Boisson">Boisson</a></li>
+                                <li><a href="#Topping">Topping</a></li>
                             </ul>
                         </nav>
                     </div>
                     <div class="col-md-9">
                         <!-- Menu Category / Burgers -->
-                        <div id="Burgers" class="menu-category">
+                        <div id="Bepbox" class="menu-category">
                             <div class="menu-category-title">
-                                <div class="bg-image"><img src="assets/img/photos/menu-title-burgers.jpg" alt=""></div>
-                                <h2 class="title">Burgers</h2>
+                                <div class="img-responsive text-center"><img src="{{ asset('assets/img/photobep/Design/bepboxAffiche.png') }}" alt=""></div>
+              
                             </div>
                             <div class="menu-category-content padded">
                                 <div class="row gutters-sm">
-                                    <div class="col-lg-4 col-6">
+                                    
+                                    <div class="" style="margin: 0 auto;">
                                         <!-- Menu Item -->
                                         <div class="menu-item menu-grid-item">
-                                            <img class="mb-4" src="assets/img/products/product-burger.jpg" alt="">
-                                            <h6 class="mb-0">Beef Burger</h6>
-                                            <span class="text-muted text-sm">Beef, cheese, potato, onion, fries</span>
+                                            <img class="mb-4" src="{{ asset('assets/img/photobep/Plats/bepbox1.jpg') }}" alt="">
+                                            <h6 class="mb-0">Bêp Box</h6>
+                                            <span class="text-muted text-sm">Nouille sauté aux crevettes</span>
                                             <div class="row align-items-center mt-4">
-                                                <div class="col-sm-6"><span class="text-md mr-4"><span class="text-muted">from</span> $9.00</span></div>
-                                                <div class="col-sm-6 text-sm-right mt-2 mt-sm-0"><button class="btn btn-outline-secondary btn-sm" data-target="#productModal" data-toggle="modal"><span>Add to cart</span></button></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-4 col-6">
-                                        <!-- Menu Item -->
-                                        <div class="menu-item menu-grid-item">
-                                            <img class="mb-4" src="assets/img/products/product-pizza.jpg" alt="">
-                                            <h6 class="mb-0">Broccoli</h6>
-                                            <span class="text-muted text-sm">Beef, cheese, potato, onion, fries</span>
-                                            <div class="row align-items-center mt-4">
-                                                <div class="col-sm-6"><span class="text-md mr-4"><span class="text-muted">from</span> $9.00</span></div>
-                                                <div class="col-sm-6 text-sm-right mt-2 mt-sm-0"><button class="btn btn-outline-secondary btn-sm" data-target="#productModal" data-toggle="modal"><span>Add to cart</span></button></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-4 col-6">
-                                        <!-- Menu Item -->
-                                        <div class="menu-item menu-grid-item">
-                                            <img class="mb-4" src="assets/img/products/product-chicken-burger.jpg" alt="">
-                                            <h6 class="mb-0">Chicken Burger</h6>
-                                            <span class="text-muted text-sm">Beef, cheese, potato, onion, fries</span>
-                                            <div class="row align-items-center mt-4">
-                                                <div class="col-sm-6"><span class="text-md mr-4"><span class="text-muted">from</span> $9.00</span></div>
-                                                <div class="col-sm-6 text-sm-right mt-2 mt-sm-0"><button class="btn btn-outline-secondary btn-sm" data-target="#productModal" data-toggle="modal"><span>Add to cart</span></button></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-4 col-6">
-                                        <!-- Menu Item -->
-                                        <div class="menu-item menu-grid-item">
-                                            <img class="mb-4" src="assets/img/products/product-pasta.jpg" alt="">
-                                            <h6 class="mb-0">Creste di Galli</h6>
-                                            <span class="text-muted text-sm">Beef, cheese, potato, onion, fries</span>
-                                            <div class="row align-items-center mt-4">
-                                                <div class="col-sm-6"><span class="text-md mr-4"><span class="text-muted">from</span> $9.00</span></div>
-                                                <div class="col-sm-6 text-sm-right mt-2 mt-sm-0"><button class="btn btn-outline-secondary btn-sm" data-target="#productModal" data-toggle="modal"><span>Add to cart</span></button></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-4 col-6">
-                                        <!-- Menu Item -->
-                                        <div class="menu-item menu-grid-item">
-                                            <img class="mb-4" src="assets/img/products/product-chicken-wings.jpg" alt="">
-                                            <h6 class="mb-0">Chicken wings</h6>
-                                            <span class="text-muted text-sm">Beef, cheese, potato, onion, fries</span>
-                                            <div class="row align-items-center mt-4">
-                                                <div class="col-sm-6"><span class="text-md mr-4"><span class="text-muted">from</span> $9.00</span></div>
-                                                <div class="col-sm-6 text-sm-right mt-2 mt-sm-0"><button class="btn btn-outline-secondary btn-sm" data-target="#productModal" data-toggle="modal"><span>Add to cart</span></button></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-4 col-6">
-                                        <!-- Menu Item -->
-                                        <div class="menu-item menu-grid-item">
-                                            <img class="mb-4" src="assets/img/products/product-sushi.jpg" alt="">
-                                            <h6 class="mb-0">Nigiri-sushi</h6>
-                                            <span class="text-muted text-sm">Beef, cheese, potato, onion, fries</span>
-                                            <div class="row align-items-center mt-4">
-                                                <div class="col-sm-6"><span class="text-md mr-4"><span class="text-muted">from</span> $9.00</span></div>
-                                                <div class="col-sm-6 text-sm-right mt-2 mt-sm-0"><button class="btn btn-outline-secondary btn-sm" data-target="#productModal" data-toggle="modal"><span>Add to cart</span></button></div>
+                                                <div class="col-sm-6"><span class="text-md mr-4"><span class="text-muted">Prix</span> 10.50 €</span></div>
+                                                <div class="col-sm-6 text-sm-right mt-2 mt-sm-0"><button class="btn btn-outline-secondary btn-sm" data-target="#productModal" data-toggle="modal"><span>Commander</span></button></div>
                                             </div>
                                         </div>
                                     </div>
@@ -103,82 +43,67 @@
                             </div>
                         </div>
                         <!-- Menu Category / Pasta -->
-                        <div id="Pasta" class="menu-category">
+                        <div id="Plat" class="menu-category">
                             <div class="menu-category-title">
-                                <div class="bg-image"><img src="assets/img/photos/menu-title-pasta.jpg" alt=""></div>
-                                <h2 class="title">Pasta</h2>
+                                <div class="bg-image"><img src="{{ asset('assets/img/photobep/Autres/plats.png') }}" alt=""></div>
+                                <h2 class="title">Plats</h2>
                             </div>
                             <div class="menu-category-content padded">
                                 <div class="row gutters-sm">
                                     <div class="col-lg-4 col-6">
                                         <!-- Menu Item -->
                                         <div class="menu-item menu-grid-item">
-                                            <img class="mb-4" src="assets/img/products/product-burger.jpg" alt="">
-                                            <h6 class="mb-0">Beef Burger</h6>
-                                            <span class="text-muted text-sm">Beef, cheese, potato, onion, fries</span>
+                                            <img class="mb-4" src="{{ asset('assets/img/photobep/Plats/bobun1.png') }}"  alt="">
+                                            <h6 class="mb-0">Bo Bun</h6>
+                                            <span class="text-muted text-sm">
+                                                <ul>
+                                                    <li>Boeuf citronelle</li>
+                                                    <li>Poulet Xia xu</li>
+                                                    <li>Tofu</li>
+                                                    <li>Mortadelle vietnamienne</li>
+                                                </ul>
+                                            </span>
                                             <div class="row align-items-center mt-4">
-                                                <div class="col-sm-6"><span class="text-md mr-4"><span class="text-muted">from</span> $9.00</span></div>
-                                                <div class="col-sm-6 text-sm-right mt-2 mt-sm-0"><button class="btn btn-outline-secondary btn-sm" data-target="#productModal" data-toggle="modal"><span>Add to cart</span></button></div>
+                                                <div class="col-sm-6"><span class="text-md mr-4"><span class="text-muted">Prix</span> $9.00</span></div>
+                                                <div class="col-sm-6 text-sm-right mt-2 mt-sm-0"><button class="btn btn-outline-secondary btn-sm" data-target="#productModal" data-toggle="modal"><span>Commander</span></button></div>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-lg-4 col-6">
                                         <!-- Menu Item -->
                                         <div class="menu-item menu-grid-item">
-                                            <img class="mb-4" src="assets/img/products/product-pizza.jpg" alt="">
-                                            <h6 class="mb-0">Broccoli</h6>
-                                            <span class="text-muted text-sm">Beef, cheese, potato, onion, fries</span>
+                                            <img class="mb-4" src="{{ asset('assets/img/photobep/Entrees/roulo1.png') }}"  alt="">
+                                            <h6 class="mb-0">Roulo'</h6>
+                                            <span class="text-muted text-sm">
+                                                <ul>
+                                                    <li>Boeuf citronelle</li>
+                                                    <li>Poulet Xia xu</li>
+                                                    <li>Tofu</li>
+                                                    <li>Mortadelle vietnamienne</li>
+                                                </ul>
+                                            </span>
                                             <div class="row align-items-center mt-4">
-                                                <div class="col-sm-6"><span class="text-md mr-4"><span class="text-muted">from</span> $9.00</span></div>
-                                                <div class="col-sm-6 text-sm-right mt-2 mt-sm-0"><button class="btn btn-outline-secondary btn-sm" data-target="#productModal" data-toggle="modal"><span>Add to cart</span></button></div>
+                                                <div class="col-sm-6"><span class="text-md mr-4"><span class="text-muted">Prix</span> $9.00</span></div>
+                                                <div class="col-sm-6 text-sm-right mt-2 mt-sm-0"><button class="btn btn-outline-secondary btn-sm" data-target="#productModal" data-toggle="modal"><span>Commander</span></button></div>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-lg-4 col-6">
                                         <!-- Menu Item -->
                                         <div class="menu-item menu-grid-item">
-                                            <img class="mb-4" src="assets/img/products/product-chicken-burger.jpg" alt="">
-                                            <h6 class="mb-0">Chicken Burger</h6>
-                                            <span class="text-muted text-sm">Beef, cheese, potato, onion, fries</span>
+                                            <img class="mb-4" src="{{ asset('assets/img/photobep/Sandwichs/banhmi1.png') }}"  alt="">
+                                            <h6 class="mb-0">Banh Mi</h6>
+                                            <span class="text-muted text-sm">
+                                                <ul>
+                                                    <li>Boeuf citronelle</li>
+                                                    <li>Poulet Xia xu</li>
+                                                    <li>Tofu</li>
+                                                    <li>Mortadelle vietnamienne</li>
+                                                </ul>
+                                            </span>
                                             <div class="row align-items-center mt-4">
-                                                <div class="col-sm-6"><span class="text-md mr-4"><span class="text-muted">from</span> $9.00</span></div>
-                                                <div class="col-sm-6 text-sm-right mt-2 mt-sm-0"><button class="btn btn-outline-secondary btn-sm" data-target="#productModal" data-toggle="modal"><span>Add to cart</span></button></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-4 col-6">
-                                        <!-- Menu Item -->
-                                        <div class="menu-item menu-grid-item">
-                                            <img class="mb-4" src="assets/img/products/product-pasta.jpg" alt="">
-                                            <h6 class="mb-0">Creste di Galli</h6>
-                                            <span class="text-muted text-sm">Beef, cheese, potato, onion, fries</span>
-                                            <div class="row align-items-center mt-4">
-                                                <div class="col-sm-6"><span class="text-md mr-4"><span class="text-muted">from</span> $9.00</span></div>
-                                                <div class="col-sm-6 text-sm-right mt-2 mt-sm-0"><button class="btn btn-outline-secondary btn-sm" data-target="#productModal" data-toggle="modal"><span>Add to cart</span></button></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-4 col-6">
-                                        <!-- Menu Item -->
-                                        <div class="menu-item menu-grid-item">
-                                            <img class="mb-4" src="assets/img/products/product-chicken-wings.jpg" alt="">
-                                            <h6 class="mb-0">Chicken wings</h6>
-                                            <span class="text-muted text-sm">Beef, cheese, potato, onion, fries</span>
-                                            <div class="row align-items-center mt-4">
-                                                <div class="col-sm-6"><span class="text-md mr-4"><span class="text-muted">from</span> $9.00</span></div>
-                                                <div class="col-sm-6 text-sm-right mt-2 mt-sm-0"><button class="btn btn-outline-secondary btn-sm" data-target="#productModal" data-toggle="modal"><span>Add to cart</span></button></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-4 col-6">
-                                        <!-- Menu Item -->
-                                        <div class="menu-item menu-grid-item">
-                                            <img class="mb-4" src="assets/img/products/product-sushi.jpg" alt="">
-                                            <h6 class="mb-0">Nigiri-sushi</h6>
-                                            <span class="text-muted text-sm">Beef, cheese, potato, onion, fries</span>
-                                            <div class="row align-items-center mt-4">
-                                                <div class="col-sm-6"><span class="text-md mr-4"><span class="text-muted">from</span> $9.00</span></div>
-                                                <div class="col-sm-6 text-sm-right mt-2 mt-sm-0"><button class="btn btn-outline-secondary btn-sm" data-target="#productModal" data-toggle="modal"><span>Add to cart</span></button></div>
+                                                <div class="col-sm-6"><span class="text-md mr-4"><span class="text-muted">Prix</span> $9.00</span></div>
+                                                <div class="col-sm-6 text-sm-right mt-2 mt-sm-0"><button class="btn btn-outline-secondary btn-sm" data-target="#productModal" data-toggle="modal"><span>Commander</span></button></div>
                                             </div>
                                         </div>
                                     </div>
@@ -186,9 +111,9 @@
                             </div>
                         </div>
                         <!-- Menu Category / Pizza -->
-                        <div id="Pizza" class="menu-category">
+                        <div id="Dessert" class="menu-category">
                             <div class="menu-category-title">
-                                <div class="bg-image"><img src="assets/img/photos/menu-title-pizza.jpg" alt=""></div>
+                                <div class="bg-image"><img src="{{ asset('assets/img/photobep/Autres/plats.png') }}"  alt=""></div>
                                 <h2 class="title">Pizza</h2>
                             </div>
                             <div class="menu-category-content padded">
@@ -200,8 +125,8 @@
                                             <h6 class="mb-0">Beef Burger</h6>
                                             <span class="text-muted text-sm">Beef, cheese, potato, onion, fries</span>
                                             <div class="row align-items-center mt-4">
-                                                <div class="col-sm-6"><span class="text-md mr-4"><span class="text-muted">from</span> $9.00</span></div>
-                                                <div class="col-sm-6 text-sm-right mt-2 mt-sm-0"><button class="btn btn-outline-secondary btn-sm" data-target="#productModal" data-toggle="modal"><span>Add to cart</span></button></div>
+                                                <div class="col-sm-6"><span class="text-md mr-4"><span class="text-muted">Prix</span> $9.00</span></div>
+                                                <div class="col-sm-6 text-sm-right mt-2 mt-sm-0"><button class="btn btn-outline-secondary btn-sm" data-target="#productModal" data-toggle="modal"><span>Commander</span></button></div>
                                             </div>
                                         </div>
                                     </div>
@@ -212,8 +137,8 @@
                                             <h6 class="mb-0">Broccoli</h6>
                                             <span class="text-muted text-sm">Beef, cheese, potato, onion, fries</span>
                                             <div class="row align-items-center mt-4">
-                                                <div class="col-sm-6"><span class="text-md mr-4"><span class="text-muted">from</span> $9.00</span></div>
-                                                <div class="col-sm-6 text-sm-right mt-2 mt-sm-0"><button class="btn btn-outline-secondary btn-sm" data-target="#productModal" data-toggle="modal"><span>Add to cart</span></button></div>
+                                                <div class="col-sm-6"><span class="text-md mr-4"><span class="text-muted">Prix</span> $9.00</span></div>
+                                                <div class="col-sm-6 text-sm-right mt-2 mt-sm-0"><button class="btn btn-outline-secondary btn-sm" data-target="#productModal" data-toggle="modal"><span>Commander</span></button></div>
                                             </div>
                                         </div>
                                     </div>
@@ -224,8 +149,8 @@
                                             <h6 class="mb-0">Chicken Burger</h6>
                                             <span class="text-muted text-sm">Beef, cheese, potato, onion, fries</span>
                                             <div class="row align-items-center mt-4">
-                                                <div class="col-sm-6"><span class="text-md mr-4"><span class="text-muted">from</span> $9.00</span></div>
-                                                <div class="col-sm-6 text-sm-right mt-2 mt-sm-0"><button class="btn btn-outline-secondary btn-sm" data-target="#productModal" data-toggle="modal"><span>Add to cart</span></button></div>
+                                                <div class="col-sm-6"><span class="text-md mr-4"><span class="text-muted">Prix</span> $9.00</span></div>
+                                                <div class="col-sm-6 text-sm-right mt-2 mt-sm-0"><button class="btn btn-outline-secondary btn-sm" data-target="#productModal" data-toggle="modal"><span>Commander</span></button></div>
                                             </div>
                                         </div>
                                     </div>
@@ -236,8 +161,8 @@
                                             <h6 class="mb-0">Creste di Galli</h6>
                                             <span class="text-muted text-sm">Beef, cheese, potato, onion, fries</span>
                                             <div class="row align-items-center mt-4">
-                                                <div class="col-sm-6"><span class="text-md mr-4"><span class="text-muted">from</span> $9.00</span></div>
-                                                <div class="col-sm-6 text-sm-right mt-2 mt-sm-0"><button class="btn btn-outline-secondary btn-sm" data-target="#productModal" data-toggle="modal"><span>Add to cart</span></button></div>
+                                                <div class="col-sm-6"><span class="text-md mr-4"><span class="text-muted">Prix</span> $9.00</span></div>
+                                                <div class="col-sm-6 text-sm-right mt-2 mt-sm-0"><button class="btn btn-outline-secondary btn-sm" data-target="#productModal" data-toggle="modal"><span>Commander</span></button></div>
                                             </div>
                                         </div>
                                     </div>
@@ -248,8 +173,8 @@
                                             <h6 class="mb-0">Chicken wings</h6>
                                             <span class="text-muted text-sm">Beef, cheese, potato, onion, fries</span>
                                             <div class="row align-items-center mt-4">
-                                                <div class="col-sm-6"><span class="text-md mr-4"><span class="text-muted">from</span> $9.00</span></div>
-                                                <div class="col-sm-6 text-sm-right mt-2 mt-sm-0"><button class="btn btn-outline-secondary btn-sm" data-target="#productModal" data-toggle="modal"><span>Add to cart</span></button></div>
+                                                <div class="col-sm-6"><span class="text-md mr-4"><span class="text-muted">Prix</span> $9.00</span></div>
+                                                <div class="col-sm-6 text-sm-right mt-2 mt-sm-0"><button class="btn btn-outline-secondary btn-sm" data-target="#productModal" data-toggle="modal"><span>Commander</span></button></div>
                                             </div>
                                         </div>
                                     </div>
@@ -260,8 +185,8 @@
                                             <h6 class="mb-0">Nigiri-sushi</h6>
                                             <span class="text-muted text-sm">Beef, cheese, potato, onion, fries</span>
                                             <div class="row align-items-center mt-4">
-                                                <div class="col-sm-6"><span class="text-md mr-4"><span class="text-muted">from</span> $9.00</span></div>
-                                                <div class="col-sm-6 text-sm-right mt-2 mt-sm-0"><button class="btn btn-outline-secondary btn-sm" data-target="#productModal" data-toggle="modal"><span>Add to cart</span></button></div>
+                                                <div class="col-sm-6"><span class="text-md mr-4"><span class="text-muted">Prix</span> $9.00</span></div>
+                                                <div class="col-sm-6 text-sm-right mt-2 mt-sm-0"><button class="btn btn-outline-secondary btn-sm" data-target="#productModal" data-toggle="modal"><span>Commander</span></button></div>
                                             </div>
                                         </div>
                                     </div>
@@ -269,7 +194,7 @@
                             </div>
                         </div>
                         <!-- Menu Category / Sushi -->
-                        <div id="Sushi" class="menu-category">
+                        <div id="Boisson" class="menu-category">
                             <div class="menu-category-title">
                                 <div class="bg-image"><img src="assets/img/photos/menu-title-sushi.jpg" alt=""></div>
                                 <h2 class="title">Sushi</h2>
@@ -283,8 +208,8 @@
                                             <h6 class="mb-0">Beef Burger</h6>
                                             <span class="text-muted text-sm">Beef, cheese, potato, onion, fries</span>
                                             <div class="row align-items-center mt-4">
-                                                <div class="col-sm-6"><span class="text-md mr-4"><span class="text-muted">from</span> $9.00</span></div>
-                                                <div class="col-sm-6 text-sm-right mt-2 mt-sm-0"><button class="btn btn-outline-secondary btn-sm" data-target="#productModal" data-toggle="modal"><span>Add to cart</span></button></div>
+                                                <div class="col-sm-6"><span class="text-md mr-4"><span class="text-muted">Prix</span> $9.00</span></div>
+                                                <div class="col-sm-6 text-sm-right mt-2 mt-sm-0"><button class="btn btn-outline-secondary btn-sm" data-target="#productModal" data-toggle="modal"><span>Commander</span></button></div>
                                             </div>
                                         </div>
                                     </div>
@@ -295,8 +220,8 @@
                                             <h6 class="mb-0">Broccoli</h6>
                                             <span class="text-muted text-sm">Beef, cheese, potato, onion, fries</span>
                                             <div class="row align-items-center mt-4">
-                                                <div class="col-sm-6"><span class="text-md mr-4"><span class="text-muted">from</span> $9.00</span></div>
-                                                <div class="col-sm-6 text-sm-right mt-2 mt-sm-0"><button class="btn btn-outline-secondary btn-sm" data-target="#productModal" data-toggle="modal"><span>Add to cart</span></button></div>
+                                                <div class="col-sm-6"><span class="text-md mr-4"><span class="text-muted">Prix</span> $9.00</span></div>
+                                                <div class="col-sm-6 text-sm-right mt-2 mt-sm-0"><button class="btn btn-outline-secondary btn-sm" data-target="#productModal" data-toggle="modal"><span>Commander</span></button></div>
                                             </div>
                                         </div>
                                     </div>
@@ -307,8 +232,8 @@
                                             <h6 class="mb-0">Chicken Burger</h6>
                                             <span class="text-muted text-sm">Beef, cheese, potato, onion, fries</span>
                                             <div class="row align-items-center mt-4">
-                                                <div class="col-sm-6"><span class="text-md mr-4"><span class="text-muted">from</span> $9.00</span></div>
-                                                <div class="col-sm-6 text-sm-right mt-2 mt-sm-0"><button class="btn btn-outline-secondary btn-sm" data-target="#productModal" data-toggle="modal"><span>Add to cart</span></button></div>
+                                                <div class="col-sm-6"><span class="text-md mr-4"><span class="text-muted">Prix</span> $9.00</span></div>
+                                                <div class="col-sm-6 text-sm-right mt-2 mt-sm-0"><button class="btn btn-outline-secondary btn-sm" data-target="#productModal" data-toggle="modal"><span>Commander</span></button></div>
                                             </div>
                                         </div>
                                     </div>
@@ -319,8 +244,8 @@
                                             <h6 class="mb-0">Creste di Galli</h6>
                                             <span class="text-muted text-sm">Beef, cheese, potato, onion, fries</span>
                                             <div class="row align-items-center mt-4">
-                                                <div class="col-sm-6"><span class="text-md mr-4"><span class="text-muted">from</span> $9.00</span></div>
-                                                <div class="col-sm-6 text-sm-right mt-2 mt-sm-0"><button class="btn btn-outline-secondary btn-sm" data-target="#productModal" data-toggle="modal"><span>Add to cart</span></button></div>
+                                                <div class="col-sm-6"><span class="text-md mr-4"><span class="text-muted">Prix</span> $9.00</span></div>
+                                                <div class="col-sm-6 text-sm-right mt-2 mt-sm-0"><button class="btn btn-outline-secondary btn-sm" data-target="#productModal" data-toggle="modal"><span>Commander</span></button></div>
                                             </div>
                                         </div>
                                     </div>
@@ -331,8 +256,8 @@
                                             <h6 class="mb-0">Chicken wings</h6>
                                             <span class="text-muted text-sm">Beef, cheese, potato, onion, fries</span>
                                             <div class="row align-items-center mt-4">
-                                                <div class="col-sm-6"><span class="text-md mr-4"><span class="text-muted">from</span> $9.00</span></div>
-                                                <div class="col-sm-6 text-sm-right mt-2 mt-sm-0"><button class="btn btn-outline-secondary btn-sm" data-target="#productModal" data-toggle="modal"><span>Add to cart</span></button></div>
+                                                <div class="col-sm-6"><span class="text-md mr-4"><span class="text-muted">Prix</span> $9.00</span></div>
+                                                <div class="col-sm-6 text-sm-right mt-2 mt-sm-0"><button class="btn btn-outline-secondary btn-sm" data-target="#productModal" data-toggle="modal"><span>Commander</span></button></div>
                                             </div>
                                         </div>
                                     </div>
@@ -343,8 +268,8 @@
                                             <h6 class="mb-0">Nigiri-sushi</h6>
                                             <span class="text-muted text-sm">Beef, cheese, potato, onion, fries</span>
                                             <div class="row align-items-center mt-4">
-                                                <div class="col-sm-6"><span class="text-md mr-4"><span class="text-muted">from</span> $9.00</span></div>
-                                                <div class="col-sm-6 text-sm-right mt-2 mt-sm-0"><button class="btn btn-outline-secondary btn-sm" data-target="#productModal" data-toggle="modal"><span>Add to cart</span></button></div>
+                                                <div class="col-sm-6"><span class="text-md mr-4"><span class="text-muted">Prix</span> $9.00</span></div>
+                                                <div class="col-sm-6 text-sm-right mt-2 mt-sm-0"><button class="btn btn-outline-secondary btn-sm" data-target="#productModal" data-toggle="modal"><span>Commander</span></button></div>
                                             </div>
                                         </div>
                                     </div>
@@ -352,7 +277,7 @@
                             </div>
                         </div>
                         <!-- Menu Category / Desserts -->
-                        <div id="Desserts" class="menu-category">
+                        <div id="Topping" class="menu-category">
                             <div class="menu-category-title">
                                 <div class="bg-image"><img src="assets/img/photos/menu-title-desserts.jpg" alt=""></div>
                                 <h2 class="title">Desserts</h2>
@@ -366,8 +291,8 @@
                                             <h6 class="mb-0">Beef Burger</h6>
                                             <span class="text-muted text-sm">Beef, cheese, potato, onion, fries</span>
                                             <div class="row align-items-center mt-4">
-                                                <div class="col-sm-6"><span class="text-md mr-4"><span class="text-muted">from</span> $9.00</span></div>
-                                                <div class="col-sm-6 text-sm-right mt-2 mt-sm-0"><button class="btn btn-outline-secondary btn-sm" data-target="#productModal" data-toggle="modal"><span>Add to cart</span></button></div>
+                                                <div class="col-sm-6"><span class="text-md mr-4"><span class="text-muted">Prix</span> $9.00</span></div>
+                                                <div class="col-sm-6 text-sm-right mt-2 mt-sm-0"><button class="btn btn-outline-secondary btn-sm" data-target="#productModal" data-toggle="modal"><span>Commander</span></button></div>
                                             </div>
                                         </div>
                                     </div>
@@ -378,8 +303,8 @@
                                             <h6 class="mb-0">Broccoli</h6>
                                             <span class="text-muted text-sm">Beef, cheese, potato, onion, fries</span>
                                             <div class="row align-items-center mt-4">
-                                                <div class="col-sm-6"><span class="text-md mr-4"><span class="text-muted">from</span> $9.00</span></div>
-                                                <div class="col-sm-6 text-sm-right mt-2 mt-sm-0"><button class="btn btn-outline-secondary btn-sm" data-target="#productModal" data-toggle="modal"><span>Add to cart</span></button></div>
+                                                <div class="col-sm-6"><span class="text-md mr-4"><span class="text-muted">Prix</span> $9.00</span></div>
+                                                <div class="col-sm-6 text-sm-right mt-2 mt-sm-0"><button class="btn btn-outline-secondary btn-sm" data-target="#productModal" data-toggle="modal"><span>Commander</span></button></div>
                                             </div>
                                         </div>
                                     </div>
@@ -390,8 +315,8 @@
                                             <h6 class="mb-0">Chicken Burger</h6>
                                             <span class="text-muted text-sm">Beef, cheese, potato, onion, fries</span>
                                             <div class="row align-items-center mt-4">
-                                                <div class="col-sm-6"><span class="text-md mr-4"><span class="text-muted">from</span> $9.00</span></div>
-                                                <div class="col-sm-6 text-sm-right mt-2 mt-sm-0"><button class="btn btn-outline-secondary btn-sm" data-target="#productModal" data-toggle="modal"><span>Add to cart</span></button></div>
+                                                <div class="col-sm-6"><span class="text-md mr-4"><span class="text-muted">Prix</span> $9.00</span></div>
+                                                <div class="col-sm-6 text-sm-right mt-2 mt-sm-0"><button class="btn btn-outline-secondary btn-sm" data-target="#productModal" data-toggle="modal"><span>Commander</span></button></div>
                                             </div>
                                         </div>
                                     </div>
@@ -402,8 +327,8 @@
                                             <h6 class="mb-0">Creste di Galli</h6>
                                             <span class="text-muted text-sm">Beef, cheese, potato, onion, fries</span>
                                             <div class="row align-items-center mt-4">
-                                                <div class="col-sm-6"><span class="text-md mr-4"><span class="text-muted">from</span> $9.00</span></div>
-                                                <div class="col-sm-6 text-sm-right mt-2 mt-sm-0"><button class="btn btn-outline-secondary btn-sm" data-target="#productModal" data-toggle="modal"><span>Add to cart</span></button></div>
+                                                <div class="col-sm-6"><span class="text-md mr-4"><span class="text-muted">Prix</span> $9.00</span></div>
+                                                <div class="col-sm-6 text-sm-right mt-2 mt-sm-0"><button class="btn btn-outline-secondary btn-sm" data-target="#productModal" data-toggle="modal"><span>Commander</span></button></div>
                                             </div>
                                         </div>
                                     </div>
@@ -414,8 +339,8 @@
                                             <h6 class="mb-0">Chicken wings</h6>
                                             <span class="text-muted text-sm">Beef, cheese, potato, onion, fries</span>
                                             <div class="row align-items-center mt-4">
-                                                <div class="col-sm-6"><span class="text-md mr-4"><span class="text-muted">from</span> $9.00</span></div>
-                                                <div class="col-sm-6 text-sm-right mt-2 mt-sm-0"><button class="btn btn-outline-secondary btn-sm" data-target="#productModal" data-toggle="modal"><span>Add to cart</span></button></div>
+                                                <div class="col-sm-6"><span class="text-md mr-4"><span class="text-muted">Prix</span> $9.00</span></div>
+                                                <div class="col-sm-6 text-sm-right mt-2 mt-sm-0"><button class="btn btn-outline-secondary btn-sm" data-target="#productModal" data-toggle="modal"><span>Commander</span></button></div>
                                             </div>
                                         </div>
                                     </div>
@@ -426,8 +351,8 @@
                                             <h6 class="mb-0">Nigiri-sushi</h6>
                                             <span class="text-muted text-sm">Beef, cheese, potato, onion, fries</span>
                                             <div class="row align-items-center mt-4">
-                                                <div class="col-sm-6"><span class="text-md mr-4"><span class="text-muted">from</span> $9.00</span></div>
-                                                <div class="col-sm-6 text-sm-right mt-2 mt-sm-0"><button class="btn btn-outline-secondary btn-sm" data-target="#productModal" data-toggle="modal"><span>Add to cart</span></button></div>
+                                                <div class="col-sm-6"><span class="text-md mr-4"><span class="text-muted">Prix</span> $9.00</span></div>
+                                                <div class="col-sm-6 text-sm-right mt-2 mt-sm-0"><button class="btn btn-outline-secondary btn-sm" data-target="#productModal" data-toggle="modal"><span>Commander</span></button></div>
                                             </div>
                                         </div>
                                     </div>
@@ -449,8 +374,8 @@
                                             <h6 class="mb-0">Beef Burger</h6>
                                             <span class="text-muted text-sm">Beef, cheese, potato, onion, fries</span>
                                             <div class="row align-items-center mt-4">
-                                                <div class="col-sm-6"><span class="text-md mr-4"><span class="text-muted">from</span> $9.00</span></div>
-                                                <div class="col-sm-6 text-sm-right mt-2 mt-sm-0"><button class="btn btn-outline-secondary btn-sm" data-target="#productModal" data-toggle="modal"><span>Add to cart</span></button></div>
+                                                <div class="col-sm-6"><span class="text-md mr-4"><span class="text-muted">Prix</span> $9.00</span></div>
+                                                <div class="col-sm-6 text-sm-right mt-2 mt-sm-0"><button class="btn btn-outline-secondary btn-sm" data-target="#productModal" data-toggle="modal"><span>Commander</span></button></div>
                                             </div>
                                         </div>
                                     </div>
@@ -461,8 +386,8 @@
                                             <h6 class="mb-0">Broccoli</h6>
                                             <span class="text-muted text-sm">Beef, cheese, potato, onion, fries</span>
                                             <div class="row align-items-center mt-4">
-                                                <div class="col-sm-6"><span class="text-md mr-4"><span class="text-muted">from</span> $9.00</span></div>
-                                                <div class="col-sm-6 text-sm-right mt-2 mt-sm-0"><button class="btn btn-outline-secondary btn-sm" data-target="#productModal" data-toggle="modal"><span>Add to cart</span></button></div>
+                                                <div class="col-sm-6"><span class="text-md mr-4"><span class="text-muted">Prix</span> $9.00</span></div>
+                                                <div class="col-sm-6 text-sm-right mt-2 mt-sm-0"><button class="btn btn-outline-secondary btn-sm" data-target="#productModal" data-toggle="modal"><span>Commander</span></button></div>
                                             </div>
                                         </div>
                                     </div>
@@ -473,8 +398,8 @@
                                             <h6 class="mb-0">Chicken Burger</h6>
                                             <span class="text-muted text-sm">Beef, cheese, potato, onion, fries</span>
                                             <div class="row align-items-center mt-4">
-                                                <div class="col-sm-6"><span class="text-md mr-4"><span class="text-muted">from</span> $9.00</span></div>
-                                                <div class="col-sm-6 text-sm-right mt-2 mt-sm-0"><button class="btn btn-outline-secondary btn-sm" data-target="#productModal" data-toggle="modal"><span>Add to cart</span></button></div>
+                                                <div class="col-sm-6"><span class="text-md mr-4"><span class="text-muted">Prix</span> $9.00</span></div>
+                                                <div class="col-sm-6 text-sm-right mt-2 mt-sm-0"><button class="btn btn-outline-secondary btn-sm" data-target="#productModal" data-toggle="modal"><span>Commander</span></button></div>
                                             </div>
                                         </div>
                                     </div>
@@ -485,8 +410,8 @@
                                             <h6 class="mb-0">Creste di Galli</h6>
                                             <span class="text-muted text-sm">Beef, cheese, potato, onion, fries</span>
                                             <div class="row align-items-center mt-4">
-                                                <div class="col-sm-6"><span class="text-md mr-4"><span class="text-muted">from</span> $9.00</span></div>
-                                                <div class="col-sm-6 text-sm-right mt-2 mt-sm-0"><button class="btn btn-outline-secondary btn-sm" data-target="#productModal" data-toggle="modal"><span>Add to cart</span></button></div>
+                                                <div class="col-sm-6"><span class="text-md mr-4"><span class="text-muted">Prix</span> $9.00</span></div>
+                                                <div class="col-sm-6 text-sm-right mt-2 mt-sm-0"><button class="btn btn-outline-secondary btn-sm" data-target="#productModal" data-toggle="modal"><span>Commander</span></button></div>
                                             </div>
                                         </div>
                                     </div>
@@ -497,8 +422,8 @@
                                             <h6 class="mb-0">Chicken wings</h6>
                                             <span class="text-muted text-sm">Beef, cheese, potato, onion, fries</span>
                                             <div class="row align-items-center mt-4">
-                                                <div class="col-sm-6"><span class="text-md mr-4"><span class="text-muted">from</span> $9.00</span></div>
-                                                <div class="col-sm-6 text-sm-right mt-2 mt-sm-0"><button class="btn btn-outline-secondary btn-sm" data-target="#productModal" data-toggle="modal"><span>Add to cart</span></button></div>
+                                                <div class="col-sm-6"><span class="text-md mr-4"><span class="text-muted">Prix</span> $9.00</span></div>
+                                                <div class="col-sm-6 text-sm-right mt-2 mt-sm-0"><button class="btn btn-outline-secondary btn-sm" data-target="#productModal" data-toggle="modal"><span>Commander</span></button></div>
                                             </div>
                                         </div>
                                     </div>
@@ -509,8 +434,8 @@
                                             <h6 class="mb-0">Nigiri-sushi</h6>
                                             <span class="text-muted text-sm">Beef, cheese, potato, onion, fries</span>
                                             <div class="row align-items-center mt-4">
-                                                <div class="col-sm-6"><span class="text-md mr-4"><span class="text-muted">from</span> $9.00</span></div>
-                                                <div class="col-sm-6 text-sm-right mt-2 mt-sm-0"><button class="btn btn-outline-secondary btn-sm" data-target="#productModal" data-toggle="modal"><span>Add to cart</span></button></div>
+                                                <div class="col-sm-6"><span class="text-md mr-4"><span class="text-muted">Prix</span> $9.00</span></div>
+                                                <div class="col-sm-6 text-sm-right mt-2 mt-sm-0"><button class="btn btn-outline-secondary btn-sm" data-target="#productModal" data-toggle="modal"><span>Commander</span></button></div>
                                             </div>
                                         </div>
                                     </div>

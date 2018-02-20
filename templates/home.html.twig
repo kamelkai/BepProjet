@@ -4,33 +4,32 @@
     <!-- Section - Main -->
     <section class="section section-main section-main-1 bg-light">
 
+        
+{#        slider#}
         <div class="container dark">
             <div class="slide-container">
                 <div id="section-main-1-carousel-image" class="image inner-controls">
-                    <div class="slide"><div class="bg-image"><img src="{{ asset('assets/img/photobep/Design/IMG_6235.png') }}" alt=""></div></div>
-                    <div class="slide"><div class="bg-image"><img src="{{ asset('assets/img/photobep/Design/IMG_6273.png') }}" alt=""></div></div>
-                    <div class="slide"><div class="bg-image"><img src="{{ asset('assets/img/photobep/Design/IMG_6375.png') }}" alt=""></div></div>
-                    <div class="slide"><div class="bg-image"><img src="{{ asset('assets/img/photobep/Design/IMG_6593.png') }}" alt=""></div></div>
+                    <div class="slide"><div class="bg-image"><img src="{{ asset('assets/img/photobep/Design/IMG_6235.jpg') }}" alt=""></div></div>
+                    <div class="slide"><div class="bg-image"><img src="{{ asset('assets/img/photobep/Design/IMG_6273.jpg') }}" alt=""></div></div>
+                    <div class="slide"><div class="bg-image"><img src="{{ asset('assets/img/photobep/Design/IMG_6375.jpg') }}" alt=""></div></div>
+                    <div class="slide"><div class="bg-image"><img src="{{ asset('assets/img/photobep/Design/IMG_6593.jpg') }}" alt=""></div></div>
                 </div>
-                <div class="content dark">
+                <div class="content" id="textSlider">
                     <div id="section-main-1-carousel-content">
                         <div class="content-inner">
-                            <h1 class="text-muted">Banh mi</h1>
-                            <h4>C’est LE sandwich franco-vietnamien, la star de la street food.</h4>
-                            <div class="btn-group">
-                                <a href="#productModal" data-toggle="modal" class="btn btn-outline-primary btn-lg"><span>Add to cart</span></a>
-                                <span class="price price-lg">from $9.98</span>
-                            </div>
+                            <h1>Banh mi</h1>
+                            <h4 class=" mb-5"> Dans sa baguette croustillante,c’est LE sandwich franco-vietnamien! la star de la street food.</h4>
+                            <a href="page-offers.html" class="btn btn-outline-primary btn-lg"><span>Commander!</span></a>
                         </div>
                         <div class="content-inner">
                             <h1>Bo bun</h1>
-                            <h4 class="text-muted mb-5">On ne présente plus le Bo bun, plat typique et incontournable de la cuisine vietnamienne !</h4>
-                            <a href="page-offers.html" class="btn btn-outline-primary btn-lg"><span>Get it now!</span></a>
+                            <h4 class="mb-5">On ne présente plus le Bo bun, plat typique et incontournable de la cuisine vietnamienne !</h4>
+                            <a href="page-offers.html" class="btn btn-outline-primary btn-lg"><span>Commander!</span></a>
                         </div>
                         <div class="content-inner">
                             <h1>Roulo'</h1>
-                            <h4 class="text-muted mb-5">Frais et savoureux, il y en a pour tous les goûts : poulet & crevette, boeuf citronnelle ou encore tofu & avocat.</h4>
-                            <a href="menu-list-collapse.html" class="btn btn-outline-primary btn-lg"><span>Order now!</span></a>
+                            <h4 class="mb-5">Frais et savoureux, il y en a pour tous les goûts : poulet & crevette, boeuf citronnelle ou encore tofu & avocat.</h4>
+                            <a href="menu-list-collapse.html" class="btn btn-outline-primary btn-lg"><span>Commander!</span></a>
                         </div>
                     </div>
                     <nav class="content-nav">
@@ -47,41 +46,114 @@
    
 
     <!-- Section - Steps -->
-    <section class="section section-extended right dark">
-
-        <div class="container bg-dark" style="margin-left;">
+    <section class="section section-extended right dark col-md-12 col-sm-12 col-xs-12" id="NosEngagements" >
+        <div class="row" >
+        <div class="container">
+            <h2 class="text-center">Nos engagements</h2>
             <div class="row">
-                <div class="col-md-4">
+                <div class="col-md-3 ">
                     <!-- Step -->
-                    <div class="feature feature-1 mb-md-0">
-                        <div class="feature-icon icon icon-primary"><i class="ti ti-shopping-cart"></i></div>
+                    <div class="feature feature-1  text-center">
+                        <div class="imgEngagements">
+                            <img src="{{ asset('assets/img/photobep/Autres/feuille.png') }}" width="150px" height="100px">
+                        </div>
+                        
                         <div class="feature-content">
-                            <h4 class="mb-2"><a href="menu-list-collapse.html">Choisis ton plat</a></h4>
-                            <p class="text-muted mb-0">Vivamus volutpat leo dictum risus ullamcorper condimentum.</p>
+                            <h4 class="text-center"><b>Fraîcheur</b></h4>
+                            <p class="text-muted text-center">C’est avec un grand soin que nous choisissons nos produits. Des plats sains cuisinés avec des ingrédients de qualité, 100% fraîcheur garantie ! Aussi, nos baguettes sont conçues spécialement pour Bêp par notre artisan-boulanger.</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-3 ">
                     <!-- Step -->
-                    <div class="feature feature-1 mb-md-0">
-                        <div class="feature-icon icon icon-primary"><i class="ti ti-wallet"></i></div>
+                    <div class="feature feature-1 text-center">
+                    <div class="imgEngagements">
+                        <img src="{{ asset('assets/img/photobep/Autres/couverts.png') }}" width="150px">
+                    </div>
+                         
                         <div class="feature-content">
-                            <h4 class="mb-2"> #COUP DE CB </h4>
-                            <p class="text-muted mb-0">Vivamus volutpat leo dictum risus ullamcorper condimentum.</p>
+                            <h4 class="text-center"><b>Fait maison</b></h4>
+                            <p class="text-muted text-center">
+De la marinade de nos viandes aux desserts tout est fait sur place avec exigence et amour. </p>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-3 ">
                     <!-- Step -->
-                    <div class="feature feature-1 mb-md-0">
-                        <div class="feature-icon icon icon-primary"><i class="ti ti-package"></i></div>
+                    <div class="feature feature-1 text-center">
+                      <div class="imgEngagements"> 
+                          <img src="{{ asset('assets/img/photobep/Autres/carotte.png') }}" width="150px;">
+                      </div>
+                      
                         <div class="feature-content">
-                            <h4 class="mb-2"> Récupère ton plat</h4>
-                            <p class="text-muted mb-3">Vivamus volutpat leo dictum risus ullamcorper condimentum.</p>
+                            <h4 class="text-center"><b>Végétarien</b></h4>
+                            <p class="text-muted text-center">
+On pense aussi à nos amis végétariens avec une version veggie pour chaque plat ! Des nems aux légumes pour le bo bun au tofu ou encore une sauce « nuoc mam » spécialement élaborée pour vous ! </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 ">
+                    <!-- Step -->
+                    <div class="feature feature-1 text-center">
+                       <div class="imgEngagements">
+                           <img src="{{ asset('assets/img/photobep/Autres/environement.png') }}" width="150px">
+                       </div>
+                         
+                        <div class="feature-content">
+                            <h4 class="text-center"><b>Environnement</b></h4>
+                            <p class="text-muted text-center">
+Très soucieux de l’environnement, nos emballages sont recyclés ou recyclables : papier kraft, carton kraft, pulpe de canne,… </p>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
+
+    <!-- Section - Steps -->
+<div class="container bg-dark" id="clickCollect" >
+<div class="row">
+       
+ 
+                <div class="col-md-4" >
+                    <!-- Step -->
+                    <div class="feature feature-1">
+                                         
+                        <div class="feature-content "> 
+                            <img src="{{ asset('assets/img/photobep/Autres/menuicon.png') }}" width="" class="pull-left"> 
+                            <h4 class=""><a href="menu.html.twig"><b>#Choisis ton plat</b></a></h4>
+
+                        </div>
+                    </div>
+                </div>
+                        
+                        
+                <div class="col-md-4" >
+                    <!-- Step -->
+                    <div class="feature feature-1">
+                                             
+                        <div class="feature-content">
+                            <img src="{{ asset('assets/img/photobep/Autres/logocb.png') }}" width="" class="pull-left">
+                            <h4 class=""><b> #Petit coup de CB </b></h4>
+
+                        </div>
+                    </div>
+                </div>
+                        
+                        
+                <div class="col-md-4" >
+                    <!-- Step -->
+                    <div class="feature feature-1">
+                       
+                     
+                        <div class="feature-content">
+                            <img src="{{ asset('assets/img/photobep/Autres/service-retrait.png') }}" width="" class="pull-left">
+                            <h4 class=""><b>#Récupère ta commande</b></h4>
+
+                        </div>
+                    </div>
+                </div>
+            
+        </div>
         </div>
 
     </section>
