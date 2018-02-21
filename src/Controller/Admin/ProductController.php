@@ -9,11 +9,29 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 class ProductController extends Controller
 {
     /**
-     * @Route("/admin/product", name="product")
+     * @Route("/admin/product", name="product_list")
      */
     public function getList(ProductRepository $productRepo)
     {
-        return $this->render('admin/product_list.html.twig');
+                $dishes = $productRepo->findBy([
+                    'type' => 'dishes'
+                ]);
+                $desserts = $productRepo->findBy([
+                    'type' => 'dessert'
+                ]);
+                $drinks = $productRepo->findBy([
+                    'type' => 'drink'
+                ]);
+                $toppings = $productRepo->findBy([
+                    'type' => 'topping'
+                ]);
         
+        return $this->render('admin/product_list.html.twig', [
+            'dishes' => $dishes,
+            'desserts' => $desserts,
+            'drinks' => $drinks,
+            'toppings' => $toppings
+        ]);
+
     }
 }

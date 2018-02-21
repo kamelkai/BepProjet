@@ -12,7 +12,14 @@ class MemberRepository extends ServiceEntityRepository
     {
         parent::__construct($registry, Member::class);
     }
-
+//
+//    public function findByAdmin($admin){
+//        return $this->createQueryBuilder('m')
+//           ->where('m.status = :admin')
+//           ->setParameter('admin', $admin)
+//           ->getQuery()
+//           ->getResult();
+//    }
     /*
     public function findBySomething($value)
     {

@@ -36,7 +36,7 @@ class Product
     
      /**
      * @ORM\Column(type="string", length=25)
-     * @Assert\Choice({"dishes", "dessert", "drink"})
+     * @Assert\Choice({"dishes", "dessert", "drink", "topping"})
      * @var string
      */
     private $type;

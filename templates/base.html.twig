@@ -146,8 +146,8 @@
                         <div class="col-md-3">
                             <!-- Logo -->
                             <div class="module module-logo">
-                                <a href="index.html">
-                                    <img src="{{ asset('assets/img/photobep/Design/beplogo.png') }}" alt="" width="" style="border-radius: 50%;background: white">
+                                <a href="{{ path('home')}}">
+                                    <img src="{{ asset('assets/img/beplogo.png') }}" alt="" width="" style="border-radius: 50%;background: white">
                                 </a>
                             </div>
                         </div>
@@ -156,16 +156,16 @@
                             <nav class="module module-navigation left mr-4">
                                 <ul id="nav-main" class="nav nav-main">
                                     <li>
-                                        <a href="#">Accueil</a>
+                                        <a href="{{ path('home')}}">Accueil</a>
                                     </li>
                                     <li>
-                                        <a href="#">A propos</a>
+                                        <a href="{{ path('about')}}">A propos</a>
                                     </li>
                                     <li>
-                                        <a href="page-contact.html">Contact</a>
+                                        <a href="{{ path('contact')}}">Contact</a>
                                     </li>
                                     <li class="has-dropdown">
-                                        <a href="#">Connexion</a>
+                                        <a href="">Connexion</a>
                                         <div class="dropdown-container">
                                             <ul>
                                                 <li>                                              
@@ -186,7 +186,7 @@
                                 </ul> 
                             </nav>
                             <div class="module left">
-                                <a href="menu-list-navigation.html" class="btn btn-outline-secondary"><span>Commander !</span></a>
+                                <a href="{{ path('menu')}}" class="btn btn-outline-secondary"><span>Commander !</span></a>
                             </div>
                         </div>
                         <div class="col-md-2">
@@ -212,8 +212,8 @@
                 </div>    
 
                 <div class="module module-logo">
-                    <a href="index.html">
-                        <img src="{{ asset('assets/img/photobep/Design/beplogocarre.png') }}" alt="">
+                    <a href="{{ path('home')}}">
+                        <img src="{{ asset('assets/img/beplogocarre.png') }}" alt="">
                     </a>
                 </div>
 
@@ -333,7 +333,7 @@
         <nav id="panel-mobile">
             <div class="module module-logo bg-dark dark">
                 <a href="#">
-                    <img src="{{ asset('assets/img/photobep/Design/beplogocarre.png') }}" alt="" width="88">
+                    <img src="{{ asset('assets/img/beplogocarre.png') }}" alt="" width="88">
                 </a>
                 <button class="close" data-toggle="panel-mobile"><i class="ti ti-close"></i></button>
             </div>
@@ -355,7 +355,7 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header modal-header-lg dark bg-dark">
-                    <div class="bg-image"><img src="{{ asset('assets/img/photobep/Design/beplogocarre.png') }}" alt="" width="100px"></div>
+                    <div class="bg-image"><img src="{{ asset('assets/img/beplogocarre.png') }}" alt="" width="100px"></div>
                     <h4 class="modal-title">Modifier mon plat</h4>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><i class="ti-close"></i></button>
                 </div>

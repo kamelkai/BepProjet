@@ -1,3 +1,8 @@
+body{
+ background: url('../assets/img/bg.jpg');
+ background-size: 35%;
+ background-repeat: repeat;
+}
 @media (min-width: 992px) {
     .typo-line {
         padding-left: 140px;
@@ -119,19 +124,20 @@ flex-wrap: nowrap;
 #menuSidebar{
     margin-top: 30px;
 }
-#Bepbox img.mb-4{
+/*#Bepbox img{
     height: 171px;
     width: 256px;
-    
+}*/
+
+.imgMiddleMenu img{
+    height: 250px;
+    width: 393px;
 }
 
-/*page about*/
-#about_bg{
-   background-image: url('../assets/img/photobep/Design/bg2.jpg');
-   background-repeat:repeat;
-}
+/* PAGE ABOUT */
 
 #about_box{
+   width: 60%;
    background: #fff;
    padding: 20px;
    border-radius: 20px;
@@ -139,6 +145,22 @@ flex-wrap: nowrap;
 }
 
 #about_img{
-   width: 50% ;
-   border-radius: 60%;
+   width: 40% ;
+   border-radius: 25%;
+   
+ 
 }
+
+
+
+/* PAGE CONTACT */
+
+
+#contact_box{
+   background: #fff;
+   padding: 50px;
+   border-radius: 25px;
+   box-shadow: 1px 1px 10px;
+}
+
+/** PAGE PROFILE */
