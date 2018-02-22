@@ -1,14 +1,14 @@
 <?php
-
 namespace App\Controller;
 
 use App\Entity\Member;
 use App\Form\MemberType;
 use Doctrine\Common\Persistence\ObjectManager;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\Routing\Annotation\Route;
+
 
 class EditMemberController extends Controller
 {

@@ -120,9 +120,12 @@ flex-wrap: nowrap;
     vertical-align: middle;
 }
 
-/*page menu*/
+/* PAGE MENU */
+.section-boutique{
+    padding-top: 2rem;
+}
 #menuSidebar{
-    margin-top: 30px;
+    margin-top: 100px;
 }
 /*#Bepbox img{
     height: 171px;
@@ -163,4 +166,10 @@ flex-wrap: nowrap;
    box-shadow: 1px 1px 10px;
 }
 
-/** PAGE PROFILE */
+/* PAGE PROFILE */
+
+
+/* PAGE NOS MENUS */
+.section-nos-menus{
+    margin-top: 2rem;
+}

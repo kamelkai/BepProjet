@@ -1,37 +1,59 @@
-{# empty Twig template #}
+{# Liste des évènements #}
+
 {% extends "admin/templateAdmin.html.twig" %}
-               {% block title %}Liste des Evénements{% endblock %}
+{% block title %}Liste des Evénements{% endblock %}
 
 {% block body %}
 
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="card">
-                                <div class="card-header" data-background-color="green">
-                                    <h4 class="">Evénements</h4>
-                                </div>
-                                <div class="card-content table-responsive">
-                                    <table class="table">
-                                        <thead class="text-primary">
-                                            <th>id</th>
-                                          
-                                        </thead>
-                                        <tbody> 
-                                            {% for event in events %}
-                                            <tr>
-                                               
-                                                <td>{{ event.id }}</td>
-                                                <td>{{ event.description }}</td>
-                                            </tr>  
-                                            {% endfor %}
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+{# Tableau d'affichage des évènements #}    
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header" data-background-color="green">
+                    <h4 class="">Evènements</h4>
                 </div>
+                <div class="card-content table-responsive">
+                    <table class="table">
+                        <thead class="text-primary">
+                            <th>Id</th>
+                            <th>Titre</th>
+                            <th>Description</th>
+                            <th colspan='2'>Action</th>
+                        </thead>
+                        <tbody> 
+                            {% for event in events %}
+                            <tr>
+                                <td>{{ event.id }}</td>
+                                <td>{{ event.title }}</td>
+                                <td>{{ event.description }}</td>
+                                <td><a href='{{ path('event_edit',  {id : event.id }) }}'><i class="material-icons">create</i></a></td>
+                                <td><a href='{{ path('event_delete',  {id : event.id }) }}'><i class="material-icons">delete</i></a></td>
+                            </tr>  
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+                                     
+    {# Formulaire de gestion des évènements #}
+    <div class="row">
+        <div class="col-md-offset-2 col-md-8">
+            <div class="card">
+                <div class="card-header" data-background-color="green">
+                    <h4 class="title">gestion des évènements</h4>
+                </div>
+                <div class="card-content">
+
+                    {{ form(form) }} {# formulaire #}
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
              
     
 {% endblock %}

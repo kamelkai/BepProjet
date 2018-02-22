@@ -13,14 +13,14 @@
     <link href="{{ asset('css/bootstrap.min.css')}}" rel="stylesheet" />
     <!--  Material Dashboard CSS    -->
     <link href="{{ asset('css/material-dashboard.css?v=1.2.0')}}" rel="stylesheet" />
-    <!--  CSS for Demo Purpose, don't include it in your project     -->
-    <link href="{{asset('/css/demo.css')}}" rel="stylesheet" />
+
     <!--     Fonts and icons     -->
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300|Material+Icons' rel='stylesheet' type='text/css'>
 </head>
 
 <body>
+    {% form_theme form "bootstrap_3_layout.html.twig" %}
     <div class="wrapper">
         <div class="sidebar" data-color="green" data-image="{{asset('img/sidebar-1.jpg')}}">
             <!--
@@ -47,7 +47,7 @@
                             <p>Produits</p>
                         </a>
                     </li>
-                    <li class="">
+                    <li>
                         <a href="{{ path('menu_list')}}">
                             <i class="material-icons">local_library</i>
                             <p>Menus</p>
@@ -120,18 +120,15 @@
 <script src="{{ asset('js/bootstrap.min.js') }}" type="text/javascript"></script>
 <script src="{{ asset('js/material.min.js') }}" type="text/javascript"></script>
 <!--  Charts Plugin -->
- <script href="{{ asset('js/chartist.min.js') }}"></script>
-    <!--  Dynamic Elements plugin -->
-    <script href="{{ asset('js/arrive.min.js') }}"></script>
-    <!--  PerfectScrollbar Library -->
-    <script href="{{ asset('js/perfect-scrollbar.jquery.min.js') }}"></script>
-    <!--  Notifications Plugin    -->
-    <script href="{{ asset('js/bootstrap-notify.js') }}"></script>
-    <!--  Google Maps Plugin    -->
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
-    <!-- Material Dashboard javascript methods -->
-    <script href="{{ asset('js/material-dashboard.js?v=1.2.0') }}"></script>
-    <!-- Material Dashboard DEMO methods, don't include it in your project! -->
-    <script href="{{ asset('js/demo.js') }}"></script>
-
+<script href="{{ asset('js/chartist.min.js') }}"></script>
+<!--  Dynamic Elements plugin -->
+<script href="{{ asset('js/arrive.min.js') }}"></script>
+<!--  PerfectScrollbar Library -->
+<script href="{{ asset('js/perfect-scrollbar.jquery.min.js') }}"></script>
+<!--  Notifications Plugin    -->
+<script href="{{ asset('js/bootstrap-notify.js') }}"></script>
+<!--  Google Maps Plugin    -->
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
+<!-- Material Dashboard javascript methods -->
+<script href="{{ asset('js/material-dashboard.js?v=1.2.0') }}"></script>
 </html>

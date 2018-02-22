@@ -2,67 +2,79 @@
 
 namespace App\Controller;
 
+use App\Entity\Menu;
+use App\Repository\MenuRepository;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-use Symfony\Component\HttpFoundation\Response;
 
-class HomeController extends Controller
-{
+class HomeController extends Controller {
+
     /**
      * @Route("/home", name="home")
      */
-    public function index()
-    {
-        // replace this line with your own code!
+    public function index() {
+       
         return $this->render('home.html.twig');
     }
-    
+
     /**
-     * 
-     * @Route("/menu", name="menu")
-     */
-   public function menu()
-    {
-        // replace this line with your own code!
-        return $this->render('menu.html.twig');
-    } 
-    
-    /**
-     * 
-     * @Route("/contact", name="contact")
-     */
-   public function contact()
-    {
-        // replace this line with your own code!
-        return $this->render('contact.html.twig');
-    } 
-   
-     /**
-     * 
      * @Route("/about", name="about")
      */
-   public function about()
-    {
-        // replace this line with your own code!
+    public function about() {
+       
         return $this->render('about.html.twig');
-    } 
- 
-     /**
-     * 
+    }
+
+    /**
+     * @Route("/contact", name="contact")
+     */
+    public function contact() {
+       
+        return $this->render('contact.html.twig');
+    }
+
+    /**
+     * @Route("/menu", name="menu")
+     */
+    public function menu() {
+      
+        return $this->render('menu.html.twig');
+    }
+
+    /**
+     * @Route("/menu/{name}", name="menu_details")
+     * @Route("/menu/{name}", name="menu_bepbox")
+     */
+    public function menuDetails(Menu $menu, MenuRepository $menuRepo) {
+        
+        return $this->render('nos_menus.html.twig', [
+            'menu' => $menu
+        ]);
+    }
+
+    /**
      * @Route("/product", name="product")
      */
-   public function product()
-    {
-        // replace this line with your own code!
+    public function product() {
+
         return $this->render('product.html.twig');
-    } 
- 
+    }
+
     /**
-    *
-    * @Route("/profil", name="profil")
-    */
-    public function profil()
-    {
+     * 
+     * @Route("/nos_menus", name="nos_menus")
+     */
+    public function nosMenus() {
+        // replace this line with your own code!
+        return $this->render('nos_menus.html.twig');
+    }
+
+    /**
+     *
+     * @Route("/profil", name="profil")
+     */
+    public function profil() {
         return $this->render('profil.html.twig');
     }
- }
+
+}

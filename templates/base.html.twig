@@ -35,176 +35,158 @@
     </head>
 
     <body>
-        <!-- Modal INSCRIPTION -->
-		<div class="modal fade" id="myModalinscription" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-		  <div class="modal-dialog" role="document">
-		  	<form method="post" action="">
-			    <div class="modal-content">
-			      <div class="modal-header">
-			        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                <h2 class="modal-title" id="myModalLabel"><b style="color: #42A232;">Inscription</b></h2>
-			      </div>
-			      <div class="modal-body">
-
-			        <!-- FORMULAIRE INSCRIPTION A METTRE CI-DESSOUS -->
-
-			        <?= $msg ?>
-
-					<!-- infos à rentrer:
-					- pseudo (varchar 20)
-					- mdp (varchar 60)
-					- nom (varchar 20)
-					- prenom (varchar 20)
-					- email (varchar 50)
-					- civilite (enum : m,f)
-					- statut (int 1)
-					- date_enregistrement (datetime)  -->
-
-					
-					  <div class="form-group">
-					    <label for="nom">Nom</label>
-					    <input type="text" class="form-control" id="lastname" name="lastname" placeholder="Votre nom">
-					  </div>
-					  <div class="form-group">
-					    <label for="prenom">Prénom</label>
-					    <input type="text" class="form-control" id="firstname" name="firstname" placeholder="Votre prénom">
-					  </div>
-					  <div class="form-group">
-					    <label for="email">Email</label>
-					    <input type="email" class="form-control" id="email" name="email" placeholder="Votre e-mail">
-					  </div>
-                                        
-                                          <div class="form-group">
-					    <label for="mdp">Mot de passe</label>
-					    <input type="password" class="form-control" id="mdp" name="mdp" placeholder="Votre mot de passe">
-					  </div>
+        <!-- MODAL INSCRIPTION -->
+        <div class="modal fade" id="myModalinscription" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+                <form method="post" action="">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <h2 class="modal-title" id="myModalLabel"><b style="color: #42A232;">Inscription</b></h2>
+                        </div>
+                        
+                        <!-- FORMULAIRE INSCRIPTION -->
+                        <div class="modal-body">
+                             <?= $msg ?>
+                        
+                            <div class="form-group">
+                                <label for="nom">Nom</label>
+                                <input type="text" class="form-control" id="lastname" name="lastname" placeholder="Votre nom">
+                            </div>
+                            <div class="form-group">
+                                <label for="prenom">Prénom</label>
+                                <input type="text" class="form-control" id="firstname" name="firstname" placeholder="Votre prénom">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" class="form-control" id="email" name="email" placeholder="Votre e-mail">
+                            </div>
+                            <div class="form-group">
+                                <label for="mdp">Mot de passe</label>
+                                <input type="password" class="form-control" id="mdp" name="mdp" placeholder="Votre mot de passe">
+                            </div>
   
-			        <!-- fin FORMULAIRE INSCRIPTION -->
+			</div>
+                        <!-- fin FORMULAIRE INSCRIPTION -->
 
-			     	</div>
-			     	<div class="modal-footer">
-			        	<button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
-			        	<button type="submit" class="btn btn-primary">Envoyer</button>
-			     	</div>
-			      	<div class="propalConnexionInscription" style="padding: 10px;">
-			      		Vous avez déjà un compte ? <a href="" data-toggle="modal" data-target="#myModalconnexion"> <b style="color: #42A232;">Connectez-vous</b></a> !
-			      	</div>
-			    </div>
-		    </form>
-		  </div>
-		</div>
-		<!-- fin Modal INSCRIPTION -->
+			<div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
+                                <button type="submit" class="btn btn-primary">Envoyer</button>
+                        </div>
+                        <div class="propalConnexionInscription" style="padding: 10px;">
+                               Vous avez déjà un compte ? <a href="" data-toggle="modal" data-target="#myModalconnexion"> <b style="color: #42A232;">Connectez-vous</b></a> !
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!-- fin MODAL INSCRIPTION -->
+		
 
-		<!-- Modal CONNEXION -->
-		<div class="modal fade" id="myModalconnexion" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-		  <div class="modal-dialog" role="document">
-		  	<form method="post" action="">
-			    <div class="modal-content">
-			      <div class="modal-header">
-			        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                <h2 class="modal-title" id="myModalLabel"><b style="color: #42A232;">Connexion</b></h2>
-			      </div>
-			      <div class="modal-body">
-			        <!-- FORMULAIRE CONNEXION A METTRE CI-DESSOUS -->
+        <!-- MODAL CONNEXION -->
+        <div class="modal fade" id="myModalconnexion" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+                <form method="post" action="">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <h2 class="modal-title" id="myModalLabel"><b style="color: #42A232;">Connexion</b></h2>
+                        </div>
+                        
+                        <!-- FORMULAIRE CONNEXION -->
+                        <div class="modal-body">
+                            <?= $msg ?>
 
-			        <?= $msg ?>
-
-                                        <div class="form-group">
-					    <label for="emailconnexion">Email</label>
-					    <input type="text" class="form-control" id="emailconnexion" name="emailconnexion" placeholder="Votre e-mail">
-					</div>
-					<div class="form-group">
-					    <label for="mdpconnexion">Mot de passe</label>
-					    <input type="password" class="form-control" id="mdpconnexion" name="mdpconnexion" placeholder="Votre mot de passe">
-					</div>
-
-			        <!-- fin CONNEXION INSCRIPTION -->
-			     	</div>
-			      	<div class="modal-footer">
-			        	<button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
-			        	<button type="submit" class="btn btn-primary">Se connecter</button>
-			      	</div>
-			      		<div class="propalConnexionInscription" style="padding: 10px;">
-			      		Vous n'avez pas de compte ? <a href="" data-toggle="modal" data-target="#myModalinscription"><b style="color: #42A232;">Inscrivez-vous</b></a> en quelques clics !
-			      	</div>
-			    </div>
-			</form>
-		  </div>
-		</div>
-		<!-- fin Modal CONNEXION -->
-
-		<!-- fin BOITE MODAL -->
-
-        <!-- Body Wrapper -->
-        <div id="body-wrapper" class="animsition">
-
-            <!-- Header -->
-            <header id="header" class="light">
-
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-3">
-                            <!-- Logo -->
-                            <div class="module module-logo">
-                                <a href="{{ path('home')}}">
-                                    <img src="{{ asset('assets/img/beplogo.png') }}" alt="" width="" style="border-radius: 50%;background: white">
-                                </a>
+                            <div class="form-group">
+                                <label for="emailconnexion">Email</label>
+                                <input type="text" class="form-control" id="emailconnexion" name="emailconnexion" placeholder="Votre e-mail">
+                            </div>
+                            <div class="form-group">
+                                <label for="mdpconnexion">Mot de passe</label>
+                                <input type="password" class="form-control" id="mdpconnexion" name="mdpconnexion" placeholder="Votre mot de passe">
                             </div>
                         </div>
-                        <div class="col-md-7" style="font-size: 1.5em">
-                            <!-- Navigation -->
-                            <nav class="module module-navigation left mr-4">
-                                <ul id="nav-main" class="nav nav-main">
-                                    <li>
-                                        <a href="{{ path('home')}}">Accueil</a>
-                                    </li>
-                                    <li>
-                                        <a href="{{ path('about')}}">A propos</a>
-                                    </li>
-                                    <li>
-                                        <a href="{{ path('contact')}}">Contact</a>
-                                    </li>
-                                    <li class="has-dropdown">
-                                        <a href="">Connexion</a>
-                                        <div class="dropdown-container">
-                                            <ul>
-                                                <li>                                              
-                                                    
-                                                    <a href="#" data-toggle="modal" data-target="#myModalinscription">Inscription</a>
-
-
-                                                </li>
-                                                <li>
-                                                   
-                                                    <a href="#" data-toggle="modal" data-target="#myModalconnexion">Connexion</a>
-                                               
-                                                </li>
-                                            </ul>
-                                </div>
-                                    </li>
-
-                                </ul> 
-                            </nav>
-                            <div class="module left">
-                                <a href="{{ path('menu')}}" class="btn btn-outline-secondary"><span>Commander !</span></a>
-                            </div>
+                        <!-- fin FORMULAIRE CONNEXION -->
+                        
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
+                            <button type="submit" class="btn btn-primary">Se connecter</button>
                         </div>
-                        <div class="col-md-2">
-                            <a href="#" class="module module-cart right" data-toggle="panel-cart">
-                                <span class="cart-icon">
-                                    <i class="ti ti-shopping-cart"></i>
-                                    <span class="notification">2</span>
-                                </span>
-                                <span class="cart-value">9.50 €</span>
+                        <div class="propalConnexionInscription" style="padding: 10px;">
+                            Vous n'avez pas de compte ? <a href="" data-toggle="modal" data-target="#myModalinscription"><b style="color: #42A232;">Inscrivez-vous</b></a> en quelques clics !
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!-- fin Modal CONNEXION -->
+
+    <!-- fin des BOITES MODAL -->
+
+    <!-- Body Wrapper -->
+    <div id="body-wrapper" class="animsition">
+
+    <!-- Header -->
+    <header id="header" class="light">
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3">
+                        <!-- Logo -->
+                        <div class="module module-logo">
+                            <a href="{{ path('home')}}">
+                                <img src="{{ asset('assets/img/beplogo.png') }}" alt="" width="" style="border-radius: 50%;background: white">
                             </a>
                         </div>
                     </div>
+                    <div class="col-md-7" style="font-size: 1.5em">
+                        <!-- Navigation -->
+                        <nav class="module module-navigation left mr-4">
+                            <ul id="nav-main" class="nav nav-main">
+                                <li>
+                                    <a href="{{ path('home')}}">Accueil</a>
+                                </li>
+                                <li>
+                                    <a href="{{ path('about')}}">A propos</a>
+                                </li>
+                                <li>
+                                    <a href="{{ path('contact')}}">Contact</a>
+                                </li>
+                                <li class="has-dropdown">
+                                    <a href="">Connexion</a>
+                                    <div class="dropdown-container">
+                                        <ul>
+                                            <li>     
+                                                <a href="#" data-toggle="modal" data-target="#myModalinscription">Inscription</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" data-toggle="modal" data-target="#myModalconnexion">Connexion</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul> 
+                        </nav>
+                        <div class="module left">
+                            <a href="{{ path('menu')}}" class="btn btn-outline-secondary"><span>Commander !</span></a>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <a href="#" class="module module-cart right" data-toggle="panel-cart">
+                            <span class="cart-icon">
+                                <i class="ti ti-shopping-cart"></i>
+                                <span class="notification">2</span>
+                            </span>
+                            <span class="cart-value">9.50 €</span>
+                        </a>
+                    </div>
                 </div>
+            </div>
 
             </header>
-            <!-- Header / End -->
+            <!-- Fin du Header -->
 
-            <!-- Header -->
+            <!-- Header 2 -->
             <header id="header-mobile" class="light">
 
                 <div class="module module-nav-toggle">
@@ -223,38 +205,35 @@
                 </a>
 
             </header>
-            <!-- Header / End -->
+            <!-- Fin du Header 2 -->
 
-            <!-- Content -->
+            <!-- CONTENT -->
             <div id="content">
 
-            {% block body %}{% endblock %}
+                {% block body %}{% endblock %}
 
-            <!-- Footer -->
-            <footer id="footer" class="bg-dark dark text-center">
+                <!-- Footer -->
+                <footer id="footer" class="bg-dark dark text-center">
 
-                <div class="container">
-                   
-                    <!-- Footer 2nd Row -->
-                    <div class="footer-second-row">
-                       
-                         <h3 class="text-muted mb-3">Suivez-nous !</h3>
-               <a href="https://www.facebook.com/bepstreetfood/" class="icon icon-social icon-circle icon-facebook"><i class="fa fa-facebook fa-2x"></i></a>
-              <a href="https://pro.iconosquare.com/igfeed/home/1855623217997824/3105274801" class="icon icon-social icon-circle icon-instagram"><i class="fa fa-instagram  fa-2x"></i></a>
-              <br>
-              <br>
-                
-              <span class="text-muted">Copyright 2018©. Bêp Vietnamese Street Food,102 Rue La Fayette 75010 PARIS - Métro Poissonnière, 09 81 33 34 49,contact@bepstreetfood.com </span>
-                        
+                    <div class="container">
+
+                        <!-- Footer 2nd Row -->
+                        <div class="footer-second-row">
+
+                            <h3 class="text-muted mb-3">Suivez-nous !</h3>
+                            <a href="https://www.facebook.com/bepstreetfood/" class="icon icon-social icon-circle icon-facebook"><i class="fa fa-facebook fa-2x"></i></a>
+                            <a href="https://pro.iconosquare.com/igfeed/home/1855623217997824/3105274801" class="icon icon-social icon-circle icon-instagram"><i class="fa fa-instagram  fa-                                2x"></i></a><br><br>
+
+                            <span class="text-muted">Copyright 2018©. Bêp Vietnamese Street Food,102 Rue La Fayette 75010 PARIS - Métro Poissonnière, 09 81 33 34 49,contact@bepstreetfood.                                 com </span>
+                        </div>
                     </div>
-                </div>
 
-                <!-- Back To Top -->
-                <a href="#" id="back-to-top"><i class="ti ti-angle-up"></i></a>
+                    <!-- Back To Top -->
+                    <a href="#" id="back-to-top"><i class="ti ti-angle-up"></i></a>
 
-            </footer>
-        </div>
-        <!-- Content / End -->
+                </footer>
+            </div>
+            <!-- Fin du CONTENT -->
 
         <!-- Panel Cart -->
         <div id="panel-cart">
@@ -368,8 +347,8 @@
                         <div class="col-3 text-lg text-right">$9.00</div>
                     </div>
                 </div>
+                    
                 <div class="modal-body panel-details-container">
-                   
                     <!-- Panel Details / Additions -->
                     <div class="panel-details">
                         <h5 class="panel-details-title">

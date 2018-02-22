@@ -1,0 +1,156 @@
+{# ! ceci est la fiche NOS_MENUS ! #}
+
+{% extends "base.html.twig" %}
+
+{% block body %}
+<div class="container bg-light section-nos-menus">
+    <div class="row">
+        <div class="col-lg-8 push-lg-4">
+            <h1 class="mb-0">Menu {{ menu.name }}</h1>
+            <h4 class="text-muted mb-0">Réalisez des économies en prenant un menu !</h4>
+            <a href="{{ path('menu') }}">Retour à la boutique</a>
+        </div>
+    </div>
+
+    <!-- Section garniture -->
+    <div class="special-offer">
+        <img src="{{ asset('assets/img/bobun2.jpg') }}" alt="" class="special-offer-image">
+        <div class="special-offer-content">
+            <h4 class="mb-2">Choisissez votre garniture</h4>
+            <div class="form-group">
+                <label class="custom-control custom-checkbox">
+                    <input type="radio" name="garniture" class="custom-control-input">
+                    <span class="custom-control-indicator"></span>
+                    <span class="custom-control-description">Boeuf citronnelle</span>
+                </label>
+            </div>
+
+            <div class="form-group">
+                <label class="custom-control custom-checkbox">
+                    <input type="radio" name="garniture" class="custom-control-input">
+                    <span class="custom-control-indicator"></span>
+                    <span class="custom-control-description">Poulet xa xiu</span>
+                </label>
+            </div>
+
+            <div class="form-group">
+                <label class="custom-control custom-checkbox">
+                    <input type="radio" name="garniture" class="custom-control-input">
+                    <span class="custom-control-indicator"></span>
+                    <span class="custom-control-description">Tofu</span>
+                </label>
+            </div>
+
+        </div>                  
+    </div><hr>
+   
+
+    <!-- Section boisson -->
+    <div class="special-offer">
+        <img src="{{ asset('assets/img/bobun2.jpg') }}" alt="" class="special-offer-image">
+        <div class="special-offer-content">
+            <h4 class="mb-2">Choisissez votre boisson</h4>
+
+            <div class="row panel-details">
+                <!-- boisson classique -->
+                <div class="col-md-6">
+                    <h5 class="panel-details-title">Boisson classique</h5>
+                    <div class="row">
+                        <div class="col-sm-9">
+                            <div class="form-group">
+                                <label class="custom-control custom-checkbox">
+                                    <input type="radio" name="boisson" class="custom-control-input">
+                                    <span class="custom-control-indicator"></span>
+                                    <span class="custom-control-description">eau</span>
+                                </label>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="custom-control custom-checkbox">
+                                    <input type="radio" name="boisson" class="custom-control-input">
+                                    <span class="custom-control-indicator"></span>
+                                    <span class="custom-control-description">thé</span>
+                                </label>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="custom-control custom-checkbox">
+                                    <input type="radio" name="boisson" class="custom-control-input">
+                                    <span class="custom-control-indicator"></span>
+                                    <span class="custom-control-description">Charlie's</span>
+                                </label>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                    
+                <!-- boisson exotique -->
+                <div class="col-md-6">
+                    <h5 class="panel-details-title">Boisson exotique (supplément 1€)</h5>
+                    <div class="row">
+                        <div class="col-sm-9">
+                            <div class="form-group">
+                                <label class="custom-control custom-checkbox">
+                                    <input type="radio" name="boisson" class="custom-control-input">
+                                    <span class="custom-control-indicator"></span>
+                                    <span class="custom-control-description">boisson maison</span>
+                                </label>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="custom-control custom-checkbox">
+                                    <input type="radio" name="boisson" class="custom-control-input">
+                                    <span class="custom-control-indicator"></span>
+                                    <span class="custom-control-description">eau de coco</span>
+                                </label>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="custom-control custom-checkbox">
+                                    <input type="radio" name="boisson" class="custom-control-input">
+                                    <span class="custom-control-indicator"></span>
+                                    <span class="custom-control-description">aloé</span>
+                                </label>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><hr> 
+       
+
+    <!-- Section dessert -->
+    <div class="special-offer">
+        <img src="{{ asset('assets/img/bobun2.jpg') }}" alt="" class="special-offer-image">
+        <div class="special-offer-content">
+            <h4 class="mb-2">Choisissez votre dessert</h4>
+            <div class="form-group">
+                <label class="custom-control custom-checkbox">
+                    <input type="radio" name="garniture" class="custom-control-input">
+                    <span class="custom-control-indicator"></span>
+                    <span class="custom-control-description">Dessert du moment 1</span>
+                </label>
+            </div>
+
+            <div class="form-group">
+                <label class="custom-control custom-checkbox">
+                    <input type="radio" name="garniture" class="custom-control-input">
+                    <span class="custom-control-indicator"></span>
+                    <span class="custom-control-description">Dessert du moment 2</span>
+                </label>
+            </div>
+
+        </div>  
+    </div><hr>
+
+    <div class="row">
+            <div class=""><span class="text-md mr-4"><span class="text-muted">Prix</span>13.50 €</span></div>
+            <div class="text-sm-right mt-2">
+                <button class="btn btn-outline-secondary btn-sm" data-target="#productModal" data-toggle="modal"><span>Ajouter au panier</span></button>
+            </div>
+    </div> 
+</div>
+{% endblock %}{# empty Twig template #}

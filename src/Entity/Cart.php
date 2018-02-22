@@ -2,14 +2,13 @@
 
 namespace App\Entity;
 
-use App\Repository\CartRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use Zend\Code\Generator\DocBlock\Tag;
 
 /**
- * @ORM\Entity(repositoryClass="CartRepository")
+ * @ORM\Entity(repositoryClass="App\Repository\CartRepository")
  */
 class Cart
 {
