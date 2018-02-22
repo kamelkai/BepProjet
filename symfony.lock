@@ -56,6 +56,9 @@
     "doctrine/orm": {
         "version": "v2.6.0"
     },
+    "flosch/stripe-bundle": {
+        "version": "2.0.0"
+    },
     "jdorn/sql-formatter": {
         "version": "v1.2.17"
     },
@@ -85,6 +88,9 @@
             "version": "4.0",
             "ref": "aaddfdf43cdecd4cf91f992052d76c2cadc04543"
         }
+    },
+    "stripe/stripe-php": {
+        "version": "v3.23.0"
     },
     "symfony/asset": {
         "version": "v4.0.4"

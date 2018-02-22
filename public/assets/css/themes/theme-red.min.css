@@ -501,7 +501,7 @@ background-color:#fff}
 
 #header.dark
 {
-background-color:#282b2e}
+background-color:#42A232}
 
 #header.transparent
 {
@@ -541,7 +541,7 @@ background-color:#fff}
 
 #header .module-logo.dark
 {
-background-color:#282b2e}
+background-color:#42A232}
 
 #header .module-logo img
 {
@@ -619,7 +619,7 @@ box-shadow:0 0 10px 0 rgba(0,0,0,0.1)}
 
 #header-mobile.dark
 {
-background-color:#282b2e}
+background-color:#42A232}
 
 @media only screen and (max-width: 991px)
 {
@@ -1364,7 +1364,7 @@ padding-left:140px}
 .menu-sample
 {
 	position:relative;
-	background-color:#282b2e;
+	background-color:#42A232;
 overflow:hidden}
 
 .menu-sample .image
@@ -1441,7 +1441,7 @@ margin-bottom:2rem}
 	min-height:160px;
 	color:#fff;
 	padding:3rem;
-background-color:#282b2e}
+background-color:#42A232}
 
 @media only screen and (max-width: 991px)
 {
@@ -2027,7 +2027,7 @@ overflow:hidden}
 .section-main-1>.container .content
 {
 	position:relative;
-	background-color:#282b2e;
+	background-color:#42A232;
 	z-index:5;
 width:45%}
 
@@ -2302,7 +2302,7 @@ padding-bottom:6rem}
 	width:100vw;
 	bottom:0;
 	content:' ';
-background-color:#282b2e}
+background-color:#42A232}
 
 .section-extended>.container>*
 {
@@ -2633,14 +2633,14 @@ background-color:#eaeaea}
 .alert-dark .close
 {
 	background-color:#fff;
-	color:#282b2e;
+	color:#42A232;
 	-webkit-box-shadow:1px 1px 20px 0 rgba(0,0,0,0.07);
 	-moz-box-shadow:1px 1px 20px 0 rgba(0,0,0,0.07);
 box-shadow:1px 1px 20px 0 rgba(0,0,0,0.07)}
 
 .alert-dark .close:hover,.alert-dark .close:focus
 {
-	background-color:#282b2e;
+	background-color:#42A232;
 color:#fff}
 
 .bg-image,.bg-slideshow
@@ -2790,7 +2790,7 @@ background-color:#4aa36b !important}
 
 .bg-dark
 {
-background-color:#282b2e !important}
+background-color:#42A232 !important}
 
 .bg-primary-tint
 {
@@ -2802,7 +2802,7 @@ background-color:#bc4c4c}
 
 .bg-facebook
 {
-background-color:#213553}
+background-color:#42A232}
 
 .bg-twitter
 {
@@ -2898,7 +2898,7 @@ background-color:#4aa36b}
 
 .badge-dark
 {
-background-color:#282b2e}
+background-color:#42A232}
 
 .btn
 {
@@ -3131,8 +3131,8 @@ color:#fff}
 
 .btn-dark
 {
-	border-color:#282b2e;
-	background-color:#282b2e;
+	border-color:#42A232;
+	background-color:#42A232;
 color:#fff}
 
 .btn-dark:before
@@ -3141,8 +3141,8 @@ background-color:#242729}
 
 .btn-dark:hover,.btn-dark:focus,.btn-dark:active,.btn-dark:focus:active
 {
-	border-color:#282b2e;
-	background-color:#282b2e;
+	border-color:#42A232;
+	background-color:#42A232;
 color:#fff}
 
 .btn-secondary:before
@@ -3250,16 +3250,16 @@ color:#fff}
 
 .btn-outline-dark
 {
-	border-color:#282b2e;
+	border-color:#42A232;
 color:inherit}
 
 .btn-outline-dark:before
 {
-background-color:#282b2e}
+background-color:#42A232}
 
 .btn-outline-dark:hover,.btn-outline-dark:focus,.btn-outline-dark:active,.btn-outline-dark:focus:active
 {
-	border-color:#282b2e;
+	border-color:#42A232;
 	background:transparent;
 color:#fff}
 
@@ -3831,7 +3831,7 @@ border-color:transparent transparent transparent #fff}
 	-o-backface-visibility:hidden;
 	backface-visibility:hidden;
 	font-family:"Oswald",sans-serif;
-	background-color:#282b2e;
+	background-color:#42A232;
 	min-width:220px;
 	margin-bottom:0.2rem;
 text-align:left}
@@ -4372,7 +4372,7 @@ color:#4aa36b}
 
 .icon.icon-dark
 {
-color:#282b2e}
+color:#42A232}
 
 .icon.icon-dark
 {
@@ -4574,7 +4574,7 @@ background-color:#4aa36b}
 
 .icon.icon-circle.icon-dark
 {
-background-color:#282b2e}
+background-color:#42A232}
 
 .icon.icon-circle.icon-white
 {
@@ -5229,7 +5229,7 @@ padding:1.5rem 2rem}
 
 .modal-backdrop
 {
-background-color:#282b2e}
+background-color:#42A232}
 
 .modal-backdrop.show
 {
@@ -5733,11 +5733,11 @@ content:' '}
 
 .blockquote .blockquote-content.dark
 {
-background-color:#282b2e}
+background-color:#42A232}
 
 .blockquote .blockquote-content.dark:after
 {
-border-color:transparent #282b2e transparent transparent}
+border-color:transparent #42A232 transparent transparent}
 
 .blockquote .blockquote-content p
 {
@@ -5797,11 +5797,11 @@ border-color:transparent #fff transparent transparent}
 
 .bg-light .blockquote .blockquote-content.dark
 {
-background-color:#282b2e}
+background-color:#42A232}
 
 .bg-light .blockquote .blockquote-content.dark:after
 {
-border-color:transparent #282b2e transparent transparent}
+border-color:transparent #42A232 transparent transparent}
 
 .text-lg
 {
@@ -5852,7 +5852,7 @@ color:#4aa36b !important}
 
 .text-dark
 {
-color:#282b2e !important}
+color:#42A232 !important}
 
 .text-dark
 {

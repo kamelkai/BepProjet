@@ -28,12 +28,137 @@
 
         <!-- CSS Theme -->
         <link id="theme" rel="stylesheet" href="{{ asset('assets/css/themes/theme-beige.min.css') }}" />
-        <link href="{{ asset('css/demo.css') }}" rel="stylesheet" />
+        <link href="{{ asset('css/override.css') }}" rel="stylesheet" />
 
     </head>
 
     <body>
 
+   
+
+		<!-- Modal INSCRIPTION -->
+		<div class="modal fade" id="myModalinscription" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		  <div class="modal-dialog" role="document">
+		  	<form method="post" action="">
+			    <div class="modal-content">
+			      <div class="modal-header">
+			        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			        <h4 class="modal-title" id="myModalLabel">Inscription</h4>
+			      </div>
+			      <div class="modal-body">
+
+			        <!-- FORMULAIRE INSCRIPTION A METTRE CI-DESSOUS -->
+
+			        <?= $msg ?>
+
+					<!-- infos à rentrer:
+					- pseudo (varchar 20)
+					- mdp (varchar 60)
+					- nom (varchar 20)
+					- prenom (varchar 20)
+					- email (varchar 50)
+					- civilite (enum : m,f)
+					- statut (int 1)
+					- date_enregistrement (datetime)  -->
+
+					
+					  <div class="form-group">
+					    <label for="pseudo">Pseudo</label>
+					    <input type="text" class="form-control" id="pseudo" name="pseudo" placeholder="Pseudo">
+					  </div>
+					  <div class="form-group">
+					    <label for="mdp">Mot de passe</label>
+					    <input type="password" class="form-control" id="mdp" name="mdp" placeholder="Mot de passe">
+					  </div>
+					  <div class="form-group">
+					    <label for="nom">Nom</label>
+					    <input type="text" class="form-control" id="nom" name="nom" placeholder="Nom">
+					  </div>
+					  <div class="form-group">
+					    <label for="prenom">Prénom</label>
+					    <input type="text" class="form-control" id="prenom" name="prenom" placeholder="Prénom">
+					  </div>
+					  <div class="form-group">
+					    <label for="email">Email</label>
+					    <input type="email" class="form-control" id="email" name="email" placeholder="Email">
+					  </div>
+					  <div class="form-group">
+					  	<div>
+					  		<label for="civilite">Civilité</label>
+					  	</div>
+						  <select id="civilite" name="civilite">
+						  	<option selected value="0">Choississez une option</option>
+						  	<option value="m">m</option>
+						  	<option value="f">f</option>
+						  </select>
+					  </div>
+					  
+			        <!-- fin FORMULAIRE INSCRIPTION -->
+
+			     	</div>
+			     	<div class="modal-footer">
+			        	<button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
+			        	<button type="submit" class="btn btn-primary">Envoyer</button>
+			     	</div>
+			      	<div class="propalConnexionInscription">
+			      		Vous avez déjà un compte ? <a href="" data-toggle="modal" data-target="#myModalconnexion">Connectez-vous</a> !
+			      	</div>
+			    </div>
+		    </form>
+		  </div>
+		</div>
+		<!-- fin Modal INSCRIPTION -->
+
+		<!-- Modal CONNEXION -->
+		<div class="modal fade" id="myModalconnexion" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		  <div class="modal-dialog" role="document">
+		  	<form method="post" action="">
+			    <div class="modal-content">
+			      <div class="modal-header">
+			        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			        <h4 class="modal-title" id="myModalLabel">Connexion</h4>
+			      </div>
+			      <div class="modal-body">
+			        <!-- FORMULAIRE CONNEXION A METTRE CI-DESSOUS -->
+
+			        <?= $msg ?>
+
+		        	<div class="form-group">
+					    <label for="pseudoconnexion">Pseudo</label>
+					    <input type="text" class="form-control" id="pseudoconnexion" name="pseudoconnexion" placeholder="Pseudo">
+					</div>
+					<div class="form-group">
+					    <label for="mdpconnexion">Mot de passe</label>
+					    <input type="password" class="form-control" id="mdpconnexion" name="mdpconnexion" placeholder="Mot de passe">
+					</div>
+
+			        <!-- fin CONNEXION INSCRIPTION -->
+			     	</div>
+			      	<div class="modal-footer">
+			        	<button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
+			        	<button type="submit" class="btn btn-primary">Se connecter</button>
+			      	</div>
+			      		<div class="propalConnexionInscription">
+			      		Vous n'avez pas de compte ? <a href="" data-toggle="modal" data-target="#myModalinscription">Inscrivez-vous</a> en quelques clics !
+			      	</div>
+			    </div>
+			</form>
+		  </div>
+		</div>
+		<!-- fin Modal CONNEXION -->
+
+		<!-- fin BOITE MODAL -->
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <!------------- -->
         <!-- Body Wrapper -->
         <div id="body-wrapper" class="animsition">
 
@@ -46,30 +171,33 @@
                             <!-- Logo -->
                             <div class="module module-logo">
                                 <a href="index.html">
-                                    <img src="{{ asset('assets/img/photobep/Design/beplogo.png') }}" alt="" width="88" style="margin-top: -88px;
-    margin-left: 140px;">
+                                    <img src="{{ asset('assets/img/photobep/Design/beplogo.png') }}" alt="" width="" style="border-radius: 50%;background: white">
                                 </a>
                             </div>
                         </div>
-                        <div class="col-md-7">
+                        <div class="col-md-7" style="font-size: 1.5em">
                             <!-- Navigation -->
                             <nav class="module module-navigation left mr-4">
                                 <ul id="nav-main" class="nav nav-main">
                                     <li class="has-dropdown">
-                                        <a href="#">Home</a>
+                                        <a href="#">Accueil</a>
                                     </li>
+                        
                                     <li class="has-dropdown">
-                                        <a href="#">About</a>
-                                    </li>
-                                    <li class="has-dropdown">
-                                        <a href="#">Menu</a>
+                                        <a href="#">A propos</a>
                                     </li>
                                     <li><a href="page-contact.html">Contact</a></li>
-                                </ul>
+                                    <li class="has-dropdown">
+                                        <a href="#"></a>
+                                    </li>
+                             
+								<li><a href="#" data-toggle="modal" data-target="#myModalinscription">Inscription</a></li>
+								<li><a href="#" data-toggle="modal" data-target="#myModalconnexion">Connexion</a></li>
+						  	
+
+                                </ul> 
                             </nav>
-                            <div class="module left">
-                                <a href="menu-list-navigation.html" class="btn btn-outline-secondary"><span>Order</span></a>
-                            </div>
+
                         </div>
                         <div class="col-md-2">
                             <a href="#" class="module module-cart right" data-toggle="panel-cart">
@@ -116,56 +244,15 @@
             <footer id="footer" class="bg-dark dark">
 
                 <div class="container">
-                    <!-- Footer 1st Row -->
-                    <div class="footer-first-row row">
-                        <div class="col-lg-3 text-center">
-                            <a href="index.html"><img src="{{ asset('assets/img/photobep/Design/beplogo.png') }}" alt="" width="200" class="mt-5 mb-5"></a>
-                        </div>
-                        <div class="col-lg-4 col-md-6">
-                            <h5 class="text-muted">Latest news</h5>
-                            <ul class="list-posts">
-                                <li>
-                                    <a href="blog-post.html" class="title">How to create effective webdeisign?</a>
-                                    <span class="date">February 14, 2015</span>
-                                </li>
-                                <li>
-                                    <a href="blog-post.html" class="title">Awesome weekend in Polish mountains!</a>
-                                    <span class="date">February 14, 2015</span>
-                                </li>
-                                <li>
-                                    <a href="blog-post.html" class="title">How to create effective webdeisign?</a>
-                                    <span class="date">February 14, 2015</span>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="col-lg-5 col-md-6">
-                            <h5 class="text-muted">Subscribe Us!</h5>
-                            <!-- MailChimp Form -->
-                            <form action="//suelo.us12.list-manage.com/subscribe/post-json?u=ed47dbfe167d906f2bc46a01b&amp;id=24ac8a22ad" id="sign-up-form" class="sign-up-form validate-form mb-3" method="POST">
-                                <div class="input-group">
-                                    <input name="EMAIL" id="mce-EMAIL" type="email" class="form-control" placeholder="Tap your e-mail..." required>
-                                    <span class="input-group-btn">
-                                        <button class="btn btn-primary btn-submit" type="submit">
-                                            <span class="description">Subscribe</span>
-                                            <span class="success">
-                                                <svg x="0px" y="0px" viewBox="0 0 32 32"><path stroke-dasharray="19.79 19.79" stroke-dashoffset="19.79" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" d="M9,17l3.9,3.9c0.1,0.1,0.2,0.1,0.3,0L23,11"/></svg>
-                                            </span>
-                                            <span class="error">Try again...</span>
-                                        </button>
-                                    </span>
-                                </div>
-                            </form>
-                            <h5 class="text-muted mb-3">Social Media</h5>
-                            <a href="#" class="icon icon-social icon-circle icon-sm icon-facebook"><i class="fa fa-facebook"></i></a>
-                            <a href="#" class="icon icon-social icon-circle icon-sm icon-google"><i class="fa fa-google"></i></a>
-                            <a href="#" class="icon icon-social icon-circle icon-sm icon-twitter"><i class="fa fa-twitter"></i></a>
-                            <a href="#" class="icon icon-social icon-circle icon-sm icon-youtube"><i class="fa fa-youtube"></i></a>
-                            <a href="#" class="icon icon-social icon-circle icon-sm icon-instagram"><i class="fa fa-instagram"></i></a>
-                        </div>
-                    </div>
+                   
                     <!-- Footer 2nd Row -->
                     <div class="footer-second-row">
-                        <span class="text-muted">Copyright Soup 2017©. Made with love by Suelo.</span>
+                       
+                         <h5 class="text-muted mb-3">Suivez-nous !</h5>
+                                <a href="https://www.facebook.com/bepstreetfood/" class="icon icon-social icon-circle icon-sm icon-facebook"><i class="fa fa-facebook"></i></a>
+                                <a href="https://pro.iconosquare.com/igfeed/home/1855623217997824/3105274801" class="icon icon-social icon-circle icon-sm icon-instagram"><i class="fa fa-instagram"></i></a> <br><br>
+                                 <span class="text-muted">Copyright 2018©. Bêp Vietnamese Street Food,102 Rue La Fayette 75010 PARIS - Métro Poissonnière, 09 81 33 34 49,contact@bepstreetfood.com </span>
+                        
                     </div>
                 </div>
 

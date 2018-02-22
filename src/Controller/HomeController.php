@@ -45,6 +45,15 @@ class HomeController extends Controller
         // replace this line with your own code!
         return $this->render('about.html.twig');
     } 
+    
+     /**
+     * 
+     * @Route("/profil", name="profil")
+     */
+    public function profil() 
+    {
+        return $this->render('profil.html.twig');
+    }
  
     
  }
