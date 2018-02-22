@@ -1,0 +1,38 @@
+{# tags list #}
+{# empty Twig template #}
+{% extends "admin/templateAdmin.html.twig" %}
+               {% block title %}Liste des Ingrédients{% endblock %}
+
+{% block body %}
+
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="card">
+                                <div class="card-header" data-background-color="green">
+                                    <h4 class="">Ingrédients</h4>
+                                </div>
+                                <div class="card-content table-responsive">
+                                    <table class="table">
+                                        <thead class="text-primary">
+                                            <th>id</th>
+                                          
+                                        </thead>
+                                        <tbody> 
+                                            {% for tag in tags %}
+                                            <tr>
+                                               
+                                                <td>{{ tag.id }}</td>
+                                                <td>{{ tag.name }}</td>
+                                            </tr>  
+                                            {% endfor %}
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+             
+    
+{% endblock %}

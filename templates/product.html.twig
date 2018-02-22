@@ -1,0 +1,88 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+<div id="content">
+
+    <!-- Page Title -->
+    <div class="page-title bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 push-lg-4">
+                    <h1 class="mb-0">Bo Bun</h1>
+                    <h4 class="text-muted mb-0">On ne présente plus le Bo bun, plat typique et incontournable de la cuisine vietnamienne. De la fraîcheur, de la couleur, un mélange de saveurs, vous pouvez même le personnaliser selon votre humeur ! </h4>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Page Content -->
+    <div class="page-content bg-light">
+        <div class="container">
+            <!-- Special Offer -->
+            <div class="special-offer mb-5 animated" data-animation="fadeIn">
+                <img src="{{ asset('assets/img/bobun2.jpg') }}" alt="" class="special-offer-image">
+                <div class="special-offer-content">
+                    <h2 class="mb-2">Bo Bun boeuf</h2>
+                    <h5 class="text-muted mb-5">Servi avec des nems aux crevettes</h5>
+                    <ul class="list-check text-lg mb-0">
+                        <li>Nems</li>
+                        <li>Salade</li>
+                        <li>Carottes</li>
+                        <li>Coriandre</li>
+                        <li>Oignons frits</li>
+                    </ul>
+                    <div class="row align-items-center mt-4">
+                        <div class="col-sm-6"><span class="text-md mr-4"><span class="text-muted">Prix</span> €9.00</span></div>
+                        <div class="col-sm-6 text-sm-right mt-2 mt-sm-0"><button class="btn btn-outline-secondary btn-sm" data-target="#productModal" data-toggle="mod                                                  al"><span>Commander</span></button></div>
+                    </div>                    
+                </div><hr>
+                <h4>Souhaitez-vous compléter votre repas ?</h4>
+                <p class="bg-success">Economisez en prenant Plat + Boisson + Dessert !</p>
+                <!-- Page Content -->
+                <div class="page-content">
+
+                    <div class="container clearfix">
+                        
+                        <div class="main left">
+
+                            <!-- Post / Item -->
+                            <article class="post post-wide animated mb-4" data-animation="fadeIn">
+                                <div class="post-image"><img src="{{ asset('assets/img/boisson.jpg') }}" alt=""></div>
+                                <div class="post-content">
+                                    <h4><a href="blog-post.html">Boisson</a></h4>
+                                    <ul>
+                                        <li>Classique 2€</li>
+                                        <li>Exotique 3€</li>
+                                    </ul>
+                                    <div class="row align-items-center mt-4">
+                                        
+                                        <div class="col-sm-6 text-sm-right mt-2 mt-sm-0"><button class="btn btn-outline-secondary btn-sm" data-target="#productModal" data-toggle="mod                                                  al"><span>Commander</span></button></div>
+                                    </div> 
+                                </div>
+                            </article>
+                            <!-- Post / Item -->
+                            <article class="post post-wide animated mb-4" data-animation="fadeIn">
+                                <div class="post-image"><img src="{{ asset('assets/img/dessert2.jpg') }}" alt=""></div>
+                                <div class="post-content">
+                                    <h4><a href="blog-post.html">Dessert</a></h4>
+                                    <ul>
+                                        <li>Dessert 1</li>
+                                        <li>Dessert 2</li>
+                                    </ul>
+                                    <div class="row align-items-center mt-4">
+                                        <div class="col-sm-6"><span class="text-md mr-4"><span class="text-muted">Prix</span> €3.00</span></div>
+                                        <div class="col-sm-6 text-sm-right mt-2 mt-sm-0"><button class="btn btn-outline-secondary btn-sm" data-target="#productModal" data-toggle="mod                                                  al"><span>Commander</span></button></div>
+                                    </div> 
+                                </div>
+                            </article>
+                            <hr>
+
+                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</div><!-- Content / End -->
+{% endblock %}

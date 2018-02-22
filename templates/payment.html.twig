@@ -1,0 +1,16 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+    <form action="{{ path('payment') }}" method='POST' >
+    <script
+        src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+        data-key="pk_test_5WjtMJqs99Wod2QltK3dqLfp"
+        data-amount="999"
+        data-name="Bep Street Food" />
+        data-description="Example charge"
+        data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
+        data-locale="auto"
+        data-currency="eur">
+    </script>
+    </form>
+{% endblock %}

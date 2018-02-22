@@ -5,31 +5,36 @@
     <section class="section section-main section-main-1 bg-light">
 
         
-{#        slider#}
+{#slider#}
         <div class="container dark">
             <div class="slide-container">
                 <div id="section-main-1-carousel-image" class="image inner-controls">
-                    <div class="slide"><div class="bg-image"><img src="{{ asset('assets/img/photobep/Design/IMG_6235.png') }}" alt=""></div></div>
-                    <div class="slide"><div class="bg-image"><img src="{{ asset('assets/img/photobep/Design/IMG_6273.png') }}" alt=""></div></div>
-                    <div class="slide"><div class="bg-image"><img src="{{ asset('assets/img/photobep/Design/IMG_6375.png') }}" alt=""></div></div>
-                    <div class="slide"><div class="bg-image"><img src="{{ asset('assets/img/photobep/Design/IMG_6593.png') }}" alt=""></div></div>
+                    <div class="slide"><div class="bg-image"><img src="{{ asset('assets/img/bepboxaffiche.png') }}" alt=""></div></div>
+                    <div class="slide"><div class="bg-image"><img src="{{ asset('assets/img/IMG_6273.jpg') }}" alt=""></div></div>
+                    <div class="slide"><div class="bg-image"><img src="{{ asset('assets/img/IMG_6375.jpg') }}" alt=""></div></div>
+                    <div class="slide"><div class="bg-image"><img src="{{ asset('assets/img/IMG_6593.jpg') }}" alt=""></div></div>
                 </div>
-                <div class="content dark">
+                <div class="content" id="textSlider">
                     <div id="section-main-1-carousel-content">
                         <div class="content-inner">
+                            <h1>Bep Box</h1>
+                            <h4 class=" mb-5"> Nous vous concoctons un plat sain & savoureux en fonction de la saison et de notre inspiration. </h4>
+                            <a href="{{ path('menu')}}" class="btn btn-outline-primary btn-lg"><span>Commander!</span></a>
+                        </div>
+                        <div class="content-inner">
                             <h1>Banh mi</h1>
-                            <h4 class="text-muted mb-5"> Dans sa baguette croustillante,c’est LE sandwich franco-vietnamien, la star de la street food.</h4>
-                            <a href="page-offers.html" class="btn btn-outline-primary btn-lg"><span>Commander!</span></a>
+                            <h4 class=" mb-5"> Dans sa baguette croustillante,c’est LE sandwich franco-vietnamien! la star de la street food.</h4>
+                            <a href="{{ path('menu')}}" class="btn btn-outline-primary btn-lg"><span>Commander!</span></a>
                         </div>
                         <div class="content-inner">
                             <h1>Bo bun</h1>
-                            <h4 class="text-muted mb-5">On ne présente plus le Bo bun, plat typique et incontournable de la cuisine vietnamienne !</h4>
-                            <a href="page-offers.html" class="btn btn-outline-primary btn-lg"><span>Commander!</span></a>
+                            <h4 class="mb-5">On ne présente plus le Bo bun, plat typique et incontournable de la cuisine vietnamienne !</h4>
+                            <a href="{{ path('menu')}}" class="btn btn-outline-primary btn-lg"><span>Commander!</span></a>
                         </div>
                         <div class="content-inner">
                             <h1>Roulo'</h1>
-                            <h4 class="text-muted mb-5">Frais et savoureux, il y en a pour tous les goûts : poulet & crevette, boeuf citronnelle ou encore tofu & avocat.</h4>
-                            <a href="menu-list-collapse.html" class="btn btn-outline-primary btn-lg"><span>Commander!</span></a>
+                            <h4 class="mb-5">Frais et savoureux, il y en a pour tous les goûts : poulet & crevette, boeuf citronnelle ou encore tofu & avocat.</h4>
+                            <a href="{{ path('menu')}}" class="btn btn-outline-primary btn-lg"><span>Commander!</span></a>
                         </div>
                     </div>
                     <nav class="content-nav">
@@ -46,6 +51,7 @@
    
 
     <!-- Section - Steps -->
+    <section class="section section-extended right dark col-md-12 col-sm-12 col-xs-12" id="NosEngagements" >
     <section class="section section-extended right dark" id="NosEngagements" >
         <div class="row" >
         <div class="container">
@@ -54,7 +60,10 @@
                 <div class="col-md-3 ">
                     <!-- Step -->
                     <div class="feature feature-1  text-center">
-                        <img src="{{ asset('assets/img/photobep/Autres/feuille.png') }}" width="150px" height="100px">
+                        <div class="imgEngagements">
+                            <img src="{{ asset('assets/img/feuille.png') }}" width="150px" height="100px">
+                        </div>
+                        
                         <div class="feature-content">
                             <h4 class="text-center"><b>Fraîcheur</b></h4>
                             <p class="text-muted text-center">C’est avec un grand soin que nous choisissons nos produits. Des plats sains cuisinés avec des ingrédients de qualité, 100% fraîcheur garantie ! Aussi, nos baguettes sont conçues spécialement pour Bêp par notre artisan-boulanger.</p>
@@ -64,7 +73,10 @@
                 <div class="col-md-3 ">
                     <!-- Step -->
                     <div class="feature feature-1 text-center">
-                         <img src="{{ asset('assets/img/photobep/Autres/couverts.png') }}" width="150px">
+                    <div class="imgEngagements">
+                        <img src="{{ asset('assets/img/couverts.png') }}" width="150px">
+                    </div>
+                         
                         <div class="feature-content">
                             <h4 class="text-center"><b>Fait maison</b></h4>
                             <p class="text-muted text-center">
@@ -75,7 +87,10 @@ De la marinade de nos viandes aux desserts tout est fait sur place avec exigence
                 <div class="col-md-3 ">
                     <!-- Step -->
                     <div class="feature feature-1 text-center">
-                       <img src="{{ asset('assets/img/photobep/Autres/carotte.png') }}" width="150px;">
+                      <div class="imgEngagements"> 
+                          <img src="{{ asset('assets/img/carotte.png') }}" width="150px;">
+                      </div>
+                      
                         <div class="feature-content">
                             <h4 class="text-center"><b>Végétarien</b></h4>
                             <p class="text-muted text-center">
@@ -86,7 +101,10 @@ On pense aussi à nos amis végétariens avec une version veggie pour chaque pla
                 <div class="col-md-3 ">
                     <!-- Step -->
                     <div class="feature feature-1 text-center">
-                         <img src="{{ asset('assets/img/photobep/Autres/environement.png') }}" width="150px">
+                       <div class="imgEngagements">
+                           <img src="{{ asset('assets/img/environement.png') }}" width="150px">
+                       </div>
+                         
                         <div class="feature-content">
                             <h4 class="text-center"><b>Environnement</b></h4>
                             <p class="text-muted text-center">
@@ -98,16 +116,16 @@ Très soucieux de l’environnement, nos emballages sont recyclés ou recyclable
         </div>
 
     <!-- Section - Steps -->
-<div class="container bg-dark" style="border: 2px solid black">
+<div class="container bg-dark" id="clickCollect" >
 <div class="row">
        
  
-                <div class="col-md-4" style="border: 1px solid black">
+                <div class="col-md-4" >
                     <!-- Step -->
                     <div class="feature feature-1">
                                          
                         <div class="feature-content "> 
-                            <img src="{{ asset('assets/img/photobep/Autres/menuicon.png') }}" width="70px" class="pull-left"> <br><br>
+                            <img src="{{ asset('assets/img/menuicon.png') }}" width="" class="pull-left"> 
                             <h4 class=""><a href="menu.html.twig"><b>#Choisis ton plat</b></a></h4>
 
                         </div>
@@ -115,12 +133,12 @@ Très soucieux de l’environnement, nos emballages sont recyclés ou recyclable
                 </div>
                         
                         
-                <div class="col-md-4" style="border: 1px solid black">
+                <div class="col-md-4" >
                     <!-- Step -->
                     <div class="feature feature-1">
                                              
                         <div class="feature-content">
-                            <img src="{{ asset('assets/img/photobep/Autres/logocb.png') }}" width="70px" class="pull-left"><br><br>
+                            <img src="{{ asset('assets/img/logocb.png') }}" width="" class="pull-left">
                             <h4 class=""><b> #Petit coup de CB </b></h4>
 
                         </div>
@@ -128,14 +146,14 @@ Très soucieux de l’environnement, nos emballages sont recyclés ou recyclable
                 </div>
                         
                         
-                <div class="col-md-4" style="border: 1px solid black">
+                <div class="col-md-4" >
                     <!-- Step -->
                     <div class="feature feature-1">
                        
                      
                         <div class="feature-content">
-                            <img src="{{ asset('assets/img/photobep/Autres/service-retrait.png') }}" width="60px" class="pull-left"><br><br>
-                            <h4 class=""><b>#Récupère ta commande sans faire la queue!</b></h4>
+                            <img src="{{ asset('assets/img/service-retrait.png') }}" width="" class="pull-left">
+                            <h4 class=""><b>#Récupère ta commande</b></h4>
 
                         </div>
                     </div>
@@ -143,9 +161,7 @@ Très soucieux de l’environnement, nos emballages sont recyclés ou recyclable
             
         </div>
         </div>
-            
-            
-		
+
     </section>
         
 

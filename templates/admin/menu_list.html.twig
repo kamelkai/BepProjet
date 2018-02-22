@@ -1,0 +1,39 @@
+{# empty Twig template #}
+{% extends "admin/templateAdmin.html.twig" %}
+{% block title %}Liste des Menus{% endblock %}
+
+{% block body %}
+
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="card">
+                                <div class="card-header" data-background-color="green">
+                                    <h4 class="">Menus</h4>
+                                </div>
+                                <div class="card-content table-responsive">
+                                    <table class="table">
+                                        <thead class="text-primary">
+                                            <th>id</th>
+                                          
+                                        </thead>
+                                        <tbody> 
+                                            {% for menu in menus %}
+                                            <tr>
+                                               
+                                                <td>{{ menu.id }}</td>
+                                                <td>{{ menu.name }}</td>
+                                                <td>{{ menu.description }}</td>
+                                                <td>{{ menu.price }}</td>
+                                            </tr>  
+                                            {% endfor %}
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+             
+    
+{% endblock %}

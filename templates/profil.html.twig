@@ -2,6 +2,99 @@
 {% extends "base.html.twig" %}
 
 {% block body %}
+   <!-- Content -->
+   <div id="content">
+
+       <!-- Page Title -->
+       <div class="page-title bg-light">
+           <div class="container">
+               <div class="row">
+                   <div class="col-lg-8 push-lg-4">
+                       <h1 class="mb-0">Bonjour Alex</h1>
+                       <h4 class="text-muted mb-0">Bienvenue chez Bêp</h4>
+                   </div>
+               </div>
+           </div>
+       </div>
+
+       <!-- Page Content -->
+       <div class="page-content">
+     
+           <div class="container clearfix">
+               <div class="mb-4 ml-5">
+                   <h4 class="text-muted mb-0" >Votre dernière commande</h4>
+               </div>
+               
+               <div class="main left">
+                   
+                   <!-- Post / Item -->
+                   <article class="post post-wide animated mb-4" data-animation="fadeIn">
+                       <div class="post-image"><img src="assets/img/posts/post01.jpg" alt=""></div>
+                       <div class="post-content">
+                           <h4><a href="blog-post.html">Banh Mi Boeuf</a></h4>
+                           <p>Délicieux sandwich vietnamien avec plein de truc dedans.</p>
+                       </div>
+                   </article>
+                   <!-- Post / Item -->
+                   <article class="post post-wide animated mb-4" data-animation="fadeIn">
+                       <div class="post-image"><img src="assets/img/posts/post01.jpg" alt=""></div>
+                       <div class="post-content">
+                           <h4><a href="blog-post.html">Roulo'</a></h4>
+                           <p>Rouleau de printemps vietnamien avec plein de truc dedans.</p>
+                       </div>
+                   </article>
+                   <hr>
+               <div class="mb-4 ml-5 mt-4">
+                   <h4 class="text-muted mb-0">Une nouvelle envie ? Nous vous suggerons...</h4>
+               </div>
+                   
+                   <!-- Post / Item -->
+                   <article class="post post-wide animated" data-animation="fadeIn">
+                       <div class="post-image"><img src="assets/img/posts/post02.jpg" alt=""></div>
+                       <div class="post-content">
+                           <h4><a href="blog-post.html">Bo Bun Poulet Xia Xu</a></h4>
+                           <p>Plat traditionnel vietnamien avec plein de truc dedans.</p>
+                       </div>
+                   </article>
+                   <!-- Post / Item -->
+                   <article class="post post-wide animated" data-animation="fadeIn">
+                       <div class="post-image"><img src="assets/img/posts/post02.jpg" alt=""></div>
+                       <div class="post-content">
+                           <h4><a href="blog-post.html">Tapioca banane</a></h4>
+                           <p>Dessert au tapioca et a la banane comme c'est écrit dans le titre.</p>
+                       </div>
+                   </article>
+           </div>
+               
+           {# sidebar #}
+               <div class="sidebar right">
+                   <!-- Widget - Recent posts -->
+                   <div class="widget widget-recent-posts">
+                       <h5>Mes identifiants</h5>
+                       <ul class="list-posts">
+                           <li>
+                               Prénom Nom
+
+                           </li>
+                           <li>
+                               Email
+
+                           </li>
+                           <li>
+                               <a href="blog-post.html" class="title">Modifier mon mot de passe</a>
+                               
+                           </li>
+                       </ul>
+                   </div>
+                   <hr>
+
+               </div>
+           </div>
+           
+       </div>
+   </div>
+   <!-- Content / End -->
+{% endblock %}
     <!-- Content -->
     <div id="content">
 

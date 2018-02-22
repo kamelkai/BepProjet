@@ -14,6 +14,20 @@ class MemberController extends Controller
      */
     public function getList(MemberRepository $memberRepo)
     {
-        return $this->render('admin/member_list.html.twig');
+        $admins = $memberRepo->findby([
+            'status' => 'admin'
+        ]);
+        
+        $membres = $memberRepo->findby([
+            'status' => 'member'
+        ]);
+        
+        return $this->render('admin/member_list.html.twig', [
+            'admins' => $admins,
+            'membres' => $membres
+        ]);
     }
+    
+    
+   
 }

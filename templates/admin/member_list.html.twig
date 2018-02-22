@@ -4,9 +4,72 @@
 {% block title %}Liste des membres{% endblock %}
 
 {% block body %}
-    <h1>Liste des membres</h1>
-    
-    
+
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="card">
+                                <div class="card-header" data-background-color="green">
+                                    <h4 class="">Administrateur</h4>
+                                </div>
+                                <div class="card-content table-responsive">
+                                    <table class="table">
+                                        <thead class="text-primary">
+                                            <th>id</th>
+                                          
+                                        </thead>
+                                        <tbody> 
+                                            {% for admin in admins %}
+                                            <tr>
+                                               
+                                                <td>{{ admin.id }}</td>
+                                                <td>{{ admin.firstname }}</td>
+                                                <td>{{ admin.lastname }}</td>
+                                                <td>{{ admin.email }}</td>
+                                                <td>{{ admin.mdp }}</td>
+                                                <td>{{ admin.status }}</td>
+                                            </tr>  
+                                            {% endfor %}
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="card">
+                                <div class="card-header" data-background-color="green">
+                                    <h4 class="">Membres</h4>
+                                </div>
+                                <div class="card-content table-responsive">
+                                    <table class="table">
+                                        <thead class="text-primary">
+                                            <th>id</th>
+                                            
+                                        </thead>
+                                        <tbody> 
+                                            {% for membre in membres %}
+                                            <tr>
+                                               
+                                                <td>{{ membre.id }}</td>
+                                                <td>{{ membre.firstname }}</td>
+                                                <td>{{ membre.lastname }}</td>
+                                                <td>{{ membre.email }}</td>
+                                                <td>{{ membre.mdp }}</td>
+                                                <td>{{ membre.status }}</td>
+                                             
+                                            </tr>  
+                                            {% endfor %}
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
     
 {% endblock %}
 
