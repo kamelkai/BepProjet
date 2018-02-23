@@ -1,4 +1,4 @@
-
+    
 @import url("https://fonts.googleapis.com/css?family=Oswald|Raleway:100,200,400,500");
 html
 {
@@ -1444,7 +1444,7 @@ margin-bottom:2rem}
 	min-height:160px;
 	color:#fff;
 	padding:3rem;
-background-color:#42A232}
+        background-color:#42A232}
 
 @media only screen and (max-width: 991px)
 {
@@ -1452,7 +1452,7 @@ background-color:#42A232}
 	{
 	min-height:100px}
 }
-.menu-category #category-bepbox .bg-image:after 
+.menu-category #category-bepbox .bg-image:after, #category-menu .bg-image:after
 {
 	position:absolute;
 	top:0;
@@ -1461,37 +1461,7 @@ background-color:#42A232}
 	bottom:0;
 	content:' ';}
 
-.menu-category #category-menu .bg-image:after 
-{
-	position:absolute;
-	top:0;
-	left:0;
-	right:0;
-	bottom:0;
-	content:' ';
-        background-image:linear-gradient(to top, rgba(0,0,0,0.5), transparent)}
-
-.menu-category #category-plat .bg-image:after
-{
-	position:absolute;
-	top:0;
-	left:0;
-	right:0;
-	bottom:0;
-	content:' ';
-        background-image:linear-gradient(to top, rgba(0,0,0,0.5), transparent)}
-
-.menu-category #category-dessert .bg-image:after
-{
-	position:absolute;
-	top:0;
-	left:0;
-	right:0;
-	bottom:0;
-	content:' ';
-        background-image:linear-gradient(to top, rgba(0,0,0,0.5), transparent)}
-
-.menu-category #category-boisson .bg-image:after
+.menu-category #category-plat .bg-image:after, #category-dessert .bg-image:after 
 {
 	position:absolute;
 	top:0;
@@ -2712,6 +2682,8 @@ color:#fff}
 	background-size:100%;
 	background-repeat:no-repeat;
         z-index:0}
+
+
 
 .bg-image.bottom,.bg-slideshow.bottom
 {

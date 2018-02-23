@@ -127,10 +127,9 @@ flex-wrap: nowrap;
 #menuSidebar{
     margin-top: 100px;
 }
-/*#Bepbox img{
-    height: 171px;
-    width: 256px;
-}*/
+category-menu img{
+    height: 50%;
+}
 
 .imgMiddleMenu img{
     height: 250px;

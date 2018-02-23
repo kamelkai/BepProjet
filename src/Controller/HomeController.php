@@ -43,13 +43,19 @@ class HomeController extends Controller {
 
     /**
      * @Route("/menu/{name}", name="menu_details")
-     * @Route("/menu/{name}", name="menu_bepbox")
      */
     public function menuDetails(Menu $menu, MenuRepository $menuRepo) {
         
-        return $this->render('nos_menus.html.twig', [
-            'menu' => $menu
-        ]);
+        if('name' == 'Bepbox'){
+            return $this->render('menu_bepbox.html.twig', [
+            'menu' => $menu]);
+        }
+        else{
+            return $this->render('nos_menus.html.twig', [
+            'menu' => $menu]);
+        }
+        
+        
     }
 
     /**
