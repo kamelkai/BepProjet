@@ -6,9 +6,9 @@
 <div class="container bg-light section-nos-menus">
     <div class="row">
         <div class="col-lg-8 push-lg-4">
-            <h1 class="mb-0">Menu {{ menu.name }}</h1>
+            <h1 class="mb-0">Menu{{ menu.menuName }}</h1>
             <h4 class="text-muted mb-0">Réalisez des économies en prenant un menu !</h4>
-            <a href="{{ path('menu') }}">Retour à la boutique</a>
+            <a href="{{ path('menu') }}"><button>Retour à la boutique</button></a>
         </div>
     </div>
 
@@ -16,6 +16,9 @@
     <div class="special-offer">
         <img src="{{ asset('assets/img/bobun2.jpg') }}" alt="" class="special-offer-image">
         <div class="special-offer-content">
+            
+            {% if menu.menuName != 'Menu Bepbox' %}
+            
             <h4 class="mb-2">Choisissez votre garniture</h4>
             <div class="form-group">
                 <label class="custom-control custom-checkbox">
@@ -23,8 +26,7 @@
                     <span class="custom-control-indicator"></span>
                     <span class="custom-control-description">Boeuf citronnelle</span>
                 </label>
-            </div>
-
+            </di    
             <div class="form-group">
                 <label class="custom-control custom-checkbox">
                     <input type="radio" name="garniture" class="custom-control-input">
@@ -41,6 +43,13 @@
                 </label>
             </div>
 
+            {% else %}
+            <h4 class="mb-2">En ce moment dans la Bepbox :</h4>  
+            <p>{{ menu.menuDescription }}</p>
+                
+            {% endif %}   
+                
+            
         </div>                  
     </div><hr>
    
@@ -147,8 +156,8 @@
     </div><hr>
 
     <div class="row">
-            <div class=""><span class="text-md mr-4"><span class="text-muted">Prix</span>13.50 €</span></div>
-            <div class="text-sm-right mt-2">
+            <div class="text-center"><span>Prix {{ menu.menuPrice }} €</span></div>
+            <div class="text-center">
                 <button class="btn btn-outline-secondary btn-sm" data-target="#productModal" data-toggle="modal"><span>Ajouter au panier</span></button>
             </div>
     </div> 

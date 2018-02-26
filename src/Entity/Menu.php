@@ -28,7 +28,18 @@ class Menu
      * @Assert\Length(min=2, max=50)
      * @var string
      */
-    private $name;
+    private $menuName;
+    
+    /**
+     * @ORM\Column(type="text")
+     * @Assert\Length(min=20, max=2500)
+     */
+    private $menuDescription;
+    
+     /**
+     * @ORM\Column(type="decimal", scale=2, nullable=true)
+     */
+    private $menuPrice;
     
     /**
      * @ORM\ManyToMany(targetEntity="Product", mappedBy="menus")
@@ -36,16 +47,6 @@ class Menu
      */
     private $products;
     
-    /**
-     * @ORM\Column(type="text")
-     * @Assert\Length(min=20, max=2500)
-     */
-    private $description;
-    
-     /**
-     * @ORM\Column(type="decimal", scale=2, nullable=true)
-     */
-    private $price;
         
     /**
      * @ORM\ManyToMany(targetEntity="Cart", mappedBy="menus")
@@ -68,27 +69,28 @@ class Menu
     }
     
     
-
     
+        
     // GETTERS
     public function getId() {
         return $this->id;
     }
 
-    public function getName() {
-        return $this->name;
+    public function getMenuName() {
+        return $this->menuName;
     }
+    
+    public function getMenuDescription() {
+        return $this->menuDescription;
+    }
+
+    public function getMenuPrice() {
+        return $this->menuPrice;
+    }
+
 
     public function getProducts(): Collection {
         return $this->products;
-    }
-
-    public function getDescription() {
-        return $this->description;
-    }
-
-    public function getPrice() {
-        return $this->price;
     }
     
     public function getTags(): Collection {
@@ -107,27 +109,28 @@ class Menu
         return $this;
     }
 
-    public function setName($name) {
-        $this->name = $name;
+    public function setMenuName($menuName) {
+        $this->menuName = $menuName;
         return $this;
     }
 
+    public function setMenuDescription($menuDescription) {
+        $this->menuDescription = $menuDescription;
+        return $this;
+    }
+
+    public function setMenuPrice($menuPrice) {
+        $this->menuPrice = $menuPrice;
+        return $this;
+    }
+
+    
     public function setProducts(Collection $products) {
         $this->products = $products;
         return $this;
     }
 
-    public function setDescription($description) {
-        $this->description = $description;
-        return $this;
-    }
-
-    public function setPrice($price) {
-        $this->price = $price;
-        return $this;
-    }
-    
-     public function setTags(Collection $tags) {
+    public function setTags(Collection $tags) {
         $this->tags = $tags;
         return $this;
     }

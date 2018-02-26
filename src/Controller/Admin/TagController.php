@@ -13,6 +13,7 @@ use Symfony\Component\HttpFoundation\Request;
 
 class TagController extends Controller
 {
+    // Fonction pour ajouter ou modifier un ingrédient
     /**
      * @Route("admin/tag", name="tag_list")
      * @Route("/admin/tag/{id}", name="tag_edit")
@@ -48,6 +49,8 @@ class TagController extends Controller
         ]);
        
     }
+    
+    // Fonction pour supprimer un ingrédient
     /**
      * @Route("/admin/tag/delete/{id}", name="tag_delete")
      */

@@ -1461,7 +1461,7 @@ margin-bottom:2rem}
 	bottom:0;
 	content:' ';}
 
-.menu-category #category-plat .bg-image:after, #category-dessert .bg-image:after 
+.menu-category #category-plat .bg-image:after
 {
 	position:absolute;
 	top:0;

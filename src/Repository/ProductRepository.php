@@ -13,16 +13,25 @@ class ProductRepository extends ServiceEntityRepository
         parent::__construct($registry, Product::class);
     }
 
-    /*
-    public function findBySomething($value)
-    {
+    // Fonction pour afficher tous les produits par type sauf Bepbox
+    public function findAllDishes(){
         return $this->createQueryBuilder('p')
-            ->where('p.something = :value')->setParameter('value', $value)
-            ->orderBy('p.id', 'ASC')
-            ->setMaxResults(10)
+            ->where('p.type = :type')->setParameter('type', 'dishes')
+            /*->andWhere('p.bepbox = false')*/
             ->getQuery()
-            ->getResult()
-        ;
+            ->getResult();
     }
-    */
+    
+    // fonction pour afficher les desserts actifs
+    public function findAllDesserts() {
+        return $this->createQueryBuilder('p')
+            ->where('p.type = :type')->setParameter('type', 'dessert')
+            /*->andWhere('p.status = active')*/
+            ->getQuery()
+            ->getResult();
+        
+    }
+        
+    
+        
 }

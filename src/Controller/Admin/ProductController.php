@@ -13,7 +13,7 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class ProductController extends Controller
 {
-    // Fonction pour ajouter ou modifier un plat    
+    // Fonction pour ajouter ou modifier un produit    
     /**
      * @Route("/admin/product", name="product_list")
      * @Route("/admin/product/{id}", name="product_edit")
@@ -55,7 +55,7 @@ class ProductController extends Controller
         ]);
     }
     
-    // Fonction pour supprimer un plat
+    // Fonction pour supprimer un produit
      /**
      * @Route("/admin/product/delete/{id}", name="product_delete")
      */
@@ -67,5 +67,6 @@ class ProductController extends Controller
         return $this->redirectToRoute('product_list');     
     }
 
-
+    
+    
 }

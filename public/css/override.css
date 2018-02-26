@@ -68,15 +68,18 @@ body{
 .tim-row h3 {
     margin-top: 0;
 }
-#NosEngagements{
-    background: white;
+#NosEngagements, #evenement{
     color: black;
     margin: 30px;
+}
+#evenement img{
+    width: 100%;
 }
 #footer{
     background: white;
     color: black;
 }
+
 
 /*section clickCollect*/
 
@@ -103,7 +106,7 @@ flex-wrap: nowrap;
    
     box-sizing: border-box;
     border-radius: 5px 5px;
-   background: #42A232;
+    background: #42A232;
     padding: 10px;
     margin: 2px;
 }
@@ -124,9 +127,16 @@ flex-wrap: nowrap;
 .section-boutique{
     padding-top: 2rem;
 }
+
 #menuSidebar{
     margin-top: 100px;
 }
+
+#category-menu{
+    height: 379px;
+    border: 1px solid lightgrey;
+}
+
 category-menu img{
     height: 50%;
 }
@@ -136,8 +146,13 @@ category-menu img{
     width: 393px;
 }
 
-/* PAGE ABOUT */
+#category-plat{
+    max-height: 275px;
+}
 
+
+
+/* PAGE ABOUT */
 #about_box{
    width: 60%;
    background: #fff;
@@ -171,4 +186,9 @@ category-menu img{
 /* PAGE NOS MENUS */
 .section-nos-menus{
     margin-top: 2rem;
+}
+
+/* PAGE PRODUCT */
+#detailed_product{
+    padding-top: 30px;
 }

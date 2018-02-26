@@ -14,6 +14,7 @@ use Doctrine\ORM\Mapping\Index;
  * @Table(indexes={
  *      @Index(name="type_index", columns={"type"}),
  *      @Index(name="garnish_index", columns={"garnish"}),
+ *      @Index(name="drink_category_index", columns={"drink_category"}),
  *      @Index(name="status_index", columns={"status"})
  * })
  */
@@ -42,10 +43,17 @@ class Product
     
      /**
      * @ORM\Column(type="string", nullable=true)
-     * @Assert\Choice({null,"beef", "chicken", "chicken and shrimp", "tofu", "mortadella"})
+     * @Assert\Choice({null, "beef", "chicken", "chicken and shrimp", "tofu", "mortadella"})
      * @var string
      */
     private $garnish;
+    
+    /**
+     * @ORM\Column(type="string", nullable=true)
+     * @Assert\Choice({null, "exotique", "classique"})
+     * @var string
+     */
+    private $drink_category;
     
      /**
      * @ORM\Column(type="string", nullable=true)
@@ -127,6 +135,8 @@ class Product
 
     
 
+        
+
     //getter
     public function getId() {
         return $this->id;
@@ -159,7 +169,14 @@ class Product
     public function getStatus() {
         return $this->status;
     }
+        
+    public function getDrink_category() {
+        return $this->drink_category;
+    }
 
+
+    
+    
     //setter
     public function setId($id) {
         $this->id = $id;
@@ -201,6 +218,9 @@ class Product
         return $this;
     }
 
-
+    public function setDrink_category($drink_category) {
+            $this->drink_category = $drink_category;
+            return $this;
+    }
           
 }

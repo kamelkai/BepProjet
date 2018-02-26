@@ -9,7 +9,7 @@
         <div class="container dark">
             <div class="slide-container">
                 <div id="section-main-1-carousel-image" class="image inner-controls">
-                    <div class="slide"><div class="bg-image"><img src="{{ asset('assets/img/beplogocarre.png') }}" alt=""></div></div>
+                    <div class="slide"><div class="bg-image"><img src="{{ asset('assets/img/img_slider_bepbox.jpg') }}" alt="" ></div></div>
                     <div class="slide"><div class="bg-image"><img src="{{ asset('assets/img/IMG_6273.jpg') }}" alt=""></div></div>
                     <div class="slide"><div class="bg-image"><img src="{{ asset('assets/img/IMG_6375.jpg') }}" alt=""></div></div>
                     <div class="slide"><div class="bg-image"><img src="{{ asset('assets/img/IMG_6593.jpg') }}" alt=""></div></div>
@@ -48,11 +48,20 @@
     </section>
 
      <!-- Section - Evènements -->
-    <section class="section section-extended right dark col-md-12 col-sm-12 col-xs-12" id="NosEngagements" >
-        <div class="row" >
-            <div class="container">
+    <section class="section section-extended right dark col-md-12 col-sm-12 col-xs-12" id='evenement'>
+        
+        <div class="page-title border-top">    
+            <div class="container" style="background: #fff; padding: 20px;border-radius: 20px;box-shadow: 1px 1px 10px;">
                 <h2 class="text-center">Evènements</h2>
-                <img src="{{ asset('assets/img/about1.jpg') }}" alt="">
+                <div class="row" >
+                    <h4 class="text-center">{{ event.title }}</h4>
+                    <div class="col-md-4">
+                        <img src="{{ asset('assets/img/about1.jpg') }}" alt="">
+                    </div>
+                    <div class="col-md-8">
+                        <span>{{ event.description }}</span>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -60,113 +69,105 @@
 
     <!-- Section - Engagements -->
     <section class="section section-extended right dark col-md-12 col-sm-12 col-xs-12" id="NosEngagements" >
-        <div class="row" >
-        <div class="container">
-            <h2 class="text-center">Nos engagements</h2>
-            <div class="row">
-                <div class="col-md-3 ">
-                    <!-- Step -->
-                    <div class="feature feature-1  text-center">
-                        <div class="imgEngagements">
-                            <img src="{{ asset('assets/img/feuille.png') }}" width="150px" height="100px">
-                        </div>
-                        
-                        <div class="feature-content">
-                            <h4 class="text-center"><b>Fraîcheur</b></h4>
-                            <p class="text-muted text-center">C’est avec un grand soin que nous choisissons nos produits. Des plats sains cuisinés avec des ingrédients de qualité, 100% fraîcheur garantie ! Aussi, nos baguettes sont conçues spécialement pour Bêp par notre artisan-boulanger.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 ">
-                    <!-- Step -->
-                    <div class="feature feature-1 text-center">
-                    <div class="imgEngagements">
-                        <img src="{{ asset('assets/img/couverts.png') }}" width="150px">
-                    </div>
-                         
-                        <div class="feature-content">
-                            <h4 class="text-center"><b>Fait maison</b></h4>
-                            <p class="text-muted text-center">
-De la marinade de nos viandes aux desserts tout est fait sur place avec exigence et amour. </p>
+        
+        <div class="page-title border-top">
+            <div class="container" style="background: #fff; padding: 20px;border-radius: 20px;box-shadow: 1px 1px 10px;">
+                <h2 class="text-center">Nos engagements</h2>
+                <div class="row">
+                    
+                    <!-- Fraicheur -->
+                    <div class="col-md-3 ">
+                        <div class="feature feature-1  text-center">
+                            <div class="imgEngagements">
+                                <img src="{{ asset('assets/img/leaf.jpg') }}" width="150px" height="100px">
+                            </div>
+                            <div class="feature-content">
+                                <h4 class="text-center"><b>Fraîcheur</b></h4>
+                                <p class="text-muted text-center">C’est avec un grand soin que nous choisissons nos produits. Des plats sains cuisinés avec des ingrédients de qualité, 100% fraîcheur garantie ! Aussi, nos baguettes sont conçues spécialement pour Bêp par notre artisan-boulanger.</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-3 ">
-                    <!-- Step -->
-                    <div class="feature feature-1 text-center">
-                      <div class="imgEngagements"> 
-                          <img src="{{ asset('assets/img/carotte.png') }}" width="150px;">
-                      </div>
-                      
-                        <div class="feature-content">
-                            <h4 class="text-center"><b>Végétarien</b></h4>
-                            <p class="text-muted text-center">
-On pense aussi à nos amis végétariens avec une version veggie pour chaque plat ! Des nems aux légumes pour le bo bun au tofu ou encore une sauce « nuoc mam » spécialement élaborée pour vous ! </p>
+                            
+                    <!-- Fait maison -->        
+                    <div class="col-md-3 ">
+                        <div class="feature feature-1 text-center">
+                            <div class="imgEngagements">
+                                <img src="{{ asset('assets/img/restaurant.jpg') }}" width="150px">
+                            </div>
+                            <div class="feature-content">
+                                <h4 class="text-center"><b>Fait maison</b></h4>
+                                <p class="text-muted text-center">
+    De la marinade de nos viandes aux desserts tout est fait sur place avec exigence et amour. </p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-3 ">
-                    <!-- Step -->
-                    <div class="feature feature-1 text-center">
-                       <div class="imgEngagements">
-                           <img src="{{ asset('assets/img/environement.png') }}" width="150px">
-                       </div>
-                         
-                        <div class="feature-content">
-                            <h4 class="text-center"><b>Environnement</b></h4>
-                            <p class="text-muted text-center">
-Très soucieux de l’environnement, nos emballages sont recyclés ou recyclables : papier kraft, carton kraft, pulpe de canne,… </p>
+                            
+                    <!-- Végétarien -->        
+                    <div class="col-md-3 ">
+                        <div class="feature feature-1 text-center">
+                            <div class="imgEngagements"> 
+                                <img src="{{ asset('assets/img/carrot.jpg') }}" width="150px;">
+                            </div>
+                            <div class="feature-content">
+                                <h4 class="text-center"><b>Végétarien</b></h4>
+                                <p class="text-muted text-center">On pense aussi à nos amis végétariens avec une version veggie pour chaque plat ! Des nems aux légumes pour le bo bun au tofu ou encore une sauce « nuoc mam » spécialement élaborée pour vous ! </p>
+                            </div>
+                        </div>
+                    </div>
+                            
+                    <!-- Environnement -->        
+                    <div class="col-md-3 ">
+                        <div class="feature feature-1 text-center">
+                            <div class="imgEngagements">
+                                <img src="{{ asset('assets/img/recycle.jpg') }}" width="150px">
+                            </div>
+                            <div class="feature-content">
+                                <h4 class="text-center"><b>Environnement</b></h4>
+                                <p class="text-muted text-center">Très soucieux de l’environnement, nos emballages sont recyclés ou recyclables : papier kraft, carton kraft, pulpe de canne,… </p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
 
-    <!-- Section - Steps -->
-<div class="container bg-dark" id="clickCollect" >
-<div class="row">
-       
- 
-                <div class="col-md-4" >
-                    <!-- Step -->
-                    <div class="feature feature-1">
-                                         
-                        <div class="feature-content "> 
-                            <img src="{{ asset('assets/img/menuicon.png') }}" width="" class="pull-left"> 
-                            <h4 class=""><a href="menu.html.twig"><b>#Choisis ton plat</b></a></h4>
+            <!-- Section - Steps -->
+            <div class="container bg-dark" id="clickCollect" >
+                <div class="row">
+                    <div class="col-md-4" >
+                        <!-- Step -->
+                        <div class="feature feature-1">
+                            <div class="feature-content "> 
+                                <img src="{{ asset('assets/img/menuicon.png') }}" width="" class="pull-left"> 
+                                <h4 class=""><a href="menu.html.twig"><b>#Choisis ton plat</b></a></h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4" >
+                        <!-- Step -->
+                        <div class="feature feature-1">
 
+                            <div class="feature-content">
+                                <img src="{{ asset('assets/img/logocb.png') }}" width="" class="pull-left">
+                                <h4 class=""><b> #Petit coup de CB </b></h4>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4" >
+                        <!-- Step -->
+                        <div class="feature feature-1">
+
+
+                            <div class="feature-content">
+                                <img src="{{ asset('assets/img/service-retrait.png') }}" width="" class="pull-left">
+                                <h4 class=""><b>#Récupère ta commande</b></h4>
+
+                            </div>
                         </div>
                     </div>
                 </div>
-                        
-                        
-                <div class="col-md-4" >
-                    <!-- Step -->
-                    <div class="feature feature-1">
-                                             
-                        <div class="feature-content">
-                            <img src="{{ asset('assets/img/logocb.png') }}" width="" class="pull-left">
-                            <h4 class=""><b> #Petit coup de CB </b></h4>
-
-                        </div>
-                    </div>
-                </div>
-                        
-                        
-                <div class="col-md-4" >
-                    <!-- Step -->
-                    <div class="feature feature-1">
-                       
-                     
-                        <div class="feature-content">
-                            <img src="{{ asset('assets/img/service-retrait.png') }}" width="" class="pull-left">
-                            <h4 class=""><b>#Récupère ta commande</b></h4>
-
-                        </div>
-                    </div>
-                </div>
-            
-        </div>
+            </div>
+        
         </div>
 
     </section>

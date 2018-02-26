@@ -3,20 +3,28 @@
 namespace App\Controller;
 
 use App\Entity\Menu;
-use App\Repository\MenuRepository;
+use App\Entity\Product;
+use App\Repository\EventRepository;
+use App\Repository\ProductRepository;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
 class HomeController extends Controller {
 
+    // Fonction pour afficher la page Home
     /**
      * @Route("/home", name="home")
      */
-    public function index() {
-       
-        return $this->render('home.html.twig');
+    public function index(EventRepository $eventRepo) {
+        
+        $currentEvent = $eventRepo->findOneBy([
+            'status' => 'actif'
+        ]);
+                   
+        return $this->render('home.html.twig', ['event' => $currentEvent]);
     }
-
+    
+    // Fonction pour afficher la page A propos
     /**
      * @Route("/about", name="about")
      */
@@ -25,6 +33,7 @@ class HomeController extends Controller {
         return $this->render('about.html.twig');
     }
 
+    // Fonction pour afficher la page Contact
     /**
      * @Route("/contact", name="contact")
      */
@@ -33,48 +42,48 @@ class HomeController extends Controller {
         return $this->render('contact.html.twig');
     }
 
+    // Fonction pour afficher la page Boutique
     /**
      * @Route("/menu", name="menu")
      */
-    public function menu() {
-      
-        return $this->render('menu.html.twig');
-    }
-
-    /**
-     * @Route("/menu/{name}", name="menu_details")
-     */
-    public function menuDetails(Menu $menu, MenuRepository $menuRepo) {
+    public function menu(ProductRepository $productRepo) {
         
-        if('name' == 'Bepbox'){
-            return $this->render('menu_bepbox.html.twig', [
-            'menu' => $menu]);
-        }
-        else{
-            return $this->render('nos_menus.html.twig', [
-            'menu' => $menu]);
-        }
+        // afficher la liste des plats
+        $products = $productRepo->findAll();
         
         
+        return $this->render('menu.html.twig', [
+            'products' => $products
+        ]);
     }
-
+    
+    // Fonction pour afficher la page des détails d'un menu    
     /**
-     * @Route("/product", name="product")
-     */
-    public function product() {
-
-        return $this->render('product.html.twig');
-    }
-
-    /**
+     * @Route("/menu/{menuName}", name="menu_details")
      * 
-     * @Route("/nos_menus", name="nos_menus")
      */
-    public function nosMenus() {
-        // replace this line with your own code!
-        return $this->render('nos_menus.html.twig');
+    public function menuDetails(Menu $menu) {
+              
+        return $this->render('nos_menus.html.twig', [
+            'menu' => $menu 
+        ]);
+        
     }
-
+    
+    // Fonction pour afficher la page des détails d'un produit
+    /**
+     * @Route("/product/{name}", name="product_details")
+     * 
+     */
+    public function productDetails(Product $product) {
+              
+        return $this->render('product.html.twig', [
+            'product' => $product 
+        ]);
+        
+    }
+    
+    // Fonction pour afficher la page Profil
     /**
      *
      * @Route("/profil", name="profil")

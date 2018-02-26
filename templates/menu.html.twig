@@ -10,9 +10,9 @@
                 <ul class="nav nav-menu bg-dark dark">
                     <li><a href="#Menus">Menus</a></li>
                     <li><a href="#Bepbox">Bêp Box</a></li>
-                    <li><a href="#Plat">Plat</a></li>
-                    <li><a href="#Dessert">Dessert</a></li>
-                    <li><a href="#Boisson">Boisson</a></li>
+                    <li><a href="#dishes">Plat</a></li>
+                    <li><a href="#dessert">Dessert</a></li>
+                    <li><a href="#drink">Boisson</a></li>
                 </ul>
             </nav>
         </div>
@@ -22,15 +22,21 @@
             <div id="Menus" class="menu-category">
                 <div id="category-menu" class="menu-category-title">
                     <div class="bg-image"><img src="{{ asset('assets/img/menu.jpg') }}" alt=""></div>
-                    <h2 class="title">Nos menus</h2>
                 </div>
                 <div class="menu-category-content padded">
                     <div class="row gutters-sm">
+                        
+                    
+                           
+                                
                         <div class="col-lg-6 col-6">
                             <!-- Menu Item -->
                             <div class="menu-item menu-grid-item">
-                                <a href="{{ path('menu_details', {name : 'Bobun'}) }}"><img class="mb-4 imgEngagements" src="{{ asset('assets/img/bobun1.jpg') }}"  alt=""></a>
-                                <h6 class="mb-0">Menu Bo Bun</h6>
+                                
+                                
+                                    
+                                <a href="{{ path('menu_details', {menuName : 'Bobun'}) }}"><img class="mb-4 imgEngagements" src="{{ asset('assets/img/bobun1.jpg') }}"  alt=""></a>
+                                <h6 class="mb-0"></h6>
                                 <span class="text-muted text-sm">
                                     <ul>
                                         <li>Boeuf citronelle</li>
@@ -39,18 +45,22 @@
                                         <li>Mortadelle vietnamienne</li>
                                     </ul>
                                 </span>
+                                                                                          
                                 <div class="row align-items-center mt-4">
-                                    <div class="col-sm-6"><span class="text-md mr-4"><span class="text-muted">Prix</span> 13.50 €</span></div>
+                                    <div class="col-sm-6"><span class="text-md mr-4"><span class="text-muted">Prix </span>€</span></div>
+                                    
                                     <div class="col-sm-6 text-sm-right mt-2 mt-sm-0">
                                         <button class="btn btn-outline-secondary btn-sm" data-target="#productModal" data-toggle="modal"><span>Commander</span></button>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                    
+                                                       
                         <div class="col-lg-6 col-6">
                             <!-- Menu Item -->
                             <div class="menu-item menu-grid-item">
-                                <a href="{{ path('menu_details', {name : 'Roulo'}) }}"><img class="mb-4 imgEngagements" src="{{ asset('assets/img/roulo1.png') }}"  alt=""></a>
+                                <a href="{{ path('menu_details', {menuName : 'Roulo'}) }}"><img class="mb-4 imgEngagements" src="{{ asset('assets/img/roulo1.png') }}"  alt=""></a>
                                 <h6 class="mb-0">Menu Roulo'</h6>
                                 <span class="text-muted text-sm">
                                     <ul>
@@ -61,7 +71,7 @@
                                     </ul>
                                 </span>
                                 <div class="row align-items-center mt-4">
-                                    <div class="col-sm-6"><span class="text-md mr-4"><span class="text-muted">Prix</span> 10.00 €</span></div>
+                                    <div class="col-sm-6"><span class="text-md mr-4"><span class="text-muted">Prix </span>€</span></div>
                                     <div class="col-sm-6 text-sm-right mt-2 mt-sm-0">
                                         <button class="btn btn-outline-secondary btn-sm" data-target="#productModal" data-toggle="modal"><span>Commander</span></button>
                                     </div>
@@ -71,7 +81,7 @@
                         <div class="col-lg-6 col-6">
                             <!-- Menu Item -->
                             <div class="menu-item menu-grid-item">
-                                <a href="{{ path('menu_details', {name : 'Banhmi'}) }}"><img class="mb-4 imgEngagements" src="{{ asset('assets/img/banhmi1.jpg') }}"  alt=""></a>
+                                <a href="{{ path('menu_details', {menuName : 'Banhmi'}) }}"><img class="mb-4 imgEngagements" src="{{ asset('assets/img/banhmi1.jpg') }}"  alt=""></a>
                                 <h6 class="mb-0">Menu Banh Mi</h6>
                                 <span class="text-muted text-sm">
                                     <ul>
@@ -82,7 +92,7 @@
                                     </ul>
                                 </span>
                                 <div class="row align-items-center mt-4">
-                                    <div class="col-sm-6"><span class="text-md mr-4"><span class="text-muted">Prix</span> 10.00 €</span></div>
+                                    <div class="col-sm-6"><span class="text-md mr-4"><span class="text-muted">Prix </span>€</span></div>
                                     <div class="col-sm-6 text-sm-right mt-2 mt-sm-0">
                                         <button class="btn btn-outline-secondary btn-sm" data-target="#productModal" data-toggle="modal"><span>Commander</span></button>
                                     </div>
@@ -92,7 +102,7 @@
                         <div class="col-lg-6 col-6">
                             <!-- Menu Item -->
                             <div class="menu-item menu-grid-item">
-                                <a href="{{ path('menu_details', {name : 'Bepbox'}) }}"><img class="mb-4 imgEngagements" src="{{ asset('assets/img/banhmi1.jpg') }}"  alt=""></a>
+                                <a href="{{ path('menu_details', {menuName : 'Bepbox'}) }}"><img class="mb-4 imgEngagements" src="{{ asset('assets/img/banhmi1.jpg') }}"  alt=""></a>
                                 <h6 class="mb-0">Menu Bep Box</h6>
                                 <span class="text-muted text-sm">
                                     <ul>
@@ -100,17 +110,19 @@
                                     </ul>
                                 </span>
                                 <div class="row align-items-center mt-4">
-                                    <div class="col-sm-6"><span class="text-md mr-4"><span class="text-muted">Prix</span> 13.50 €</span></div>
+                                    <div class="col-sm-6"><span class="text-md mr-4"><span class="text-muted">Prix </span>€</span></div>
                                     <div class="col-sm-6 text-sm-right mt-2 mt-sm-0">
                                         <button class="btn btn-outline-secondary btn-sm" data-target="#productModal" data-toggle="modal"><span>Commander</span></button>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                       
                     </div>
                 </div>
             </div>
             
+                                
             <!-- Menu Category / Bep box -->
             <div id="Bepbox" class="menu-category">
                 <div id="category-bepbox" class="menu-category-title">
@@ -137,198 +149,86 @@
                     </div>
                 </div>
             </div>
-                                    
+                                  
+            
             <!-- Menu Category / Plats -->
-            <div id="Plat" class="menu-category">
+            {% for label, type in {'Nos plats' : 'dishes', 'Nos desserts' : 'dessert', 'Nos boissons' : 'drink'} %}
+            <div id="{{ type }}" class="menu-category">
                 <div id="category-plat" class="menu-category-title">
-                    <div class="bg-image"><img src="{{ asset('assets/img/plats.png') }}" alt=""></div>
-                    <h2 class="title">Nos plats</h2>
+                    <div class="bg-image"><img src="{{ asset('assets/img/' ~ type ~ '.png') }}" alt=""></div>
+                    <h2 class="title">{{ label }}</h2>
                 </div>
                 <div class="menu-category-content padded">
                     <div class="row gutters-sm">
-                        <div class="col-lg-4 col-6">
-                            <!-- Menu Item -->
-                            <div class="menu-item menu-grid-item">
-                                <img class="mb-4" src="{{ asset('assets/img/bobun1.jpg') }}"  alt="">
-                                <h6 class="mb-0">Bo Bun</h6>
-                                <span class="text-muted text-sm">
-                                    <ul>
-                                        <li>Boeuf citronelle</li>
-                                        <li>Poulet Xia xu</li>
-                                        <li>Tofu</li>
-                                        <li>Mortadelle vietnamienne</li>
-                                    </ul>
-                                </span>
-                                <div class="row align-items-center mt-4">
-                                    <div class="col-sm-6"><span class="text-md mr-4"><span class="text-muted">Prix</span> 13.50 €</span></div>
-                                    <div class="col-sm-6 text-sm-right mt-2 mt-sm-0">
-                                        <button class="btn btn-outline-secondary btn-sm" data-target="#productModal" data-toggle="modal"><span>Commander</span></button>
+                        
+                        
+                        {% for product in products %}
+                            
+                            {% if type != 'drink' and product.type == type and product.status == 'active' %}
+                                    
+                                <div class="col-lg-4">
+                                    <!-- Menu Item -->
+                                    <div class="menu-item menu-grid-item">
+                                        <a href="{{ path('product_details', {name : product.name}) }}"><img class="mb-4" src="{{ asset('assets/img/' ~ product.image ) }}"  alt=""></a>
+                                        <h6 class="mb-0">{{ product.name }}</h6>
+                                        <span class="text-muted text-sm">
+                                            <p>{{ product.garnish }}</p>
+                                        </span>
+                                        <div class="row align-items-center mt-4">
+                                            <div class="col-sm-6"><span class="text-md mr-4"><span class="text-muted">Prix </span>{{ product.price }}€</span></div>
+                                            <div class="col-sm-6 text-sm-right mt-2 mt-sm-0">
+                                                <button class="btn btn-outline-secondary btn-sm" data-target="#productModal" data-toggle="modal"><span>Commander</span></button>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-6">
-                            <!-- Menu Item -->
-                            <div class="menu-item menu-grid-item">
-                                <img class="mb-4" src="{{ asset('assets/img/roulo1.png') }}"  alt="">
-                                <h6 class="mb-0">Roulo'</h6>
-                                <span class="text-muted text-sm">
-                                    <ul>
-                                        <li>Boeuf citronelle</li>
-                                        <li>Poulet Xia xu</li>
-                                        <li>Tofu</li>
-                                        <li>Mortadelle vietnamienne</li>
-                                    </ul>
-                                </span>
-                                <div class="row align-items-center mt-4">
-                                    <div class="col-sm-6"><span class="text-md mr-4"><span class="text-muted">Prix</span> 10.00 €</span></div>
-                                    <div class="col-sm-6 text-sm-right mt-2 mt-sm-0">
-                                        <button class="btn btn-outline-secondary btn-sm" data-target="#productModal" data-toggle="modal"><span>Commander</span></button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-6">
-                            <!-- Menu Item -->
-                            <div class="menu-item menu-grid-item">
-                                <img class="mb-4" src="{{ asset('assets/img/banhmi1.jpg') }}"  alt="">
-                                <h6 class="mb-0">Banh Mi</h6>
-                                <span class="text-muted text-sm">
-                                    <ul>
-                                        <li>Boeuf citronelle</li>
-                                        <li>Poulet Xia xu</li>
-                                        <li>Tofu</li>
-                                        <li>Mortadelle vietnamienne</li>
-                                    </ul>
-                                </span>
-                                <div class="row align-items-center mt-4">
-                                    <div class="col-sm-6"><span class="text-md mr-4"><span class="text-muted">Prix</span> 10.00 €</span></div>
-                                    <div class="col-sm-6 text-sm-right mt-2 mt-sm-0">
-                                        <button class="btn btn-outline-secondary btn-sm" data-target="#productModal" data-toggle="modal"><span>Commander</span></button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+                            {% endif %}  
+                                  
+                            {% if type == 'drink' and product.type == type and product.status == 'active' %}
                                 
-            <!-- Menu Category / Dessert -->
-            <div id="Dessert" class="menu-category">
-                <div id="category-dessert" class="menu-category-title">
-                    <div class="bg-image"><img src="{{ asset('assets/img/dessert1.png') }}"  alt=""></div>
-                    <h2 class="title">Nos desserts</h2>
-                </div>
-                <div class="menu-category-content padded">
-                    <div class="row gutters-sm">
-                        <div class="col-lg-12">
-                            <h4 class="text-center mt-4">2 desserts fait maison selon la saison et notre inspiration</h4>
-                        </div>
-                        <div class="col-lg-6 col-6">
-                            <!-- Menu Item -->
-                            <div class="menu-item menu-grid-item imgMiddleMenu">
-                                <img class="mb-4 " src="{{ asset('assets/img/dessert2.jpg') }}" alt="">
-                                <h6 class="mb-0">Tapioca banane</h6>
-                                <span class="text-muted text-sm">Graine de tapioca...</span>
-                                <div class="row align-items-center mt-4">
-                                    <div class="col-sm-6"><span class="text-md mr-4"><span class="text-muted">Prix</span> 3.00 €</span></div>
-                                    <div class="col-sm-6 text-sm-right mt-2 mt-sm-0">
-                                        <button class="btn btn-outline-secondary btn-sm" data-target="#productModal" data-toggle="modal"><span>Commander</span></button>
+                                {% if product.drink_category == 'exotique' %}
+                                <div class="col-lg-6 col-6 mx-auto">
+                                    <!-- Menu Item -->
+                                    <div class="menu-item menu-grid-item imgMiddleMenu">
+                                        <a href="{{ path('product_details', {name : product.name}) }}"><img class="mb-4" src="{{ asset('assets/img/' ~ product.image ) }}" alt=""></a>
+                                        <h6 class="mb-0">{{ product.name }}</h6>
+                                        <span class="text-muted text-sm">{{ product.description }}</span>
+                                        <div class="row align-items-center mt-4">
+                                            <div class="col-sm-6"><span class="text-md mr-4"><span class="text-muted">Prix </span> 3.00 €</span></div>
+                                            <div class="col-sm-6 text-sm-right mt-2 mt-sm-0">
+                                                <button class="btn btn-outline-secondary btn-sm" data-target="#productModal" data-toggle="modal"><span>Commander</span></button>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-6">
-                            <!-- Menu Item -->
-                            <div class="menu-item menu-grid-item imgMiddleMenu">
-                                <img class="mb-4 " src="{{ asset('assets/img/dessert2.jpg') }}" alt="">
-                                <h6 class="mb-0">Fraise speculos...</h6>
-                                <span class="text-muted text-sm">Fraise, sur lit de mascarpone et speculos</span>
-                                <div class="row align-items-center mt-4">
-                                    <div class="col-sm-6"><span class="text-md mr-4"><span class="text-muted">Prix</span> 3.00 €</span></div>
-                                    <div class="col-sm-6 text-sm-right mt-2 mt-sm-0">
-                                        <button class="btn btn-outline-secondary btn-sm" data-target="#productModal" data-toggle="modal"><span>Commander</span></button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
                                 
-            <!-- Menu Category / Boisson -->
-            <div id="Boisson" class="menu-category">
-                <div id="category-boisson"class="menu-category-title">
-                    <div class="bg-image"><img src="{{ asset('assets/img/boisson1.png') }}" alt=""></div>
-                    <h2 class="title">Nos boissons</h2>
-                </div>
-                <div class="menu-category-content padded">
-                    <div class="row gutters-sm">
-                        <div class="col-lg-12">
-                            <h4 class="text-center mt-4">Exotique : Boisson du moment</h4>
-                        </div>
-                        <div class="col-lg-6 col-6 mx-auto">
-                            <!-- Menu Item -->
-                            <div class="menu-item menu-grid-item imgMiddleMenu">
-                                <img class="mb-4" src="{{ asset('assets/img/boisson1.png') }}" alt="">
-                                <h6 class="mb-0">Fruit de la passion</h6>
-                                <span class="text-muted text-sm">Description de la boisson...</span>
-                                <div class="row align-items-center mt-4">
-                                    <div class="col-sm-6"><span class="text-md mr-4"><span class="text-muted">Prix</span> 3.00 €</span></div>
-                                    <div class="col-sm-6 text-sm-right mt-2 mt-sm-0">
-                                        <button class="btn btn-outline-secondary btn-sm" data-target="#productModal" data-toggle="modal"><span>Commander</span></button>
+                                {% else %}
+                                <div class="col-lg-4 col-6">
+                                    <!-- Menu Item -->
+                                    <div class="menu-item menu-grid-item">
+                                        <img class="mb-4" src="{{ asset('assets/img/' ~ product.image ) }}" alt="">
+                                        <h6 class="mb-0">{{ product.name }}</h6>
+                                        <span class="text-muted text-sm">{{ product.description }}</span>
+                                        <div class="row align-items-center mt-4">
+                                            <div class="col-sm-6"><span class="text-md mr-4"><span class="text-muted">Prix </span> 2.00 €</span></div>
+                                            <div class="col-sm-6 text-sm-right mt-2 mt-sm-0">
+                                                <button class="btn btn-outline-secondary btn-sm" data-target="#productModal" data-toggle="modal"><span>Commander</span></button>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-12">
-                            <h4 class="text-center mt-4">Classique</h4>
-                        </div>
-                        <div class="col-lg-4 col-6">
-                            <!-- Menu Item -->
-                            <div class="menu-item menu-grid-item">
-                                <img class="mb-4" src="{{ asset('assets/img/boisson1.png') }}" alt="">
-                                <h6 class="mb-0">Evian</h6>
-                                <span class="text-muted text-sm">Eau de source</span>
-                                <div class="row align-items-center mt-4">
-                                    <div class="col-sm-6"><span class="text-md mr-4"><span class="text-muted">Prix</span> 2.00 €</span></div>
-                                    <div class="col-sm-6 text-sm-right mt-2 mt-sm-0">
-                                        <button class="btn btn-outline-secondary btn-sm" data-target="#productModal" data-toggle="modal"><span>Commander</span></button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-6">
-                            <!-- Menu Item -->
-                            <div class="menu-item menu-grid-item">
-                                <img class="mb-4" src="{{ asset('assets/img/boisson1.png') }}" alt="">
-                                <h6 class="mb-0">Arizona</h6>
-                                <span class="text-muted text-sm">Thé aromatisé aux plantes...</span>
-                                <div class="row align-items-center mt-4">
-                                    <div class="col-sm-6"><span class="text-md mr-4"><span class="text-muted">Prix</span> 2.00 €</span></div>
-                                    <div class="col-sm-6 text-sm-right mt-2 mt-sm-0">
-                                        <button class="btn btn-outline-secondary btn-sm" data-target="#productModal" data-toggle="modal"><span>Commander</span></button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-6">
-                            <!-- Menu Item -->
-                            <div class="menu-item menu-grid-item">
-                                <img class="mb-4" src="{{ asset('assets/img/boisson1.png') }}" alt="">
-                                <h6 class="mb-0">Charlie's</h6>
-                                <span class="text-muted text-sm">Je ne sais pas ce que c'est...</span>
-                                <div class="row align-items-center mt-4">
-                                    <div class="col-sm-6"><span class="text-md mr-4"><span class="text-muted">Prix</span> 2.00 €</span></div>
-                                    <div class="col-sm-6 text-sm-right mt-2 mt-sm-0">
-                                        <button class="btn btn-outline-secondary btn-sm" data-target="#productModal" data-toggle="modal"><span>Commander</span></button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                                {% endif %}
+                                
+                            {% endif %}
+                            
+                        {% endfor %}
                     </div>
                 </div>
             </div>
+            {% endfor %}
+            
+            
+           
                                 
         </div>
     </div>

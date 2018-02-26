@@ -13,6 +13,7 @@ use Symfony\Component\HttpFoundation\Request;
 
 class MenuController extends Controller
 {
+    // Fonction pour afficher ou modifier un menu
     /**
      * @Route("/admin/menu", name="menu_list")
      * @Route("/admin/menu/{id}", name="menu_edit")
@@ -22,31 +23,32 @@ class MenuController extends Controller
         // SELECT * FROM menu
         $menus = $menuRepo->findAll();
         
-       if(! $menu){
-           $menu = new Menu();
-       }
-        
-        
-         // creation du formulaire
-       $form = $this->createForm(MenuType::class, $menu)
-               // création du bouton submit)
-               ->add('Enregistrer', SubmitType::class);
+        if(! $menu){
+            $menu = new Menu();
+        }
+                
+        // creation du formulaire
+        $form = $this->createForm(MenuType::class, $menu)
+                // création du bouton submit)
+                ->add('Enregistrer', SubmitType::class);
 
-       $form->handleRequest($request);
+        $form->handleRequest($request);
 
-       // validation du formulaire
-       if ($form->isSubmitted() && $form->isValid()) {
-           // enregistrement du produit
-           $manager->persist($menu);
-           $manager->flush();
-           return $this->redirectToRoute('menu_list');
-       }
+        // validation du formulaire
+        if ($form->isSubmitted() && $form->isValid()) {
+            // enregistrement du produit
+            $manager->persist($menu);
+            $manager->flush();
+            return $this->redirectToRoute('menu_list');
+        }
         
         return $this->render('admin/menu_list.html.twig', [
             'menus' => $menus,
             'form' => $form->createView()   
         ]);
     }
+    
+    // Fonction pour supprimer un menu
     /**
      * @Route("/admin/menu/delete/{id}", name="menu_delete")
      */
@@ -57,5 +59,6 @@ class MenuController extends Controller
         
         return $this->redirectToRoute('menu_list');     
     }
+    
 }
 

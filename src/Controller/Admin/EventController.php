@@ -14,6 +14,7 @@ use Symfony\Component\HttpFoundation\Request;
 
 class EventController extends Controller
 {
+    // Fonction pour afficher ou modifier un évènement
     /**
      * @Route("/admin/event", name="event_list")
      * @Route("/admin/event/{id}", name="event_edit")
@@ -50,6 +51,7 @@ class EventController extends Controller
         ]);
     }
     
+    // Fonction pour supprimer un évènement
     /**
      * @Route("/admin/event/delete/{id}", name="event_delete")
      */
@@ -60,5 +62,6 @@ class EventController extends Controller
         
         return $this->redirectToRoute('event_list');     
     }
+        
     
 } 

@@ -13,7 +13,7 @@ use Symfony\Component\HttpFoundation\Request;
 
 class MemberController extends Controller
 {
-// Fonction pour ajouter ou modifier un membre
+    // Fonction pour ajouter ou modifier un membre
     /**
      * @Route("/admin/member", name="member_list")
      * @Route("/admin/member/{id}", name="member_edit")
@@ -50,7 +50,7 @@ class MemberController extends Controller
         ]);      
     }
     
-// Fonction pour supprimer un membre
+    // Fonction pour supprimer un membre
     /**
      * @Route("/admin/member/delete/{id}", name="member_delete")
      */
