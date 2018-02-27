@@ -49,11 +49,19 @@ class HomeController extends Controller {
     public function menu(ProductRepository $productRepo) {
         
         // afficher la liste des plats
-        $products = $productRepo->findAll();
+        $dishes= $productRepo->findAllDishes();
+        
+        // afficher la liste des desserts
+        $desserts= $productRepo->findAllDesserts();
+        
+        // afficher la liste des boissons
+        $drinks= $productRepo->findAllDrinks();
         
         
         return $this->render('menu.html.twig', [
-            'products' => $products
+            'dishes' => $dishes,
+            'desserts' => $desserts,
+            'drinks' => $drinks,
         ]);
     }
     

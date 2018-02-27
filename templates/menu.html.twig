@@ -25,9 +25,6 @@
                 </div>
                 <div class="menu-category-content padded">
                     <div class="row gutters-sm">
-                        
-                    
-                           
                                 
                         <div class="col-lg-6 col-6">
                             <!-- Menu Item -->
@@ -152,84 +149,121 @@
                                   
             
             <!-- Menu Category / Plats -->
-            {% for label, type in {'Nos plats' : 'dishes', 'Nos desserts' : 'dessert', 'Nos boissons' : 'drink'} %}
-            <div id="{{ type }}" class="menu-category">
-                <div id="category-plat" class="menu-category-title">
-                    <div class="bg-image"><img src="{{ asset('assets/img/' ~ type ~ '.png') }}" alt=""></div>
-                    <h2 class="title">{{ label }}</h2>
+            <div id="dishes" class="menu-category">
+                <div class="menu-category-title product-category">
+                    <div class="bg-image"><img src="{{ asset('assets/img/dishes.png') }}" alt=""></div>
+                    <h2 class="title">Nos Plats</h2>
+                </div>
+                <div class="menu-category-content padded">
+                    <div class="row gutters-sm">
+                          
+                        {% for dish in dishes %}
+                        {% if dish.status == 'active' %}
+                        <div class="col-lg-4">
+                            <!-- Menu Item -->
+                            <div class="menu-item menu-grid-item">
+                                <a href="{{ path('product_details', {name : dish.name}) }}"><img class="mb-4" src="{{ asset('assets/img/' ~ dish.image ) }}"  alt=""></a>
+                                <h6 class="mb-0">{{ dish.name }}</h6>
+                                <span class="text-muted text-sm">
+                                    <p>{{ dish.garnish }}</p>
+                                </span>
+                                <div class="row align-items-center mt-4">
+                                    <div class="col-sm-6"><span class="text-md mr-4"><span class="text-muted">Prix </span>{{ dish.price }}€</span></div>
+                                    <div class="col-sm-6 text-sm-right mt-2 mt-sm-0">
+                                        <button class="btn btn-outline-secondary btn-sm" data-target="#productModal" data-toggle="modal"><span>Commander</span></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        {% endif %}
+                        {% endfor %} 
+                    </div>
+                </div>        
+            </div>      
+            
+            <!-- Menu Category / Desserts -->
+            <div id="dessert" class="menu-category">
+                <div class="menu-category-title product-category">
+                    <div class="bg-image"><img src="{{ asset('assets/img/dessert.png') }}" alt=""></div>
+                    <h2 class="title">Nos Desserts</h2>
                 </div>
                 <div class="menu-category-content padded">
                     <div class="row gutters-sm">
                         
+                        {% for dessert in desserts %}
+                        {% if dessert.status == 'active' %}
+                        <div class="col-lg-6">
+                            <!-- Menu Item -->
+                            <div class="menu-item menu-grid-item">
+                                <img class="mb-4" src="{{ asset('assets/img/' ~ dessert.image ) }}"  alt="">
+                                <h6 class="mb-0">{{ dessert.name }}</h6>
+                                <span class="text-muted text-sm">
+                                    <p>{{ dessert.description }}</p>
+                                </span>
+                                <div class="row align-items-center mt-4">
+                                    <div class="col-sm-6"><span class="text-md mr-4"><span class="text-muted">Prix </span>{{ dessert.price }}€</span></div>
+                                    <div class="col-sm-6 text-sm-right mt-2 mt-sm-0">
+                                        <button class="btn btn-outline-secondary btn-sm" data-target="#productModal" data-toggle="modal"><span>Commander</span></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        {% endif %}
+                        {% endfor %}   
+                    </div>
+                </div>        
+            </div> 
+            
+            <!-- Menu Category / Boissons -->
+            <div id="drink" class="menu-category">
+                <div class="menu-category-title product-category">
+                    <div class="bg-image"><img src="{{ asset('assets/img/drink.png') }}" alt=""></div>
+                    <h2 class="title">Nos Boissons</h2>
+                </div>
+                <div class="menu-category-content padded">
+                    <div class="row gutters-sm">        
                         
-                        {% for product in products %}
-                            
-                            {% if type != 'drink' and product.type == type and product.status == 'active' %}
-                                    
-                                <div class="col-lg-4">
-                                    <!-- Menu Item -->
-                                    <div class="menu-item menu-grid-item">
-                                        <a href="{{ path('product_details', {name : product.name}) }}"><img class="mb-4" src="{{ asset('assets/img/' ~ product.image ) }}"  alt=""></a>
-                                        <h6 class="mb-0">{{ product.name }}</h6>
-                                        <span class="text-muted text-sm">
-                                            <p>{{ product.garnish }}</p>
-                                        </span>
-                                        <div class="row align-items-center mt-4">
-                                            <div class="col-sm-6"><span class="text-md mr-4"><span class="text-muted">Prix </span>{{ product.price }}€</span></div>
-                                            <div class="col-sm-6 text-sm-right mt-2 mt-sm-0">
-                                                <button class="btn btn-outline-secondary btn-sm" data-target="#productModal" data-toggle="modal"><span>Commander</span></button>
-                                            </div>
+                        {% for drink in drinks %}
+                            {% if drink.drink_category == 'exotique' and drink.status == 'active' %}
+                            <div class="col-lg-6 col-6 mx-auto">
+                                <!-- Menu Item -->
+                                <div class="menu-item menu-grid-item">
+                                    <img class="mb-4" src="{{ asset('assets/img/' ~ drink.image ) }}"  alt="">
+                                    <h6 class="mb-0">{{ drink.name }}</h6>
+                                    <span class="text-muted text-sm">
+                                        <p>{{ drink.description }}</p>
+                                    </span>
+                                    <div class="row align-items-center mt-4">
+                                        <div class="col-sm-6"><span class="text-md mr-4"><span class="text-muted">Prix </span>{{ drink.price }}€</span></div>
+                                        <div class="col-sm-6 text-sm-right mt-2 mt-sm-0">
+                                            <button class="btn btn-outline-secondary btn-sm" data-target="#productModal" data-toggle="modal"><span>Commander</span></button>
                                         </div>
                                     </div>
                                 </div>
-                            {% endif %}  
-                                  
-                            {% if type == 'drink' and product.type == type and product.status == 'active' %}
-                                
-                                {% if product.drink_category == 'exotique' %}
-                                <div class="col-lg-6 col-6 mx-auto">
-                                    <!-- Menu Item -->
-                                    <div class="menu-item menu-grid-item imgMiddleMenu">
-                                        <a href="{{ path('product_details', {name : product.name}) }}"><img class="mb-4" src="{{ asset('assets/img/' ~ product.image ) }}" alt=""></a>
-                                        <h6 class="mb-0">{{ product.name }}</h6>
-                                        <span class="text-muted text-sm">{{ product.description }}</span>
-                                        <div class="row align-items-center mt-4">
-                                            <div class="col-sm-6"><span class="text-md mr-4"><span class="text-muted">Prix </span> 3.00 €</span></div>
-                                            <div class="col-sm-6 text-sm-right mt-2 mt-sm-0">
-                                                <button class="btn btn-outline-secondary btn-sm" data-target="#productModal" data-toggle="modal"><span>Commander</span></button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                                {% else %}
-                                <div class="col-lg-4 col-6">
-                                    <!-- Menu Item -->
-                                    <div class="menu-item menu-grid-item">
-                                        <img class="mb-4" src="{{ asset('assets/img/' ~ product.image ) }}" alt="">
-                                        <h6 class="mb-0">{{ product.name }}</h6>
-                                        <span class="text-muted text-sm">{{ product.description }}</span>
-                                        <div class="row align-items-center mt-4">
-                                            <div class="col-sm-6"><span class="text-md mr-4"><span class="text-muted">Prix </span> 2.00 €</span></div>
-                                            <div class="col-sm-6 text-sm-right mt-2 mt-sm-0">
-                                                <button class="btn btn-outline-secondary btn-sm" data-target="#productModal" data-toggle="modal"><span>Commander</span></button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                {% endif %}
-                                
+                            </div>
                             {% endif %}
-                            
-                        {% endfor %}
+                            {% if drink.drink_category == 'classique' and drink.status == 'active' %}
+                            <div class="col-lg-4">
+                                <!-- Menu Item -->
+                                <div class="menu-item menu-grid-item">
+                                    <img class="mb-4" src="{{ asset('assets/img/' ~ drink.image ) }}"  alt="">
+                                    <h6 class="mb-0">{{ drink.name }}</h6>
+                                    <span class="text-muted text-sm">
+                                        <p>{{ drink.description }}</p>
+                                    </span>
+                                    <div class="row align-items-center mt-4">
+                                        <div class="col-sm-6"><span class="text-md mr-4"><span class="text-muted">Prix </span>{{ drink.price }}€</span></div>
+                                        <div class="col-sm-6 text-sm-right mt-2 mt-sm-0">
+                                            <button class="btn btn-outline-secondary btn-sm" data-target="#productModal" data-toggle="modal"><span>Commander</span></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            {% endif %}
+                        {% endfor %}   
                     </div>
                 </div>
             </div>
-            {% endfor %}
-            
-            
-           
-                                
         </div>
     </div>
 </div>
